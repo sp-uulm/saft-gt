@@ -10,7 +10,7 @@ RefComponent optitrack_motive = "Tracking software"
  
 
 rosbox = {ROS_foxy, ROS_noetic, Ubuntu_20:OS, Linux, Gnome, Nvidia, Xorg} 
-rosbox (reachable="ssh", hostname="134.60.46.22", sshUser="ros", sshPort="8844") executes {apache2, ros_nodes}
+rosbox executes {apache2, ros_nodes}
 Ubuntu_20 = "Ubuntu 20.04.4 64bit"
 Linux = "Linux 5.13.0-51"
 Gnome = "Gnome 3.36.8"

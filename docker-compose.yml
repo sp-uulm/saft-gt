@@ -1,0 +1,11 @@
+services:
+  ros-pipeline:
+    build: .
+    container_name: ros-saft-gt
+    volumes: 
+      - .:/ros2_ws/src
+      - /var/run/docker.sock:/var/run/docker.sock # this is necesary to run docker in docker (security issue!)
+  storm-modelchecker:
+    image: movesrwth/storm:stable 
+    container_name: storm2 # this name must be the same as configured in "saft_config.py"
+    command: tail -f /dev/null # keep container running

@@ -1,0 +1,35 @@
+{
+  "sources": {
+    "cwe": [
+      "https://cwe.mitre.org/data/csv/699.csv.zip",
+      "https://cwe.mitre.org/data/csv/1194.csv.zip",
+      "https://cwe.mitre.org/data/csv/1000.csv.zip"
+    ],
+    "capec": "https://capec.mitre.org/data/csv/1000.csv.zip",
+    "cve": "https://cve.mitre.org/data/downloads/allitems.csv",
+    "cwe_categories": "https://cwe.mitre.org/data/xml/views/699.xml.zip",
+    "epss": "https://epss.cyentia.com/epss_scores-current.csv.gz"
+  },
+  "database": {
+    "user": "root",
+    "password": "private",
+    "host": "ip-address",
+    "database": "attackGraphGeneration"
+  },
+  "nistApi": {
+    "cpe": {
+      "URI": "https://services.nvd.nist.gov/rest/json/cpes/1.0/",
+      "itemName": "cpes"
+    },
+    "cves": {
+      "URI": "https://services.nvd.nist.gov/rest/json/cves/2.0/",
+      "itemName": "cve"
+    },
+    "cve": {
+      "URI": "https://services.nvd.nist.gov/rest/json/cve/2.0/",
+      "itemName": "CVE_Items"
+    },
+    "pauseBetweenRequests": 0
+  },
+  "maxRelationDepth": 3
+}

@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="ASCII"?>
+<attackFaultTree:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attackFaultTree="http://www.ulm.uni/safesec/AttackFaultTree">
+  <aftModel xsi:type="attackFaultTree:AFTTopEvent" description="Drone crashes into a person">
+    <tree xsi:type="attackFaultTree:AFTSubTree">
+      <gate name="OR"/>
+      <subTreeElements>
+        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Trajectory out of control">
+          <subTree>
+            <subtree xsi:type="attackFaultTree:AFTSubTree">
+              <gate name="OR"/>
+              <subTreeElements>
+                <subtree xsi:type="attackFaultTree:BasicFaultEvent" description="Miscalculation" probability="0.2"/>
+              </subTreeElements>
+              <subTreeElements>
+                <subtree xsi:type="attackFaultTree:BasicFaultEvent" description="Errorenous messages" probability="0.3"/>
+              </subTreeElements>
+              <subTreeElements>
+                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" name="DisruptDroneControl" description="The position control loop of the drone is disrupted">
+                  <subTree>
+                    <subtree xsi:type="attackFaultTree:AFTSubTree">
+                      <gate name="OR"/>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="The camera tracking does not work Dataflow: OpticalTracking">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Channel is corrupted">
+                              <subTree>
+                                <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Sender is corrupted" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                                  <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.36"/>
+                                </subtree>
+                              </subTree>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="The camera data is not received Dataflow: CameraData">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Channel is corrupted">
+                              <subTree>
+                                <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Sender is corrupted" cost="0.9" lambda="1.2E-5" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                                  <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.35"/>
+                                </subtree>
+                              </subTree>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTSubTree">
+                          <gate name="AND"/>
+                          <subTreeElements>
+                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="The tracking cameras do not work" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                              <linkedDataflowElement href="ResultCopyFT.xmi#/2/@elements.34"/>
+                            </subtree>
+                          </subTreeElements>
+                          <subTreeElements>
+                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="The tracking cameras do not work" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                              <linkedDataflowElement href="ResultCopyFT.xmi#/2/@elements.35"/>
+                            </subtree>
+                          </subTreeElements>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="The tracking software does not work" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                          <linkedDataflowElement href="ResultCopyFT.xmi#/2/@elements.33"/>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="VRPN data is not transmitted Dataflow: VRPNData">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Channel is corrupted">
+                              <subTree>
+                                <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Sender is corrupted" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                                  <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.33"/>
+                                </subtree>
+                              </subTree>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="The VRPN client node does not work Dataflow: vrpn_client_node">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by description for keyword: libgcc_s Untrusted Search Path">
+                              <subTree>
+                                <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                  <gate name="OR"/>
+                                  <subTreeElements>
+                                    <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202126807" description="GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." cvss="CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" baseScore="7.8" impactScore="5.9" exploitabilityScore="1.8">
+                                      <cve cve="CVE-2021-26807"/>
+                                    </subtree>
+                                  </subTreeElements>
+                                </subtree>
+                              </subTree>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="The position controller does not work" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>=N/A:>=N">
+                          <linkedDataflowElement href="ResultCopyFT.xmi#/2/@elements.5"/>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Quadcopter pose data is not transmitted Dataflow: vrpn_client_node">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by description for keyword: libgcc_s Untrusted Search Path">
+                              <subTree>
+                                <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                  <gate name="OR"/>
+                                  <subTreeElements>
+                                    <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202126807" description="GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." cvss="CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" baseScore="7.8" impactScore="5.9" exploitabilityScore="1.8">
+                                      <cve cve="CVE-2021-26807"/>
+                                    </subtree>
+                                  </subTreeElements>
+                                </subtree>
+                              </subTree>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="The Bebop Driver does not work" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                          <linkedDataflowElement href="ResultCopyFT.xmi#/2/@elements.28"/>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Commands are not sent to the drone Dataflow: DroneCommands">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Channel is corrupted">
+                              <subTree>
+                                <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Sender is corrupted" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                                  <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.28"/>
+                                </subtree>
+                              </subTree>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="The flight controller does not work" cost="0.9" lambda="1.2E-4" cvss="CVSS:3.1/C:~L/I:>N/A:>N">
+                          <linkedDataflowElement href="ResultCopyFT.xmi#/2/@elements.36"/>
+                        </subtree>
+                      </subTreeElements>
+                    </subtree>
+                  </subTree>
+                </subtree>
+              </subTreeElements>
+              <subTreeElements>
+                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Messages get lost">
+                  <subTree>
+                    <subtree xsi:type="attackFaultTree:AFTSubTree">
+                      <gate name="OR"/>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:BasicFaultEvent" description="Poor connection" probability="0.8"/>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Too many incoming messages">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTSubTree">
+                              <gate name="OR"/>
+                              <subTreeElements>
+                                <subtree xsi:type="attackFaultTree:BasicFaultEvent" description="Poor configuration of a node" probability="0.8"/>
+                              </subTreeElements>
+                              <subTreeElements>
+                                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Attacker performs flooding-attack on trajectory request topic Deployment: ros_nodes">
+                                  <subTree>
+                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Platform is corrupted">
+                                      <subTree>
+                                        <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                          <gate name="OR"/>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt default_FARFETCH_transform_listener_impl_5585492d4320" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.0"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt default_FARFETCH_bebop_position_control" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.1"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt _ros2cli_daemon_0" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.11"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt saft_saft_dataflow_generator" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.13"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt default_FARFETCH_transform_listener_impl_5627460fee20" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.4"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Corrupt simple_trajectory_server Dataflow: simple_trajectory_server">
+                                              <subTree>
+                                                <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                  <gate name="OR"/>
+                                                  <subTreeElements>
+                                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by description for keyword: libgcc_s Untrusted Search Path">
+                                                      <subTree>
+                                                        <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                          <gate name="OR"/>
+                                                          <subTreeElements>
+                                                            <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202126807" description="GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." cvss="CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" baseScore="7.8" impactScore="5.9" exploitabilityScore="1.8">
+                                                              <cve cve="CVE-2021-26807"/>
+                                                            </subtree>
+                                                          </subTreeElements>
+                                                        </subtree>
+                                                      </subTree>
+                                                    </subtree>
+                                                  </subTreeElements>
+                                                  <subTreeElements>
+                                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)">
+                                                      <subTree>
+                                                        <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                          <gate name="OR"/>
+                                                          <subTreeElements>
+                                                            <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202138425" description="eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." cvss="CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H" baseScore="9.1" impactScore="5.2" exploitabilityScore="3.9">
+                                                              <cve cve="CVE-2021-38425"/>
+                                                            </subtree>
+                                                          </subTreeElements>
+                                                        </subtree>
+                                                      </subTree>
+                                                    </subtree>
+                                                  </subTreeElements>
+                                                </subtree>
+                                              </subTree>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt _ros2cli_requester_std_srvs_Trigger" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.6"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt transform_listener_impl_5597986f9180" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.7"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt transform_listener_impl_55c92f218678" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.8"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Corrupt simple_trajectory_visualizer Dataflow: simple_trajectory_visualizer">
+                                              <subTree>
+                                                <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                  <gate name="OR"/>
+                                                  <subTreeElements>
+                                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by description for keyword: libgcc_s Untrusted Search Path">
+                                                      <subTree>
+                                                        <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                          <gate name="OR"/>
+                                                          <subTreeElements>
+                                                            <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202126807" description="GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." cvss="CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" baseScore="7.8" impactScore="5.9" exploitabilityScore="1.8">
+                                                              <cve cve="CVE-2021-26807"/>
+                                                            </subtree>
+                                                          </subTreeElements>
+                                                        </subtree>
+                                                      </subTree>
+                                                    </subtree>
+                                                  </subTreeElements>
+                                                  <subTreeElements>
+                                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)">
+                                                      <subTree>
+                                                        <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                          <gate name="OR"/>
+                                                          <subTreeElements>
+                                                            <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202138425" description="eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." cvss="CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H" baseScore="9.1" impactScore="5.2" exploitabilityScore="3.9">
+                                                              <cve cve="CVE-2021-38425"/>
+                                                            </subtree>
+                                                          </subTreeElements>
+                                                        </subtree>
+                                                      </subTree>
+                                                    </subtree>
+                                                  </subTreeElements>
+                                                </subtree>
+                                              </subTree>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt rviz2" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.19"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt simple_obstacle_loader" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.11"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt transform_listener_impl_560bce96be08" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.12"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt transform_listener_impl_55b3d55d2a00" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.13"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt default_FARFETCH_transform_listener_impl_559bee05e1d0" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.14"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt default_FARFETCH_simple_trajectory_client" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.15"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt rostopic" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.21"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt bebop_guard_node" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.22"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt bebop_switch_node" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.23"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt joy_teleop" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.24"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt default_FARFETCH_quad_script_node" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDeploymentElement href="src/models/quadlab_enhanced.deployment#//@elements.465/@definitionDep/@def.20"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt quad_state_node" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.26"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt sim_photo_node" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.27"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt ROWLET_bebop_driver_node" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.16"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt robot_state_publisher" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.29"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt gesture_node" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.30"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt joy_node" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.31"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Corrupt vrpn_client_node Dataflow: vrpn_client_node">
+                                              <subTree>
+                                                <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                  <gate name="OR"/>
+                                                  <subTreeElements>
+                                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by description for keyword: libgcc_s Untrusted Search Path">
+                                                      <subTree>
+                                                        <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                          <gate name="OR"/>
+                                                          <subTreeElements>
+                                                            <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202126807" description="GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." cvss="CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" baseScore="7.8" impactScore="5.9" exploitabilityScore="1.8">
+                                                              <cve cve="CVE-2021-26807"/>
+                                                            </subtree>
+                                                          </subTreeElements>
+                                                        </subtree>
+                                                      </subTree>
+                                                    </subtree>
+                                                  </subTreeElements>
+                                                  <subTreeElements>
+                                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)">
+                                                      <subTree>
+                                                        <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                          <gate name="OR"/>
+                                                          <subTreeElements>
+                                                            <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202138425" description="eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." cvss="CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H" baseScore="9.1" impactScore="5.2" exploitabilityScore="3.9">
+                                                              <cve cve="CVE-2021-38425"/>
+                                                            </subtree>
+                                                          </subTreeElements>
+                                                        </subtree>
+                                                      </subTree>
+                                                    </subtree>
+                                                  </subTreeElements>
+                                                </subtree>
+                                              </subTree>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt optitrack_motive" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.33"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt optitrack_prime_13" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.34"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt optitrack_prime_13W" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.35"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt bebop2" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.36"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                          <subTreeElements>
+                                            <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Corrupt Gamepad" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                              <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.37"/>
+                                            </subtree>
+                                          </subTreeElements>
+                                        </subtree>
+                                      </subTree>
+                                    </subtree>
+                                  </subTree>
+                                </subtree>
+                              </subTreeElements>
+                              <subTreeElements>
+                                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Attacker performs flooding-attack on trajectory request topic Dataflow: trajectory_request">
+                                  <subTree>
+                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Channel is corrupted">
+                                      <subTree>
+                                        <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Sender is corrupted" cost="0.8" lambda="1.2E-4" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                          <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.10"/>
+                                        </subtree>
+                                      </subTree>
+                                    </subtree>
+                                  </subTree>
+                                </subtree>
+                              </subTreeElements>
+                              <subTreeElements>
+                                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Attacker performs flooding-attack on trajectory assignment topic Dataflow: trajectory_assignment">
+                                  <subTree>
+                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Channel is corrupted">
+                                      <subTree>
+                                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Sender is corrupted Dataflow: simple_trajectory_server">
+                                          <subTree>
+                                            <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                              <gate name="OR"/>
+                                              <subTreeElements>
+                                                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by description for keyword: libgcc_s Untrusted Search Path">
+                                                  <subTree>
+                                                    <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                      <gate name="OR"/>
+                                                      <subTreeElements>
+                                                        <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202126807" description="GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." cvss="CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" baseScore="7.8" impactScore="5.9" exploitabilityScore="1.8">
+                                                          <cve cve="CVE-2021-26807"/>
+                                                        </subtree>
+                                                      </subTreeElements>
+                                                    </subtree>
+                                                  </subTree>
+                                                </subtree>
+                                              </subTreeElements>
+                                              <subTreeElements>
+                                                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)">
+                                                  <subTree>
+                                                    <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                                      <gate name="OR"/>
+                                                      <subTreeElements>
+                                                        <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202138425" description="eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." cvss="CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H" baseScore="9.1" impactScore="5.2" exploitabilityScore="3.9">
+                                                          <cve cve="CVE-2021-38425"/>
+                                                        </subtree>
+                                                      </subTreeElements>
+                                                    </subtree>
+                                                  </subTree>
+                                                </subtree>
+                                              </subTreeElements>
+                                            </subtree>
+                                          </subTree>
+                                        </subtree>
+                                      </subTree>
+                                    </subtree>
+                                  </subTree>
+                                </subtree>
+                              </subTreeElements>
+                              <subTreeElements>
+                                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Attacker performs flooding-attack on trajectory control target topic Dataflow: ROWLET_target">
+                                  <subTree>
+                                    <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Channel is corrupted">
+                                      <subTree>
+                                        <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Sender is corrupted" cost="0.8" lambda="1.2E-4" cvss="CVSS:3.1/C:=*/I:*/A:H">
+                                          <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.10"/>
+                                        </subtree>
+                                      </subTree>
+                                    </subtree>
+                                  </subTree>
+                                </subtree>
+                              </subTreeElements>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                    </subtree>
+                  </subTree>
+                </subtree>
+              </subTreeElements>
+              <subTreeElements>
+                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" name="TakeOverTrajectoryNode" description="Attacker takes over a trajectory node">
+                  <subTree>
+                    <subtree xsi:type="attackFaultTree:AFTSubTree">
+                      <gate name="OR"/>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Attacker takes over the trajectory server node Dataflow: simple_trajectory_server">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Generated for search by description for keyword: libgcc_s Untrusted Search Path">
+                              <subTree>
+                                <subtree xsi:type="attackFaultTree:AFTSubTree">
+                                  <gate name="OR"/>
+                                  <subTreeElements>
+                                    <subtree xsi:type="attackFaultTree:BasicAttackStep" name="CVE202126807" description="GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." cvss="CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" baseScore="7.8" impactScore="5.9" exploitabilityScore="1.8">
+                                      <cve cve="CVE-2021-26807"/>
+                                    </subtree>
+                                  </subTreeElements>
+                                </subtree>
+                              </subTree>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Attacker takes over the trajectory client node" cost="6.0" lambda="1.2E-4" cvss="CVSS:3.1/C:=H/I:=H/A:~L">
+                          <linkedDataflowElement href="ResultCopyFT.xmi#/2/@elements.10"/>
+                        </subtree>
+                      </subTreeElements>
+                    </subtree>
+                  </subTree>
+                </subtree>
+              </subTreeElements>
+            </subtree>
+          </subTree>
+        </subtree>
+      </subTreeElements>
+      <subTreeElements>
+        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Drone unable to fly">
+          <subTree>
+            <subtree xsi:type="attackFaultTree:AFTSubTree">
+              <gate name="OR"/>
+              <subTreeElements>
+                <subtree xsi:type="attackFaultTree:BasicFaultEvent" description="Damaged rotor" probability="0.7"/>
+              </subTreeElements>
+              <subTreeElements>
+                <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="No power supply">
+                  <subTree>
+                    <subtree xsi:type="attackFaultTree:AFTSubTree">
+                      <gate name="OR"/>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:BasicFaultEvent" description="Battery dead" probability="0.7"/>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Attacker manipulates battery status indicator Dataflow: BatteryStateChanged">
+                          <subTree>
+                            <subtree xsi:type="attackFaultTree:AFTIntermediateEvent" description="Channel is corrupted">
+                              <subTree>
+                                <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Sender is corrupted" cost="6.0" lambda="1.2E-4" cvss="CVSS:3.1/C:=H/I:=H/A:~L">
+                                  <linkedDataflowElement href="src/models/quadlab.dataflow#//@elements.28"/>
+                                </subtree>
+                              </subTree>
+                            </subtree>
+                          </subTree>
+                        </subtree>
+                      </subTreeElements>
+                      <subTreeElements>
+                        <subtree xsi:type="attackFaultTree:AFTAttackEvent" description="Attack switches off flight control" cost="6.0" lambda="1.2E-4" cvss="CVSS:3.1/C:=H/I:=H/A:~L">
+                          <linkedDataflowElement href="ResultCopyFT.xmi#/2/@elements.36"/>
+                        </subtree>
+                      </subTreeElements>
+                    </subtree>
+                  </subTree>
+                </subtree>
+              </subTreeElements>
+            </subtree>
+          </subTree>
+        </subtree>
+      </subTreeElements>
+    </tree>
+  </aftModel>
+</attackFaultTree:Model>

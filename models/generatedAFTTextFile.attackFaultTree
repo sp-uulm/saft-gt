@@ -1,0 +1,273 @@
+Hazard description = "Drone crashes into a person" 
+ { 
+	OR {
+	 IntermediateEvent description = "Trajectory out of control" {
+		 OR {
+		 BasicEvent description = "Miscalculation" probability = 0.2
+		, 
+		 BasicEvent description = "Errorenous messages" probability = 0.3
+		, 
+		 IntermediateEvent DisruptDroneControl  description = "The position control loop of the drone is disrupted" {
+			 OR {
+			 IntermediateEvent description = "The camera tracking does not work Dataflow: OpticalTracking" {
+				 IntermediateEvent description = "Channel is corrupted" {
+					 AttackEvent  description = "Sender is corrupted" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = bebop2 
+				}
+			}
+			, 
+			 IntermediateEvent description = "The camera data is not received Dataflow: CameraData" {
+				 IntermediateEvent description = "Channel is corrupted" {
+					 AttackEvent  description = "Sender is corrupted" cost = 0.9 lambda = 0.000012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = optitrack_prime_13W 
+				}
+			}
+			, 
+			 AND {
+			 AttackEvent  description = "The tracking cameras do not work" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = optitrack_prime_13 
+			, 
+			 AttackEvent  description = "The tracking cameras do not work" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = optitrack_prime_13W 
+			}
+			, 
+			 AttackEvent  description = "The tracking software does not work" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = optitrack_motive 
+			, 
+			 IntermediateEvent description = "VRPN data is not transmitted Dataflow: VRPNData" {
+				 IntermediateEvent description = "Channel is corrupted" {
+					 AttackEvent  description = "Sender is corrupted" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = optitrack_motive 
+				}
+			}
+			, 
+			 IntermediateEvent description = "The VRPN client node does not work Dataflow: vrpn_client_node" {
+				 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+					 OR {
+					 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+					   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+					}
+				}
+			}
+			, 
+			 AttackEvent  description = "The position controller does not work" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>=N/A:>=N dataflowElement = ROWLET_bebop_position_control 
+			, 
+			 IntermediateEvent description = "Quadcopter pose data is not transmitted Dataflow: vrpn_client_node" {
+				 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+					 OR {
+					 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+					   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+					}
+				}
+			}
+			, 
+			 AttackEvent  description = "The Bebop Driver does not work" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = bebop_driver_node 
+			, 
+			 IntermediateEvent description = "Commands are not sent to the drone Dataflow: DroneCommands" {
+				 IntermediateEvent description = "Channel is corrupted" {
+					 AttackEvent  description = "Sender is corrupted" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = bebop_driver_node 
+				}
+			}
+			, 
+			 AttackEvent  description = "The flight controller does not work" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N dataflowElement = bebop2 
+			}
+		}
+		, 
+		 IntermediateEvent description = "Messages get lost" {
+			 OR {
+			 BasicEvent description = "Poor connection" probability = 0.8
+			, 
+			 IntermediateEvent description = "Too many incoming messages" {
+				 OR {
+				 BasicEvent description = "Poor configuration of a node" probability = 0.8
+				, 
+				 IntermediateEvent description = "Attacker performs flooding-attack on trajectory request topic Deployment: ros_nodes" {
+					 IntermediateEvent description = "Platform is corrupted" {
+						 OR {
+						 AttackEvent  description = "Corrupt default_FARFETCH_transform_listener_impl_5585492d4320" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = default_FARFETCH_transform_listener_impl_5585492d4320 
+						, 
+						 AttackEvent  description = "Corrupt default_FARFETCH_bebop_position_control" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = default_FARFETCH_bebop_position_control 
+						, 
+						 AttackEvent  description = "Corrupt _ros2cli_daemon_0" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = _ros2cli_daemon_0 
+						, 
+						 AttackEvent  description = "Corrupt saft_saft_dataflow_generator" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = saft_saft_dataflow_generator 
+						, 
+						 AttackEvent  description = "Corrupt default_FARFETCH_transform_listener_impl_5627460fee20" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = default_FARFETCH_transform_listener_impl_5627460fee20 
+						, 
+						 IntermediateEvent description = "Corrupt simple_trajectory_server Dataflow: simple_trajectory_server" {
+							 OR {
+							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+								 OR {
+								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+								}
+							}
+							, 
+							 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+								 OR {
+								 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+								   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+								}
+							}
+							}
+						}
+						, 
+						 AttackEvent  description = "Corrupt _ros2cli_requester_std_srvs_Trigger" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = _ros2cli_requester_std_srvs_Trigger 
+						, 
+						 AttackEvent  description = "Corrupt transform_listener_impl_5597986f9180" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = transform_listener_impl_5597986f9180 
+						, 
+						 AttackEvent  description = "Corrupt transform_listener_impl_55c92f218678" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = transform_listener_impl_55c92f218678 
+						, 
+						 IntermediateEvent description = "Corrupt simple_trajectory_visualizer Dataflow: simple_trajectory_visualizer" {
+							 OR {
+							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+								 OR {
+								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+								}
+							}
+							, 
+							 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+								 OR {
+								 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+								   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+								}
+							}
+							}
+						}
+						, 
+						 AttackEvent  description = "Corrupt rviz2" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = rviz2 
+						, 
+						 AttackEvent  description = "Corrupt simple_obstacle_loader" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = simple_obstacle_loader 
+						, 
+						 AttackEvent  description = "Corrupt transform_listener_impl_560bce96be08" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = transform_listener_impl_560bce96be08 
+						, 
+						 AttackEvent  description = "Corrupt transform_listener_impl_55b3d55d2a00" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = transform_listener_impl_55b3d55d2a00 
+						, 
+						 AttackEvent  description = "Corrupt default_FARFETCH_transform_listener_impl_559bee05e1d0" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = default_FARFETCH_transform_listener_impl_559bee05e1d0 
+						, 
+						 AttackEvent  description = "Corrupt default_FARFETCH_simple_trajectory_client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = default_FARFETCH_simple_trajectory_client 
+						, 
+						 AttackEvent  description = "Corrupt rostopic" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = rostopic 
+						, 
+						 AttackEvent  description = "Corrupt bebop_guard_node" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = bebop_guard_node 
+						, 
+						 AttackEvent  description = "Corrupt bebop_switch_node" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = bebop_switch_node 
+						, 
+						 AttackEvent  description = "Corrupt joy_teleop" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = joy_teleop 
+						, 
+						 AttackEvent  description = "Corrupt default_FARFETCH_quad_script_node" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H deploymentElement = default_FARFETCH_quad_script_node 
+						, 
+						 AttackEvent  description = "Corrupt quad_state_node" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = quad_state_node 
+						, 
+						 AttackEvent  description = "Corrupt sim_photo_node" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = sim_photo_node 
+						, 
+						 AttackEvent  description = "Corrupt ROWLET_bebop_driver_node" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = ROWLET_bebop_driver_node 
+						, 
+						 AttackEvent  description = "Corrupt robot_state_publisher" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = robot_state_publisher 
+						, 
+						 AttackEvent  description = "Corrupt gesture_node" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = gesture_node 
+						, 
+						 AttackEvent  description = "Corrupt joy_node" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = joy_node 
+						, 
+						 IntermediateEvent description = "Corrupt vrpn_client_node Dataflow: vrpn_client_node" {
+							 OR {
+							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+								 OR {
+								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+								}
+							}
+							, 
+							 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+								 OR {
+								 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+								   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+								}
+							}
+							}
+						}
+						, 
+						 AttackEvent  description = "Corrupt optitrack_motive" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = optitrack_motive 
+						, 
+						 AttackEvent  description = "Corrupt optitrack_prime_13" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = optitrack_prime_13 
+						, 
+						 AttackEvent  description = "Corrupt optitrack_prime_13W" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = optitrack_prime_13W 
+						, 
+						 AttackEvent  description = "Corrupt bebop2" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = bebop2 
+						, 
+						 AttackEvent  description = "Corrupt Gamepad" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = Gamepad 
+						}
+					}
+				}
+				, 
+				 IntermediateEvent description = "Attacker performs flooding-attack on trajectory request topic Dataflow: trajectory_request" {
+					 IntermediateEvent description = "Channel is corrupted" {
+						 AttackEvent  description = "Sender is corrupted" cost = 0.8 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = trajectory_client 
+					}
+				}
+				, 
+				 IntermediateEvent description = "Attacker performs flooding-attack on trajectory assignment topic Dataflow: trajectory_assignment" {
+					 IntermediateEvent description = "Channel is corrupted" {
+						 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+							 OR {
+							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+								 OR {
+								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+								}
+							}
+							, 
+							 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+								 OR {
+								 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+								   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+								}
+							}
+							}
+						}
+					}
+				}
+				, 
+				 IntermediateEvent description = "Attacker performs flooding-attack on trajectory control target topic Dataflow: ROWLET_target" {
+					 IntermediateEvent description = "Channel is corrupted" {
+						 AttackEvent  description = "Sender is corrupted" cost = 0.8 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = trajectory_client 
+					}
+				}
+				}
+			}
+			}
+		}
+		, 
+		 IntermediateEvent TakeOverTrajectoryNode  description = "Attacker takes over a trajectory node" {
+			 OR {
+			 IntermediateEvent description = "Attacker takes over the trajectory server node Dataflow: simple_trajectory_server" {
+				 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+					 OR {
+					 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+					   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+					}
+				}
+			}
+			, 
+			 AttackEvent  description = "Attacker takes over the trajectory client node" cost = 6.0 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L dataflowElement = trajectory_client 
+			}
+		}
+		}
+	}
+	, 
+	 IntermediateEvent description = "Drone unable to fly" {
+		 OR {
+		 BasicEvent description = "Damaged rotor" probability = 0.7
+		, 
+		 IntermediateEvent description = "No power supply" {
+			 OR {
+			 BasicEvent description = "Battery dead" probability = 0.7
+			, 
+			 IntermediateEvent description = "Attacker manipulates battery status indicator Dataflow: BatteryStateChanged" {
+				 IntermediateEvent description = "Channel is corrupted" {
+					 AttackEvent  description = "Sender is corrupted" cost = 6.0 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L dataflowElement = bebop_driver_node 
+				}
+			}
+			, 
+			 AttackEvent  description = "Attack switches off flight control" cost = 6.0 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L dataflowElement = bebop2 
+			}
+		}
+		}
+	}
+	}
+}	

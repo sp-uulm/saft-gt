@@ -1,0 +1,62 @@
+[
+    {
+        "id": "cpe:2.3:a:cmake_project:cmake:3.16.3",
+        "synonyms": [
+            "cmake"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:debian:dpkg:1.19.7ubuntu3.2",
+        "synonyms": [
+            "dpkg"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:gentoo:glibc:2.31",
+        "synonyms": [
+            "libc6"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:gentoo:glibc:2.31",
+        "synonyms": [
+            "libc6"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:xmlsoft:libxml2:2.9.10",
+        "synonyms": [
+            "libxml2"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:debian:mime-support:3.64ubuntu1",
+        "synonyms": [
+            "mime-support"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:procps_project:procps:2:3.3.16",
+        "synonyms": [
+            "procps"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:eprosima:fast_dds:2.1.1",
+        "synonyms": [
+            "ros-foxy-fastrtps"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:starkvilleelectric:sed_account:4.7",
+        "synonyms": [
+            "sed"
+        ]
+    },
+    {
+        "id": "cpe:2.3:a:php:archive_tar:1.30",
+        "synonyms": [
+            "tar"
+        ]
+    }
+]

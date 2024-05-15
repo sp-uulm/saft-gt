@@ -1,0 +1,22 @@
+Hazard description = "violation of privacy" {
+	OR {
+		IntermediateEvent description = "Loss of control over drone"{
+			OR {
+				BasicEvent description = "Errorenous messages" probability = 0.7,
+				BasicEvent description = "Loss of control" probability = 0.7 
+				
+			}
+		},
+		SAND{
+
+			TakeOverTrajectoryNode,
+			IntermediateEvent description = "Leak of camera information"{ 
+				OR {
+					AttackEvent description = "Attacker reads messages from the tracking camera data stream" dataflowElement = CameraData cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:=H/A:~L,
+						GetDroneCameraData
+				}
+			}
+		}
+	}
+}
+

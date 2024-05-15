@@ -1,0 +1,4 @@
+#!/bin/bash
+source /ros2_ws/install/setup.sh
+ros2 service call /run_pipeline saft_msgs/RunPipeline "stages_to_run: 8192"
+

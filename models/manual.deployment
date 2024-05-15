@@ -1,0 +1,24 @@
+// Plattforms
+WinPC  = {Motive_1, Windows}
+
+Motive_1:Platform = "Motive 1.9.0 64bit"
+Windows:Platform = "Windows 10 21H2, Build: 19044.1766"
+
+WinPC executes {optitrack_motive} 
+
+RefComponent optitrack_motive = "Tracking software"
+ 
+
+rosbox = {ROS_foxy, ROS_noetic, Ubuntu_20:OS, Linux, Gnome, Nvidia, Xorg} 
+rosbox (reachable="ssh", hostname="134.60.46.22", sshUser="ros", sshPort="8844") executes {apache2, ros_nodes}
+Ubuntu_20 = "Ubuntu 20.04.4 64bit"
+Linux = "Linux 5.13.0-51"
+Gnome = "Gnome 3.36.8"
+Nvidia = "Nvidia 510.73.05"
+Xorg = "X.org 1.20.13"
+
+ros_nodes:Platform = 
+{default_FARFETCH_transform_listener_impl_5585492d4320, default_FARFETCH_bebop_position_control, _ros2cli_daemon_0, saft_saft_dataflow_generator, default_FARFETCH_transform_listener_impl_5627460fee20, simple_trajectory_server, _ros2cli_requester_std_srvs_Trigger, transform_listener_impl_5597986f9180, transform_listener_impl_55c92f218678, simple_trajectory_visualizer, rviz2, simple_obstacle_loader, transform_listener_impl_560bce96be08, transform_listener_impl_55b3d55d2a00, default_FARFETCH_transform_listener_impl_559bee05e1d0, default_FARFETCH_simple_trajectory_client, rostopic, bebop_guard_node, bebop_switch_node, joy_teleop, default_FARFETCH_quad_script_node, quad_state_node, sim_photo_node, ROWLET_bebop_driver_node, robot_state_publisher, gesture_node, joy_node, vrpn_client_node, optitrack_motive, optitrack_prime_13, optitrack_prime_13W, bebop2, Gamepad}
+
+
+

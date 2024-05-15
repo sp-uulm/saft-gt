@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_eMTD4JWKEe2A7LLFW__1pA">
+  <imports href="http://www.ulm.uni/safesec/deployment/Deployment#/"/>
+  <imports href="http://www.ulm.uni/safesec/dataflow/Dataflow#/"/>
+  <imports href="http://www.ulm.uni/safesec/AttackFaultTree#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_84CM4JWUEe2A7LLFW__1pA" name="attachComponentsDeployment">
+    <parameters xmi:id="_PfYigJWVEe2A7LLFW__1pA" name="element" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_StXhcJWVEe2A7LLFW__1pA" name="description" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_WLaVoJWVEe2A7LLFW__1pA" name="cvss" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_J6ldMJWVEe2A7LLFW__1pA" name="aftSubTreeOrReference" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+    </parameters>
+    <parameters xmi:id="_ZwipQJWVEe2A7LLFW__1pA" name="newaftAttackEvent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+    </parameters>
+    <lhs xmi:id="_84ZZQJWUEe2A7LLFW__1pA" name="Lhs">
+      <nodes xmi:id="_-dy0UJWVEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+        <attributes xmi:id="__Z0XsJWVEe2A7LLFW__1pA" value="element">
+          <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_84aAUJWUEe2A7LLFW__1pA" name="Rhs">
+      <nodes xmi:id="_roY0kJWVEe2A7LLFW__1pA" name="aftSubTreeOrReference" outgoing="_CHsTMJWWEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_vpJUQJWVEe2A7LLFW__1pA" name="newaftAttackEvent" incoming="_CHsTMJWWEe2A7LLFW__1pA" outgoing="_CalaAJWWEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+        <attributes xmi:id="_xEXVEJWVEe2A7LLFW__1pA" value="description">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/description"/>
+        </attributes>
+        <attributes xmi:id="_z0kfIBTGEe61O6NGg1422Q" value="cvss">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/cvss"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_-d3FwJWVEe2A7LLFW__1pA" incoming="_CalaAJWWEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+        <attributes xmi:id="__Z0XsZWVEe2A7LLFW__1pA" value="element">
+          <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_CHsTMJWWEe2A7LLFW__1pA" source="_roY0kJWVEe2A7LLFW__1pA" target="_vpJUQJWVEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_CalaAJWWEe2A7LLFW__1pA" source="_vpJUQJWVEe2A7LLFW__1pA" target="_-d3FwJWVEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/linkedDeploymentElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_-d3FwZWVEe2A7LLFW__1pA" origin="_-dy0UJWVEe2A7LLFW__1pA" image="_-d3FwJWVEe2A7LLFW__1pA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_duXUQJWWEe2A7LLFW__1pA" name="alternativeAttachComponent">
+    <parameters xmi:id="_jUHb0JWWEe2A7LLFW__1pA" name="aftSubTree" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+    </parameters>
+    <parameters xmi:id="_nV9goJWWEe2A7LLFW__1pA" name="orAFTSubTree" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+    </parameters>
+    <lhs xmi:id="_ducz0JWWEe2A7LLFW__1pA" name="Lhs">
+      <nodes xmi:id="_1wrdwJWWEe2A7LLFW__1pA" name="aftSubTree">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_ducz0ZWWEe2A7LLFW__1pA" name="Rhs">
+      <nodes xmi:id="_1wuhEJWWEe2A7LLFW__1pA" name="aftSubTree" outgoing="_AYM2EJWXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+      </nodes>
+      <nodes xmi:id="_4kMuQJWWEe2A7LLFW__1pA" incoming="_AYM2EJWXEe2A7LLFW__1pA" outgoing="_A8f18JWXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_6fJYAJWWEe2A7LLFW__1pA" name="orAFTSubTree" incoming="_A8f18JWXEe2A7LLFW__1pA" outgoing="_BRrbwJWXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+      </nodes>
+      <nodes xmi:id="_8q-WYJWWEe2A7LLFW__1pA" incoming="_BRrbwJWXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate"/>
+        <attributes xmi:id="_9l8J0JWWEe2A7LLFW__1pA" value="&quot;OR&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_AYM2EJWXEe2A7LLFW__1pA" source="_1wuhEJWWEe2A7LLFW__1pA" target="_4kMuQJWWEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree/subTreeElements"/>
+      </edges>
+      <edges xmi:id="_A8f18JWXEe2A7LLFW__1pA" source="_4kMuQJWWEe2A7LLFW__1pA" target="_6fJYAJWWEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_BRrbwJWXEe2A7LLFW__1pA" source="_6fJYAJWWEe2A7LLFW__1pA" target="_8q-WYJWWEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree/gate"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_1wuhEZWWEe2A7LLFW__1pA" origin="_1wrdwJWWEe2A7LLFW__1pA" image="_1wuhEJWWEe2A7LLFW__1pA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_2BJQ4JaBEe2878XtIpL05g" name="attachComponentsDataflow">
+    <parameters xmi:id="_2BJQ4ZaBEe2878XtIpL05g" name="element" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_2BJQ4paBEe2878XtIpL05g" name="description" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_2BJQ45aBEe2878XtIpL05g" name="cvss" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_2BJQ5JaBEe2878XtIpL05g" name="aftSubTreeOrReference" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+    </parameters>
+    <parameters xmi:id="_2BJQ5ZaBEe2878XtIpL05g" name="newaftAttackEvent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+    </parameters>
+    <lhs xmi:id="_2BJQ5paBEe2878XtIpL05g" name="Lhs">
+      <nodes xmi:id="_QcnqIJaCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement"/>
+        <attributes xmi:id="_RJy5MJaCEe2878XtIpL05g" value="element">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_2BJQ6ZaBEe2878XtIpL05g" name="Rhs">
+      <nodes xmi:id="_2BJQ6paBEe2878XtIpL05g" name="aftSubTreeOrReference" outgoing="_2BJQ8JaBEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_2BJQ65aBEe2878XtIpL05g" name="newaftAttackEvent" incoming="_2BJQ8JaBEe2878XtIpL05g" outgoing="_U5cawJaCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+        <attributes xmi:id="_2BJQ7JaBEe2878XtIpL05g" value="description">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/description"/>
+        </attributes>
+        <attributes xmi:id="_AKghEBTHEe61O6NGg1422Q" value="cvss">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/cvss"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Qc0ecJaCEe2878XtIpL05g" incoming="_U5cawJaCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement"/>
+        <attributes xmi:id="_RJy5MZaCEe2878XtIpL05g" value="element">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_2BJQ8JaBEe2878XtIpL05g" source="_2BJQ6paBEe2878XtIpL05g" target="_2BJQ65aBEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_U5cawJaCEe2878XtIpL05g" source="_2BJQ65aBEe2878XtIpL05g" target="_Qc0ecJaCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/linkedDataflowElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Qc0ecZaCEe2878XtIpL05g" origin="_QcnqIJaCEe2878XtIpL05g" image="_Qc0ecJaCEe2878XtIpL05g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Qa1JAJgEEe2878XtIpL05g" name="replaceAttackEventWithIntermediateEvent">
+    <parameters xmi:id="_UP9AcJgEEe2878XtIpL05g" name="aftAttackEvent" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+    </parameters>
+    <parameters xmi:id="_YLN8IJgEEe2878XtIpL05g" name="aftSubTreeOrReference" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+    </parameters>
+    <parameters xmi:id="_Vd_mAK6vEe29I5OtIJqbBQ" name="traceInfo" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_QboaQJgEEe2878XtIpL05g" name="Lhs">
+      <nodes xmi:id="_sJuR8JgEEe2878XtIpL05g" name="aftAttackEvent" incoming="_zHn4MJgEEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+      </nodes>
+      <nodes xmi:id="_xucewJgEEe2878XtIpL05g" name="aftSubTreeOrReference" outgoing="_zHn4MJgEEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <edges xmi:id="_zHn4MJgEEe2878XtIpL05g" source="_xucewJgEEe2878XtIpL05g" target="_sJuR8JgEEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_QboaQZgEEe2878XtIpL05g" name="Rhs">
+      <nodes xmi:id="_xufiEJgEEe2878XtIpL05g" name="aftSubTreeOrReference" outgoing="_7cXQIK6uEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_3W52oK6uEe29I5OtIJqbBQ" incoming="_7cXQIK6uEe29I5OtIJqbBQ" outgoing="_740ioK6uEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent"/>
+        <attributes xmi:id="_4TNt4K6uEe29I5OtIJqbBQ" value="traceInfo">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/description"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_6x3hoK6uEe29I5OtIJqbBQ" incoming="_740ioK6uEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <edges xmi:id="_7cXQIK6uEe29I5OtIJqbBQ" source="_xufiEJgEEe2878XtIpL05g" target="_3W52oK6uEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_740ioK6uEe29I5OtIJqbBQ" source="_3W52oK6uEe29I5OtIJqbBQ" target="_6x3hoK6uEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/subTree"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_xufiEZgEEe2878XtIpL05g" origin="_xucewJgEEe2878XtIpL05g" image="_xufiEJgEEe2878XtIpL05g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_jC8eMJgFEe2878XtIpL05g" name="replaceAttackEventWithORGate">
+    <parameters xmi:id="_nsbKwJgFEe2878XtIpL05g" name="aftAttackEvent" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+    </parameters>
+    <parameters xmi:id="_oLj90JgFEe2878XtIpL05g" name="aftSubTreeOrReference" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+    </parameters>
+    <parameters xmi:id="_oyok4JgFEe2878XtIpL05g" name="aftSubTree" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+    </parameters>
+    <parameters xmi:id="_xEocwK6tEe29I5OtIJqbBQ" name="traceInfo" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_jDIEYJgFEe2878XtIpL05g" name="Lhs">
+      <nodes xmi:id="_5ZwvMJgFEe2878XtIpL05g" name="aftSubTreeOrReference" outgoing="_Fnq2gJgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_80QgIJgFEe2878XtIpL05g" name="aftAttackEvent" incoming="_Fnq2gJgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+      </nodes>
+      <edges xmi:id="_Fnq2gJgGEe2878XtIpL05g" source="_5ZwvMJgFEe2878XtIpL05g" target="_80QgIJgFEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_jDIrcJgFEe2878XtIpL05g" name="Rhs">
+      <nodes xmi:id="_5ZwvMZgFEe2878XtIpL05g" name="aftSubTreeOrReference" outgoing="_gAm7EK6tEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_BwyrkJgGEe2878XtIpL05g" name="aftSubTree" incoming="_mwCngK6tEe29I5OtIJqbBQ" outgoing="_GYcMIJgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+      </nodes>
+      <nodes xmi:id="_DIk94JgGEe2878XtIpL05g" incoming="_GYcMIJgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate"/>
+        <attributes xmi:id="_DvGyYJgGEe2878XtIpL05g" value="&quot;OR&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_eoM9sK6tEe29I5OtIJqbBQ" incoming="_gAm7EK6tEe29I5OtIJqbBQ" outgoing="_mISrAK6tEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent"/>
+        <attributes xmi:id="_ro9eQK6tEe29I5OtIJqbBQ" value="traceInfo">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/description"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_lieBIK6tEe29I5OtIJqbBQ" incoming="_mISrAK6tEe29I5OtIJqbBQ" outgoing="_mwCngK6tEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <edges xmi:id="_GYcMIJgGEe2878XtIpL05g" source="_BwyrkJgGEe2878XtIpL05g" target="_DIk94JgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree/gate"/>
+      </edges>
+      <edges xmi:id="_gAm7EK6tEe29I5OtIJqbBQ" source="_5ZwvMZgFEe2878XtIpL05g" target="_eoM9sK6tEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_mISrAK6tEe29I5OtIJqbBQ" source="_eoM9sK6tEe29I5OtIJqbBQ" target="_lieBIK6tEe29I5OtIJqbBQ">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/subTree"/>
+      </edges>
+      <edges xmi:id="_mwCngK6tEe29I5OtIJqbBQ" source="_lieBIK6tEe29I5OtIJqbBQ" target="_BwyrkJgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_5ZwvMpgFEe2878XtIpL05g" origin="_5ZwvMJgFEe2878XtIpL05g" image="_5ZwvMZgFEe2878XtIpL05g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_UOVk8JgGEe2878XtIpL05g" name="addSubTreeOrReference">
+    <parameters xmi:id="_XCUIcJgGEe2878XtIpL05g" name="aftSubTree" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+    </parameters>
+    <parameters xmi:id="_aLpQ4JgGEe2878XtIpL05g" name="newSubTreeOrReference" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+    </parameters>
+    <lhs xmi:id="_UOhLIJgGEe2878XtIpL05g" name="Lhs">
+      <nodes xmi:id="_kFE0IJgGEe2878XtIpL05g" name="aftSubTree">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_UOhLIZgGEe2878XtIpL05g" name="Rhs">
+      <nodes xmi:id="_kFGCQJgGEe2878XtIpL05g" name="aftSubTree" outgoing="_n2iTkJgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+      </nodes>
+      <nodes xmi:id="_mtuRYJgGEe2878XtIpL05g" name="newSubTreeOrReference" incoming="_n2iTkJgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <edges xmi:id="_n2iTkJgGEe2878XtIpL05g" source="_kFGCQJgGEe2878XtIpL05g" target="_mtuRYJgGEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree/subTreeElements"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_kFGpUJgGEe2878XtIpL05g" origin="_kFE0IJgGEe2878XtIpL05g" image="_kFGCQJgGEe2878XtIpL05g"/>
+  </units>
+</henshin:Module>

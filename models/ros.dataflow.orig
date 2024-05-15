@@ -1,0 +1,2279 @@
+component ROWLET_transform_listener_impl_55ef56dca3e0 {
+    property ros_name = "transform_listener_impl_55ef56dca3e0";
+    property full_ros_name = "/ROWLET/transform_listener_impl_55ef56dca3e0";
+}
+
+component ROWLET_quad_script_node {
+    property ros_name = "quad_script_node";
+    property full_ros_name = "/ROWLET/quad_script_node";
+}
+
+component ROWLET_quad_state_node {
+    property ros_name = "quad_state_node";
+    property full_ros_name = "/ROWLET/quad_state_node";
+    property lifecycle_state = "active";
+}
+
+component ROWLET_bebop_switch_node {
+    property ros_name = "bebop_switch_node";
+    property full_ros_name = "/ROWLET/bebop_switch_node";
+}
+
+component ROWLET_transform_listener_impl_5625a079d6f0 {
+    property ros_name = "transform_listener_impl_5625a079d6f0";
+    property full_ros_name = "/ROWLET/transform_listener_impl_5625a079d6f0";
+}
+
+component ROWLET_bebop_position_control {
+    property ros_name = "bebop_position_control";
+    property full_ros_name = "/ROWLET/bebop_position_control";
+}
+
+component _ros2cli_requester_std_srvs_Trigger {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger";
+    property full_ros_name = "/_ros2cli_requester_std_srvs_Trigger";
+}
+
+component transform_listener_impl_55e377922250 {
+    property ros_name = "transform_listener_impl_55e377922250";
+    property full_ros_name = "/transform_listener_impl_55e377922250";
+}
+
+component ROWLET_joy_teleop {
+    property ros_name = "joy_teleop";
+    property full_ros_name = "/ROWLET/joy_teleop";
+}
+
+component transform_listener_impl_558c64acec30 {
+    property ros_name = "transform_listener_impl_558c64acec30";
+    property full_ros_name = "/transform_listener_impl_558c64acec30";
+}
+
+component trajectory_client {
+    property ros_name = "trajectory_client";
+    property full_ros_name = "/trajectory_client";
+}
+
+component _ros2cli_daemon_0 {
+    property ros_name = "_ros2cli_daemon_0";
+    property full_ros_name = "/_ros2cli_daemon_0";
+}
+
+component vrpn_client_node {
+    property ros_name = "vrpn_client_node";
+    property full_ros_name = "/vrpn_client_node";
+}
+
+component saft_saft_dataflow_generator {
+    property ros_name = "saft_dataflow_generator";
+    property full_ros_name = "/saft/saft_dataflow_generator";
+}
+
+component simple_trajectory_server {
+    property ros_name = "simple_trajectory_server";
+    property full_ros_name = "/simple_trajectory_server";
+}
+
+component transform_listener_impl_5620e574d150 {
+    property ros_name = "transform_listener_impl_5620e574d150";
+    property full_ros_name = "/transform_listener_impl_5620e574d150";
+}
+
+component ROWLET_bebop_driver_node {
+    property ros_name = "bebop_driver_node";
+    property full_ros_name = "/ROWLET/bebop_driver_node";
+}
+
+component transform_listener_impl_565005919d58 {
+    property ros_name = "transform_listener_impl_565005919d58";
+    property full_ros_name = "/transform_listener_impl_565005919d58";
+}
+
+component simple_trajectory_visualizer {
+    property ros_name = "simple_trajectory_visualizer";
+    property full_ros_name = "/simple_trajectory_visualizer";
+}
+
+component rviz2 {
+    property ros_name = "rviz2";
+    property full_ros_name = "/rviz2";
+}
+
+component optitrack_joy_node {
+    property ros_name = "joy_node";
+    property full_ros_name = "/optitrack/joy_node";
+}
+
+channel trajectory_visualization_array {
+    property ros_name = "trajectory_visualization_array";
+    property full_ros_name = "/trajectory_visualization_array";
+    property ros_type = "visualization_msgs/msg/MarkerArray";
+    property ros_channel_type = "topic";
+}
+
+channel trajectory_visualization {
+    property ros_name = "trajectory_visualization";
+    property full_ros_name = "/trajectory_visualization";
+    property ros_type = "visualization_msgs/msg/Marker";
+    property ros_channel_type = "topic";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_list_parameters_response {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_list_parameters_response";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel rviz2_set_parameters_atomically_request {
+    property ros_name = "rviz2_set_parameters_atomically_request";
+    property full_ros_name = "rviz2_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_describe_parameters_response {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_describe_parameters_response";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel trajectory_client_set_parameters_atomically_request {
+    property ros_name = "trajectory_client_set_parameters_atomically_request";
+    property full_ros_name = "trajectory_client_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel trajectory_client_set_parameters_response {
+    property ros_name = "trajectory_client_set_parameters_response";
+    property full_ros_name = "trajectory_client_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel trajectory_client_list_parameters_response {
+    property ros_name = "trajectory_client_list_parameters_response";
+    property full_ros_name = "trajectory_client_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel saft_saft_dataflow_generator_list_parameters_response {
+    property ros_name = "saft_saft_dataflow_generator_list_parameters_response";
+    property full_ros_name = "saft_saft_dataflow_generator_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel trajectory_client_list_parameters_request {
+    property ros_name = "trajectory_client_list_parameters_request";
+    property full_ros_name = "trajectory_client_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel trajectory_client_get_parameters_response {
+    property ros_name = "trajectory_client_get_parameters_response";
+    property full_ros_name = "trajectory_client_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel saft_get_dataflow_response {
+    property ros_name = "saft_get_dataflow_response";
+    property full_ros_name = "saft_get_dataflow_response";
+    property ros_type = "std_srvs/srv/Trigger";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_position_control_list_parameters_request {
+    property ros_name = "ROWLET_bebop_position_control_list_parameters_request";
+    property full_ros_name = "ROWLET_bebop_position_control_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel trajectory_client_get_parameter_types_request {
+    property ros_name = "trajectory_client_get_parameter_types_request";
+    property full_ros_name = "trajectory_client_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_action_pose__action_send_goal_response {
+    property ros_name = "ROWLET_action_pose__action_send_goal_response";
+    property full_ros_name = "ROWLET_action_pose__action_send_goal_response";
+    property ros_type = "nav2_msgs/action/NavigateToPose_SendGoal";
+    property ros_channel_type = "service_response";
+}
+
+channel trajectory_client_describe_parameters_request {
+    property ros_name = "trajectory_client_describe_parameters_request";
+    property full_ros_name = "trajectory_client_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_action_pose__action_get_result_response {
+    property ros_name = "ROWLET_action_pose__action_get_result_response";
+    property full_ros_name = "ROWLET_action_pose__action_get_result_response";
+    property ros_type = "nav2_msgs/action/NavigateToPose_GetResult";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_action_pose__action_send_goal_request {
+    property ros_name = "ROWLET_action_pose__action_send_goal_request";
+    property full_ros_name = "ROWLET_action_pose__action_send_goal_request";
+    property ros_type = "nav2_msgs/action/NavigateToPose_SendGoal";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_land {
+    property ros_name = "land";
+    property full_ros_name = "/ROWLET/land";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel optitrack_joy_node_get_parameters_response {
+    property ros_name = "optitrack_joy_node_get_parameters_response";
+    property full_ros_name = "optitrack_joy_node_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_get_transition_graph_request {
+    property ros_name = "ROWLET_quad_state_node_get_transition_graph_request";
+    property full_ros_name = "ROWLET_quad_state_node_get_transition_graph_request";
+    property ros_type = "lifecycle_msgs/srv/GetAvailableTransitions";
+    property ros_channel_type = "service_request";
+}
+
+channel optitrack_joy_node_list_parameters_response {
+    property ros_name = "optitrack_joy_node_list_parameters_response";
+    property full_ros_name = "optitrack_joy_node_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_joy_teleop_describe_parameters_response {
+    property ros_name = "ROWLET_joy_teleop_describe_parameters_response";
+    property full_ros_name = "ROWLET_joy_teleop_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel optitrack_joy_node_get_parameter_types_request {
+    property ros_name = "optitrack_joy_node_get_parameter_types_request";
+    property full_ros_name = "optitrack_joy_node_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_visualizer_describe_parameters_request {
+    property ros_name = "simple_trajectory_visualizer_describe_parameters_request";
+    property full_ros_name = "simple_trajectory_visualizer_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_position_control_get_parameters_request {
+    property ros_name = "ROWLET_bebop_position_control_get_parameters_request";
+    property full_ros_name = "ROWLET_bebop_position_control_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_action_pose__action_feedback {
+    property ros_name = "feedback";
+    property full_ros_name = "/ROWLET/action/pose/_action/feedback";
+    property ros_type = "nav2_msgs/action/NavigateToPose_FeedbackMessage";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_autoflight_stop {
+    property ros_name = "stop";
+    property full_ros_name = "/ROWLET/autoflight/stop";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel vrpn_client_node_set_parameters_request {
+    property ros_name = "vrpn_client_node_set_parameters_request";
+    property full_ros_name = "vrpn_client_node_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel optitrack_joy_node_set_parameters_request {
+    property ros_name = "optitrack_joy_node_set_parameters_request";
+    property full_ros_name = "optitrack_joy_node_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_position_control_get_parameter_types_request {
+    property ros_name = "ROWLET_bebop_position_control_get_parameter_types_request";
+    property full_ros_name = "ROWLET_bebop_position_control_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel vrpn_client_node_get_parameters_response {
+    property ros_name = "vrpn_client_node_get_parameters_response";
+    property full_ros_name = "vrpn_client_node_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_script_node_get_parameters_request {
+    property ros_name = "ROWLET_quad_script_node_get_parameters_request";
+    property full_ros_name = "ROWLET_quad_script_node_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_fix {
+    property ros_name = "fix";
+    property full_ros_name = "/ROWLET/fix";
+    property ros_type = "sensor_msgs/msg/NavSatFix";
+    property ros_channel_type = "topic";
+}
+
+channel parameter_events {
+    property ros_name = "parameter_events";
+    property full_ros_name = "/parameter_events";
+    property ros_type = "rcl_interfaces/msg/ParameterEvent";
+    property ros_channel_type = "topic";
+}
+
+channel vrpn_client_node_get_parameters_request {
+    property ros_name = "vrpn_client_node_get_parameters_request";
+    property full_ros_name = "vrpn_client_node_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel vrpn_client_node_describe_parameters_request {
+    property ros_name = "vrpn_client_node_describe_parameters_request";
+    property full_ros_name = "vrpn_client_node_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel rviz2_set_parameters_atomically_response {
+    property ros_name = "rviz2_set_parameters_atomically_response";
+    property full_ros_name = "rviz2_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_joy_teleop_describe_parameters_request {
+    property ros_name = "ROWLET_joy_teleop_describe_parameters_request";
+    property full_ros_name = "ROWLET_joy_teleop_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel rviz2_set_parameters_response {
+    property ros_name = "rviz2_set_parameters_response";
+    property full_ros_name = "rviz2_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel server_pathfinding_output {
+    property ros_name = "server_pathfinding_output";
+    property full_ros_name = "/server_pathfinding_output";
+    property ros_type = "sp_trajectory_msgs/msg/SeTrajectoryAssignment";
+    property ros_channel_type = "topic";
+}
+
+channel rviz2_list_parameters_response {
+    property ros_name = "rviz2_list_parameters_response";
+    property full_ros_name = "rviz2_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_switch_node_set_parameters_response {
+    property ros_name = "ROWLET_bebop_switch_node_set_parameters_response";
+    property full_ros_name = "ROWLET_bebop_switch_node_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_driver_node_get_parameters_request {
+    property ros_name = "ROWLET_bebop_driver_node_get_parameters_request";
+    property full_ros_name = "ROWLET_bebop_driver_node_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel rviz2_get_parameters_request {
+    property ros_name = "rviz2_get_parameters_request";
+    property full_ros_name = "rviz2_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_switch_node_get_parameters_request {
+    property ros_name = "ROWLET_bebop_switch_node_get_parameters_request";
+    property full_ros_name = "ROWLET_bebop_switch_node_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel tf {
+    property ros_name = "tf";
+    property full_ros_name = "/tf";
+    property ros_type = "tf2_msgs/msg/TFMessage";
+    property ros_channel_type = "topic";
+}
+
+channel rviz2_describe_parameters_request {
+    property ros_name = "rviz2_describe_parameters_request";
+    property full_ros_name = "rviz2_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_get_parameter_types_request {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_get_parameter_types_request";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel vrpn_client_node_describe_parameters_response {
+    property ros_name = "vrpn_client_node_describe_parameters_response";
+    property full_ros_name = "vrpn_client_node_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel simple_trajectory_visualizer_set_parameters_request {
+    property ros_name = "simple_trajectory_visualizer_set_parameters_request";
+    property full_ros_name = "simple_trajectory_visualizer_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_channel_select {
+    property ros_name = "channel_select";
+    property full_ros_name = "/ROWLET/channel_select";
+    property ros_type = "std_msgs/msg/Int32";
+    property ros_channel_type = "topic";
+}
+
+channel simple_trajectory_visualizer_list_parameters_response {
+    property ros_name = "simple_trajectory_visualizer_list_parameters_response";
+    property full_ros_name = "simple_trajectory_visualizer_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_describe_parameters_request {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_describe_parameters_request";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel optitrack_joy_node_set_parameters_response {
+    property ros_name = "optitrack_joy_node_set_parameters_response";
+    property full_ros_name = "optitrack_joy_node_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel vrpn_client_node_list_parameters_request {
+    property ros_name = "vrpn_client_node_list_parameters_request";
+    property full_ros_name = "vrpn_client_node_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_transition_event {
+    property ros_name = "transition_event";
+    property full_ros_name = "/ROWLET/quad_state_node/transition_event";
+    property ros_type = "lifecycle_msgs/msg/TransitionEvent";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_bebop_driver_node_list_parameters_request {
+    property ros_name = "ROWLET_bebop_driver_node_list_parameters_request";
+    property full_ros_name = "ROWLET_bebop_driver_node_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_position_control_get_parameter_types_response {
+    property ros_name = "ROWLET_bebop_position_control_get_parameter_types_response";
+    property full_ros_name = "ROWLET_bebop_position_control_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel simple_trajectory_visualizer_set_parameters_response {
+    property ros_name = "simple_trajectory_visualizer_set_parameters_response";
+    property full_ros_name = "simple_trajectory_visualizer_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_set_camera_info_request {
+    property ros_name = "ROWLET_set_camera_info_request";
+    property full_ros_name = "ROWLET_set_camera_info_request";
+    property ros_type = "sensor_msgs/srv/SetCameraInfo";
+    property ros_channel_type = "service_request";
+}
+
+channel vrpn_client_node_get_parameter_types_response {
+    property ros_name = "vrpn_client_node_get_parameter_types_response";
+    property full_ros_name = "vrpn_client_node_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_joy_teleop_set_parameters_request {
+    property ros_name = "ROWLET_joy_teleop_set_parameters_request";
+    property full_ros_name = "ROWLET_joy_teleop_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel saft_saft_dataflow_generator_get_parameter_types_response {
+    property ros_name = "saft_saft_dataflow_generator_get_parameter_types_response";
+    property full_ros_name = "saft_saft_dataflow_generator_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel simple_trajectory_server_get_parameter_types_response {
+    property ros_name = "simple_trajectory_server_get_parameter_types_response";
+    property full_ros_name = "simple_trajectory_server_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel rviz2_get_parameters_response {
+    property ros_name = "rviz2_get_parameters_response";
+    property full_ros_name = "rviz2_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_driver_node_set_parameters_response {
+    property ros_name = "ROWLET_bebop_driver_node_set_parameters_response";
+    property full_ros_name = "ROWLET_bebop_driver_node_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_get_parameter_types_response {
+    property ros_name = "ROWLET_quad_state_node_get_parameter_types_response";
+    property full_ros_name = "ROWLET_quad_state_node_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_set_camera_info_response {
+    property ros_name = "ROWLET_set_camera_info_response";
+    property full_ros_name = "ROWLET_set_camera_info_response";
+    property ros_type = "sensor_msgs/srv/SetCameraInfo";
+    property ros_channel_type = "service_response";
+}
+
+channel vrpn_client_node_set_parameters_atomically_response {
+    property ros_name = "vrpn_client_node_set_parameters_atomically_response";
+    property full_ros_name = "vrpn_client_node_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel simple_trajectory_server_get_parameter_types_request {
+    property ros_name = "simple_trajectory_server_get_parameter_types_request";
+    property full_ros_name = "simple_trajectory_server_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_autoflight_pause {
+    property ros_name = "pause";
+    property full_ros_name = "/ROWLET/autoflight/pause";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel trajectory_client_set_parameters_request {
+    property ros_name = "trajectory_client_set_parameters_request";
+    property full_ros_name = "trajectory_client_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel saft_saft_dataflow_generator_set_parameters_atomically_request {
+    property ros_name = "saft_saft_dataflow_generator_set_parameters_atomically_request";
+    property full_ros_name = "saft_saft_dataflow_generator_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_get_parameters_request {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_get_parameters_request";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel optitrack_joy_node_set_parameters_atomically_response {
+    property ros_name = "optitrack_joy_node_set_parameters_atomically_response";
+    property full_ros_name = "optitrack_joy_node_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_control_vel {
+    property ros_name = "control_vel";
+    property full_ros_name = "/ROWLET/control_vel";
+    property ros_type = "geometry_msgs/msg/Twist";
+    property ros_channel_type = "topic";
+}
+
+channel simple_trajectory_server_get_parameters_request {
+    property ros_name = "simple_trajectory_server_get_parameters_request";
+    property full_ros_name = "simple_trajectory_server_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_driver_node_describe_parameters_request {
+    property ros_name = "ROWLET_bebop_driver_node_describe_parameters_request";
+    property full_ros_name = "ROWLET_bebop_driver_node_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel saft_saft_dataflow_generator_set_parameters_atomically_response {
+    property ros_name = "saft_saft_dataflow_generator_set_parameters_atomically_response";
+    property full_ros_name = "saft_saft_dataflow_generator_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel simple_trajectory_visualizer_get_parameters_response {
+    property ros_name = "simple_trajectory_visualizer_get_parameters_response";
+    property full_ros_name = "simple_trajectory_visualizer_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_joy_teleop_get_parameters_request {
+    property ros_name = "ROWLET_joy_teleop_get_parameters_request";
+    property full_ros_name = "ROWLET_joy_teleop_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_action_mission__action_get_result_response {
+    property ros_name = "ROWLET_action_mission__action_get_result_response";
+    property full_ros_name = "ROWLET_action_mission__action_get_result_response";
+    property ros_type = "quad_script_msgs/action/Mission_GetResult";
+    property ros_channel_type = "service_response";
+}
+
+channel optitrack_joy_node_get_parameters_request {
+    property ros_name = "optitrack_joy_node_get_parameters_request";
+    property full_ros_name = "optitrack_joy_node_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_list_parameters_request {
+    property ros_name = "ROWLET_quad_state_node_list_parameters_request";
+    property full_ros_name = "ROWLET_quad_state_node_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_driver_node_set_parameters_atomically_request {
+    property ros_name = "ROWLET_bebop_driver_node_set_parameters_atomically_request";
+    property full_ros_name = "ROWLET_bebop_driver_node_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_driver_node_describe_parameters_response {
+    property ros_name = "ROWLET_bebop_driver_node_describe_parameters_response";
+    property full_ros_name = "ROWLET_bebop_driver_node_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel helmGelb_pose_cov {
+    property ros_name = "pose_cov";
+    property full_ros_name = "/helmGelb/pose_cov";
+    property ros_type = "geometry_msgs/msg/PoseWithCovarianceStamped";
+    property ros_channel_type = "topic";
+}
+
+channel simple_trajectory_server_set_parameters_request {
+    property ros_name = "simple_trajectory_server_set_parameters_request";
+    property full_ros_name = "simple_trajectory_server_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_joy_teleop_list_parameters_response {
+    property ros_name = "ROWLET_joy_teleop_list_parameters_response";
+    property full_ros_name = "ROWLET_joy_teleop_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_action_mission__action_status {
+    property ros_name = "status";
+    property full_ros_name = "/ROWLET/action/mission/_action/status";
+    property ros_type = "action_msgs/msg/GoalStatusArray";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_quad_script_node_set_parameters_atomically_response {
+    property ros_name = "ROWLET_quad_script_node_set_parameters_atomically_response";
+    property full_ros_name = "ROWLET_quad_script_node_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel vrpn_client_node_get_parameter_types_request {
+    property ros_name = "vrpn_client_node_get_parameter_types_request";
+    property full_ros_name = "vrpn_client_node_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_visualizer_get_parameter_types_response {
+    property ros_name = "simple_trajectory_visualizer_get_parameter_types_response";
+    property full_ros_name = "simple_trajectory_visualizer_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel saft_saft_dataflow_generator_describe_parameters_request {
+    property ros_name = "saft_saft_dataflow_generator_describe_parameters_request";
+    property full_ros_name = "saft_saft_dataflow_generator_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_joy_teleop_set_parameters_atomically_request {
+    property ros_name = "ROWLET_joy_teleop_set_parameters_atomically_request";
+    property full_ros_name = "ROWLET_joy_teleop_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_driver_node_list_parameters_response {
+    property ros_name = "ROWLET_bebop_driver_node_list_parameters_response";
+    property full_ros_name = "ROWLET_bebop_driver_node_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel optitrack_joy_node_list_parameters_request {
+    property ros_name = "optitrack_joy_node_list_parameters_request";
+    property full_ros_name = "optitrack_joy_node_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_set_parameters_request {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_set_parameters_request";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel saft_saft_dataflow_generator_describe_parameters_response {
+    property ros_name = "saft_saft_dataflow_generator_describe_parameters_response";
+    property full_ros_name = "saft_saft_dataflow_generator_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel optitrack_joy_node_describe_parameters_request {
+    property ros_name = "optitrack_joy_node_describe_parameters_request";
+    property full_ros_name = "optitrack_joy_node_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_driver_node_get_parameters_response {
+    property ros_name = "ROWLET_bebop_driver_node_get_parameters_response";
+    property full_ros_name = "ROWLET_bebop_driver_node_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel saft_saft_dataflow_generator_get_parameter_types_request {
+    property ros_name = "saft_saft_dataflow_generator_get_parameter_types_request";
+    property full_ros_name = "saft_saft_dataflow_generator_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_visualizer_describe_parameters_response {
+    property ros_name = "simple_trajectory_visualizer_describe_parameters_response";
+    property full_ros_name = "simple_trajectory_visualizer_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_position_control_set_parameters_atomically_response {
+    property ros_name = "ROWLET_bebop_position_control_set_parameters_atomically_response";
+    property full_ros_name = "ROWLET_bebop_position_control_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel vrpn_client_node_set_parameters_atomically_request {
+    property ros_name = "vrpn_client_node_set_parameters_atomically_request";
+    property full_ros_name = "vrpn_client_node_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel saft_saft_dataflow_generator_get_parameters_request {
+    property ros_name = "saft_saft_dataflow_generator_get_parameters_request";
+    property full_ros_name = "saft_saft_dataflow_generator_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel saft_saft_dataflow_generator_get_parameters_response {
+    property ros_name = "saft_saft_dataflow_generator_get_parameters_response";
+    property full_ros_name = "saft_saft_dataflow_generator_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_action_pose__action_cancel_goal_response {
+    property ros_name = "ROWLET_action_pose__action_cancel_goal_response";
+    property full_ros_name = "ROWLET_action_pose__action_cancel_goal_response";
+    property ros_type = "action_msgs/srv/CancelGoal";
+    property ros_channel_type = "service_response";
+}
+
+channel rviz2_describe_parameters_response {
+    property ros_name = "rviz2_describe_parameters_response";
+    property full_ros_name = "rviz2_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_list_parameters_request {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_list_parameters_request";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel saft_saft_dataflow_generator_list_parameters_request {
+    property ros_name = "saft_saft_dataflow_generator_list_parameters_request";
+    property full_ros_name = "saft_saft_dataflow_generator_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel rviz2_get_parameter_types_request {
+    property ros_name = "rviz2_get_parameter_types_request";
+    property full_ros_name = "rviz2_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel helmGelb_twist {
+    property ros_name = "twist";
+    property full_ros_name = "/helmGelb/twist";
+    property ros_type = "geometry_msgs/msg/TwistStamped";
+    property ros_channel_type = "topic";
+}
+
+channel saft_saft_dataflow_generator_set_parameters_response {
+    property ros_name = "saft_saft_dataflow_generator_set_parameters_response";
+    property full_ros_name = "saft_saft_dataflow_generator_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel simple_trajectory_server_set_parameters_atomically_response {
+    property ros_name = "simple_trajectory_server_set_parameters_atomically_response";
+    property full_ros_name = "simple_trajectory_server_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_snapshot {
+    property ros_name = "snapshot";
+    property full_ros_name = "/ROWLET/snapshot";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_bebop_switch_node_list_parameters_response {
+    property ros_name = "ROWLET_bebop_switch_node_list_parameters_response";
+    property full_ros_name = "ROWLET_bebop_switch_node_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_get_available_states_response {
+    property ros_name = "ROWLET_quad_state_node_get_available_states_response";
+    property full_ros_name = "ROWLET_quad_state_node_get_available_states_response";
+    property ros_type = "lifecycle_msgs/srv/GetAvailableStates";
+    property ros_channel_type = "service_response";
+}
+
+channel rviz2_set_parameters_request {
+    property ros_name = "rviz2_set_parameters_request";
+    property full_ros_name = "rviz2_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_action_pose__action_get_result_request {
+    property ros_name = "ROWLET_action_pose__action_get_result_request";
+    property full_ros_name = "ROWLET_action_pose__action_get_result_request";
+    property ros_type = "nav2_msgs/action/NavigateToPose_GetResult";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_visualizer_list_parameters_request {
+    property ros_name = "simple_trajectory_visualizer_list_parameters_request";
+    property full_ros_name = "simple_trajectory_visualizer_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_visualizer_set_parameters_atomically_response {
+    property ros_name = "simple_trajectory_visualizer_set_parameters_atomically_response";
+    property full_ros_name = "simple_trajectory_visualizer_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_image_raw {
+    property ros_name = "image_raw";
+    property full_ros_name = "/ROWLET/image_raw";
+    property ros_type = "sensor_msgs/msg/Image";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_joint_states {
+    property ros_name = "joint_states";
+    property full_ros_name = "/ROWLET/joint_states";
+    property ros_type = "sensor_msgs/msg/JointState";
+    property ros_channel_type = "topic";
+}
+
+channel simple_trajectory_server_describe_parameters_request {
+    property ros_name = "simple_trajectory_server_describe_parameters_request";
+    property full_ros_name = "simple_trajectory_server_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_print_error {
+    property ros_name = "print_error";
+    property full_ros_name = "/ROWLET/print_error";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel simple_trajectory_visualizer_set_parameters_atomically_request {
+    property ros_name = "simple_trajectory_visualizer_set_parameters_atomically_request";
+    property full_ros_name = "simple_trajectory_visualizer_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_action_pose__action_cancel_goal_request {
+    property ros_name = "ROWLET_action_pose__action_cancel_goal_request";
+    property full_ros_name = "ROWLET_action_pose__action_cancel_goal_request";
+    property ros_type = "action_msgs/srv/CancelGoal";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_server_describe_parameters_response {
+    property ros_name = "simple_trajectory_server_describe_parameters_response";
+    property full_ros_name = "simple_trajectory_server_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_switch_node_get_parameter_types_request {
+    property ros_name = "ROWLET_bebop_switch_node_get_parameter_types_request";
+    property full_ros_name = "ROWLET_bebop_switch_node_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_visualizer_get_parameters_request {
+    property ros_name = "simple_trajectory_visualizer_get_parameters_request";
+    property full_ros_name = "simple_trajectory_visualizer_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_server_set_parameters_atomically_request {
+    property ros_name = "simple_trajectory_server_set_parameters_atomically_request";
+    property full_ros_name = "simple_trajectory_server_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_joy_teleop_set_parameters_response {
+    property ros_name = "ROWLET_joy_teleop_set_parameters_response";
+    property full_ros_name = "ROWLET_joy_teleop_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel rosout {
+    property ros_name = "rosout";
+    property full_ros_name = "/rosout";
+    property ros_type = "rcl_interfaces/msg/Log";
+    property ros_channel_type = "topic";
+}
+
+channel simple_trajectory_server_get_parameters_response {
+    property ros_name = "simple_trajectory_server_get_parameters_response";
+    property full_ros_name = "simple_trajectory_server_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel trajectory_client_get_parameter_types_response {
+    property ros_name = "trajectory_client_get_parameter_types_response";
+    property full_ros_name = "trajectory_client_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel simple_trajectory_server_list_parameters_request {
+    property ros_name = "simple_trajectory_server_list_parameters_request";
+    property full_ros_name = "simple_trajectory_server_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_driver_node_set_parameters_request {
+    property ros_name = "ROWLET_bebop_driver_node_set_parameters_request";
+    property full_ros_name = "ROWLET_bebop_driver_node_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel simple_trajectory_server_set_parameters_response {
+    property ros_name = "simple_trajectory_server_set_parameters_response";
+    property full_ros_name = "simple_trajectory_server_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_joy_teleop_list_parameters_request {
+    property ros_name = "ROWLET_joy_teleop_list_parameters_request";
+    property full_ros_name = "ROWLET_joy_teleop_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel trajectory_client_set_parameters_atomically_response {
+    property ros_name = "trajectory_client_set_parameters_atomically_response";
+    property full_ros_name = "trajectory_client_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_joy_teleop_get_parameters_response {
+    property ros_name = "ROWLET_joy_teleop_get_parameters_response";
+    property full_ros_name = "ROWLET_joy_teleop_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_script_node_describe_parameters_response {
+    property ros_name = "ROWLET_quad_script_node_describe_parameters_response";
+    property full_ros_name = "ROWLET_quad_script_node_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel optitrack_joy_node_describe_parameters_response {
+    property ros_name = "optitrack_joy_node_describe_parameters_response";
+    property full_ros_name = "optitrack_joy_node_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel optitrack_joy_node_get_parameter_types_response {
+    property ros_name = "optitrack_joy_node_get_parameter_types_response";
+    property full_ros_name = "optitrack_joy_node_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_accel {
+    property ros_name = "accel";
+    property full_ros_name = "/ROWLET/accel";
+    property ros_type = "geometry_msgs/msg/AccelStamped";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_k_pose {
+    property ros_name = "k_pose";
+    property full_ros_name = "/ROWLET/k_pose";
+    property ros_type = "geometry_msgs/msg/PoseStamped";
+    property ros_channel_type = "topic";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_set_parameters_atomically_request {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_set_parameters_atomically_request";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_set_parameters_atomically_response {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_set_parameters_atomically_response";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_joy_teleop_set_parameters_atomically_response {
+    property ros_name = "ROWLET_joy_teleop_set_parameters_atomically_response";
+    property full_ros_name = "ROWLET_joy_teleop_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_list_parameters_response {
+    property ros_name = "ROWLET_quad_state_node_list_parameters_response";
+    property full_ros_name = "ROWLET_quad_state_node_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_position_control_describe_parameters_request {
+    property ros_name = "ROWLET_bebop_position_control_describe_parameters_request";
+    property full_ros_name = "ROWLET_bebop_position_control_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_position_control_describe_parameters_response {
+    property ros_name = "ROWLET_bebop_position_control_describe_parameters_response";
+    property full_ros_name = "ROWLET_bebop_position_control_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_position_control_get_parameters_response {
+    property ros_name = "ROWLET_bebop_position_control_get_parameters_response";
+    property full_ros_name = "ROWLET_bebop_position_control_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_position_control_list_parameters_response {
+    property ros_name = "ROWLET_bebop_position_control_list_parameters_response";
+    property full_ros_name = "ROWLET_bebop_position_control_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_action_mission__action_cancel_goal_response {
+    property ros_name = "ROWLET_action_mission__action_cancel_goal_response";
+    property full_ros_name = "ROWLET_action_mission__action_cancel_goal_response";
+    property ros_type = "action_msgs/srv/CancelGoal";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_position_control_set_parameters_response {
+    property ros_name = "ROWLET_bebop_position_control_set_parameters_response";
+    property full_ros_name = "ROWLET_bebop_position_control_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_land {
+    property ros_name = "land";
+    property full_ros_name = "/ROWLET/bebop/land";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_bebop_switch_node_describe_parameters_request {
+    property ros_name = "ROWLET_bebop_switch_node_describe_parameters_request";
+    property full_ros_name = "ROWLET_bebop_switch_node_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_joy_teleop_get_parameter_types_response {
+    property ros_name = "ROWLET_joy_teleop_get_parameter_types_response";
+    property full_ros_name = "ROWLET_joy_teleop_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_twist_input_3 {
+    property ros_name = "twist_input_3";
+    property full_ros_name = "/ROWLET/twist_input_3";
+    property ros_type = "geometry_msgs/msg/Twist";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_bebop_switch_node_describe_parameters_response {
+    property ros_name = "ROWLET_bebop_switch_node_describe_parameters_response";
+    property full_ros_name = "ROWLET_bebop_switch_node_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel trajectory_client_get_parameters_request {
+    property ros_name = "trajectory_client_get_parameters_request";
+    property full_ros_name = "trajectory_client_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_pose {
+    property ros_name = "pose";
+    property full_ros_name = "/ROWLET/pose";
+    property ros_type = "geometry_msgs/msg/PoseStamped";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_bebop_switch_node_get_parameters_response {
+    property ros_name = "ROWLET_bebop_switch_node_get_parameters_response";
+    property full_ros_name = "ROWLET_bebop_switch_node_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel helmGelb_accel {
+    property ros_name = "accel";
+    property full_ros_name = "/helmGelb/accel";
+    property ros_type = "geometry_msgs/msg/AccelStamped";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_bebop_driver_node_get_parameter_types_request {
+    property ros_name = "ROWLET_bebop_driver_node_get_parameter_types_request";
+    property full_ros_name = "ROWLET_bebop_driver_node_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_camera_control {
+    property ros_name = "camera_control";
+    property full_ros_name = "/ROWLET/camera_control";
+    property ros_type = "geometry_msgs/msg/Twist";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_bebop_switch_node_list_parameters_request {
+    property ros_name = "ROWLET_bebop_switch_node_list_parameters_request";
+    property full_ros_name = "ROWLET_bebop_switch_node_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_driver_node_get_parameter_types_response {
+    property ros_name = "ROWLET_bebop_driver_node_get_parameter_types_response";
+    property full_ros_name = "ROWLET_bebop_driver_node_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_switch_node_set_parameters_request {
+    property ros_name = "ROWLET_bebop_switch_node_set_parameters_request";
+    property full_ros_name = "ROWLET_bebop_switch_node_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel vrpn_client_node_list_parameters_response {
+    property ros_name = "vrpn_client_node_list_parameters_response";
+    property full_ros_name = "vrpn_client_node_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_switch_node_set_parameters_atomically_request {
+    property ros_name = "ROWLET_bebop_switch_node_set_parameters_atomically_request";
+    property full_ros_name = "ROWLET_bebop_switch_node_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_switch_node_set_parameters_atomically_response {
+    property ros_name = "ROWLET_bebop_switch_node_set_parameters_atomically_response";
+    property full_ros_name = "ROWLET_bebop_switch_node_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_change_state_request {
+    property ros_name = "ROWLET_quad_state_node_change_state_request";
+    property full_ros_name = "ROWLET_quad_state_node_change_state_request";
+    property ros_type = "lifecycle_msgs/srv/ChangeState";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_k_acc {
+    property ros_name = "k_acc";
+    property full_ros_name = "/ROWLET/k_acc";
+    property ros_type = "geometry_msgs/msg/AccelStamped";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_quad_state_node_change_state_response {
+    property ros_name = "ROWLET_quad_state_node_change_state_response";
+    property full_ros_name = "ROWLET_quad_state_node_change_state_response";
+    property ros_type = "lifecycle_msgs/srv/ChangeState";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_describe_parameters_request {
+    property ros_name = "ROWLET_quad_state_node_describe_parameters_request";
+    property full_ros_name = "ROWLET_quad_state_node_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_takeoff {
+    property ros_name = "takeoff";
+    property full_ros_name = "/ROWLET/takeoff";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_quad_state_node_describe_parameters_response {
+    property ros_name = "ROWLET_quad_state_node_describe_parameters_response";
+    property full_ros_name = "ROWLET_quad_state_node_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel rviz2_list_parameters_request {
+    property ros_name = "rviz2_list_parameters_request";
+    property full_ros_name = "rviz2_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_get_available_states_request {
+    property ros_name = "ROWLET_quad_state_node_get_available_states_request";
+    property full_ros_name = "ROWLET_quad_state_node_get_available_states_request";
+    property ros_type = "lifecycle_msgs/srv/GetAvailableStates";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_get_available_transitions_request {
+    property ros_name = "ROWLET_quad_state_node_get_available_transitions_request";
+    property full_ros_name = "ROWLET_quad_state_node_get_available_transitions_request";
+    property ros_type = "lifecycle_msgs/srv/GetAvailableTransitions";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_get_available_transitions_response {
+    property ros_name = "ROWLET_quad_state_node_get_available_transitions_response";
+    property full_ros_name = "ROWLET_quad_state_node_get_available_transitions_response";
+    property ros_type = "lifecycle_msgs/srv/GetAvailableTransitions";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_script_node_list_parameters_request {
+    property ros_name = "ROWLET_quad_script_node_list_parameters_request";
+    property full_ros_name = "ROWLET_quad_script_node_list_parameters_request";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_get_parameters_request {
+    property ros_name = "ROWLET_quad_state_node_get_parameters_request";
+    property full_ros_name = "ROWLET_quad_state_node_get_parameters_request";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_get_parameters_response {
+    property ros_name = "ROWLET_quad_state_node_get_parameters_response";
+    property full_ros_name = "ROWLET_quad_state_node_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_twist_input_2 {
+    property ros_name = "twist_input_2";
+    property full_ros_name = "/ROWLET/twist_input_2";
+    property ros_type = "geometry_msgs/msg/Twist";
+    property ros_channel_type = "topic";
+}
+
+channel vrpn_client_node_set_parameters_response {
+    property ros_name = "vrpn_client_node_set_parameters_response";
+    property full_ros_name = "vrpn_client_node_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_get_state_response {
+    property ros_name = "ROWLET_quad_state_node_get_state_response";
+    property full_ros_name = "ROWLET_quad_state_node_get_state_response";
+    property ros_type = "lifecycle_msgs/srv/GetState";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_set_parameters_request {
+    property ros_name = "ROWLET_quad_state_node_set_parameters_request";
+    property full_ros_name = "ROWLET_quad_state_node_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_bebop_switch_node_get_parameter_types_response {
+    property ros_name = "ROWLET_bebop_switch_node_get_parameter_types_response";
+    property full_ros_name = "ROWLET_bebop_switch_node_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_position_control_set_parameters_atomically_request {
+    property ros_name = "ROWLET_bebop_position_control_set_parameters_atomically_request";
+    property full_ros_name = "ROWLET_bebop_position_control_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_joy_teleop_get_parameter_types_request {
+    property ros_name = "ROWLET_joy_teleop_get_parameter_types_request";
+    property full_ros_name = "ROWLET_joy_teleop_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_set_parameters_response {
+    property ros_name = "ROWLET_quad_state_node_set_parameters_response";
+    property full_ros_name = "ROWLET_quad_state_node_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_set_parameters_atomically_request {
+    property ros_name = "ROWLET_quad_state_node_set_parameters_atomically_request";
+    property full_ros_name = "ROWLET_quad_state_node_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_set_parameters_atomically_response {
+    property ros_name = "ROWLET_quad_state_node_set_parameters_atomically_response";
+    property full_ros_name = "ROWLET_quad_state_node_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel simple_trajectory_visualizer_get_parameter_types_request {
+    property ros_name = "simple_trajectory_visualizer_get_parameter_types_request";
+    property full_ros_name = "simple_trajectory_visualizer_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_script_node_describe_parameters_request {
+    property ros_name = "ROWLET_quad_script_node_describe_parameters_request";
+    property full_ros_name = "ROWLET_quad_script_node_describe_parameters_request";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_script_node_get_parameter_types_response {
+    property ros_name = "ROWLET_quad_script_node_get_parameter_types_response";
+    property full_ros_name = "ROWLET_quad_script_node_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel saft_get_dataflow_request {
+    property ros_name = "saft_get_dataflow_request";
+    property full_ros_name = "saft_get_dataflow_request";
+    property ros_type = "std_srvs/srv/Trigger";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_action_mission__action_cancel_goal_request {
+    property ros_name = "ROWLET_action_mission__action_cancel_goal_request";
+    property full_ros_name = "ROWLET_action_mission__action_cancel_goal_request";
+    property ros_type = "action_msgs/srv/CancelGoal";
+    property ros_channel_type = "service_request";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_get_parameters_response {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_get_parameters_response";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_action_mission__action_get_result_request {
+    property ros_name = "ROWLET_action_mission__action_get_result_request";
+    property full_ros_name = "ROWLET_action_mission__action_get_result_request";
+    property ros_type = "quad_script_msgs/action/Mission_GetResult";
+    property ros_channel_type = "service_request";
+}
+
+channel rviz2_get_parameter_types_response {
+    property ros_name = "rviz2_get_parameter_types_response";
+    property full_ros_name = "rviz2_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_takeoff {
+    property ros_name = "takeoff";
+    property full_ros_name = "/ROWLET/bebop/takeoff";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_action_mission__action_send_goal_request {
+    property ros_name = "ROWLET_action_mission__action_send_goal_request";
+    property full_ros_name = "ROWLET_action_mission__action_send_goal_request";
+    property ros_type = "quad_script_msgs/action/Mission_SendGoal";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_action_mission__action_send_goal_response {
+    property ros_name = "ROWLET_action_mission__action_send_goal_response";
+    property full_ros_name = "ROWLET_action_mission__action_send_goal_response";
+    property ros_type = "quad_script_msgs/action/Mission_SendGoal";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_bebop_driver_node_set_parameters_atomically_response {
+    property ros_name = "ROWLET_bebop_driver_node_set_parameters_atomically_response";
+    property full_ros_name = "ROWLET_bebop_driver_node_set_parameters_atomically_response";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_script_node_get_parameter_types_request {
+    property ros_name = "ROWLET_quad_script_node_get_parameter_types_request";
+    property full_ros_name = "ROWLET_quad_script_node_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_set_parameters_response {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_set_parameters_response";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_script_node_get_parameters_response {
+    property ros_name = "ROWLET_quad_script_node_get_parameters_response";
+    property full_ros_name = "ROWLET_quad_script_node_get_parameters_response";
+    property ros_type = "rcl_interfaces/srv/GetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_script_node_list_parameters_response {
+    property ros_name = "ROWLET_quad_script_node_list_parameters_response";
+    property full_ros_name = "ROWLET_quad_script_node_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_script_node_set_parameters_request {
+    property ros_name = "ROWLET_quad_script_node_set_parameters_request";
+    property full_ros_name = "ROWLET_quad_script_node_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_script_node_set_parameters_response {
+    property ros_name = "ROWLET_quad_script_node_set_parameters_response";
+    property full_ros_name = "ROWLET_quad_script_node_set_parameters_response";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_script_node_set_parameters_atomically_request {
+    property ros_name = "ROWLET_quad_script_node_set_parameters_atomically_request";
+    property full_ros_name = "ROWLET_quad_script_node_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel optitrack_joy_set_feedback {
+    property ros_name = "set_feedback";
+    property full_ros_name = "/optitrack/joy/set_feedback";
+    property ros_type = "sensor_msgs/msg/JoyFeedback";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_action_mission__action_feedback {
+    property ros_name = "feedback";
+    property full_ros_name = "/ROWLET/action/mission/_action/feedback";
+    property ros_type = "quad_script_msgs/action/Mission_FeedbackMessage";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_action_pose__action_status {
+    property ros_name = "status";
+    property full_ros_name = "/ROWLET/action/pose/_action/status";
+    property ros_type = "action_msgs/msg/GoalStatusArray";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_autoflight_navigate_home {
+    property ros_name = "navigate_home";
+    property full_ros_name = "/ROWLET/autoflight/navigate_home";
+    property ros_type = "std_msgs/msg/Bool";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_autoflight_start {
+    property ros_name = "start";
+    property full_ros_name = "/ROWLET/autoflight/start";
+    property ros_type = "std_msgs/msg/String";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_bebop_position_control_set_parameters_request {
+    property ros_name = "ROWLET_bebop_position_control_set_parameters_request";
+    property full_ros_name = "ROWLET_bebop_position_control_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_camera_info {
+    property ros_name = "camera_info";
+    property full_ros_name = "/ROWLET/camera_info";
+    property ros_type = "sensor_msgs/msg/CameraInfo";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_cmd_vel {
+    property ros_name = "cmd_vel";
+    property full_ros_name = "/ROWLET/cmd_vel";
+    property ros_type = "geometry_msgs/msg/Twist";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_quad_state_node_get_transition_graph_response {
+    property ros_name = "ROWLET_quad_state_node_get_transition_graph_response";
+    property full_ros_name = "ROWLET_quad_state_node_get_transition_graph_response";
+    property ros_type = "lifecycle_msgs/srv/GetAvailableTransitions";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_flattrim {
+    property ros_name = "flattrim";
+    property full_ros_name = "/ROWLET/flattrim";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_flip {
+    property ros_name = "flip";
+    property full_ros_name = "/ROWLET/flip";
+    property ros_type = "bebop_msgs/msg/FlipAnimation";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_gesture {
+    property ros_name = "gesture";
+    property full_ros_name = "/ROWLET/gesture";
+    property ros_type = "gesture_msgs/msg/Gesture";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_user_takeoff {
+    property ros_name = "user_takeoff";
+    property full_ros_name = "/ROWLET/user_takeoff";
+    property ros_type = "std_msgs/msg/Bool";
+    property ros_channel_type = "topic";
+}
+
+channel optitrack_joy_node_set_parameters_atomically_request {
+    property ros_name = "optitrack_joy_node_set_parameters_atomically_request";
+    property full_ros_name = "optitrack_joy_node_set_parameters_atomically_request";
+    property ros_type = "rcl_interfaces/srv/SetParametersAtomically";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_k_vel {
+    property ros_name = "k_vel";
+    property full_ros_name = "/ROWLET/k_vel";
+    property ros_type = "geometry_msgs/msg/TwistStamped";
+    property ros_channel_type = "topic";
+}
+
+channel clicked_point {
+    property ros_name = "clicked_point";
+    property full_ros_name = "/clicked_point";
+    property ros_type = "geometry_msgs/msg/PointStamped";
+    property ros_channel_type = "topic";
+}
+
+channel trajectory_hold {
+    property ros_name = "trajectory_hold";
+    property full_ros_name = "/trajectory_hold";
+    property ros_type = "sp_trajectory_msgs/msg/SeTrajectoryHold";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_odom {
+    property ros_name = "odom";
+    property full_ros_name = "/ROWLET/odom";
+    property ros_type = "nav_msgs/msg/Odometry";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_pose_cov {
+    property ros_name = "pose_cov";
+    property full_ros_name = "/ROWLET/pose_cov";
+    property ros_type = "geometry_msgs/msg/PoseWithCovarianceStamped";
+    property ros_channel_type = "topic";
+}
+
+channel _ros2cli_requester_std_srvs_Trigger_get_parameter_types_response {
+    property ros_name = "_ros2cli_requester_std_srvs_Trigger_get_parameter_types_response";
+    property full_ros_name = "_ros2cli_requester_std_srvs_Trigger_get_parameter_types_response";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_reset {
+    property ros_name = "reset";
+    property full_ros_name = "/ROWLET/reset";
+    property ros_type = "std_msgs/msg/Empty";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_set_exposure {
+    property ros_name = "set_exposure";
+    property full_ros_name = "/ROWLET/set_exposure";
+    property ros_type = "std_msgs/msg/Float32";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_target {
+    property ros_name = "target";
+    property full_ros_name = "/ROWLET/target";
+    property ros_type = "sp_trajectory_msgs/msg/ControlTarget";
+    property ros_channel_type = "topic";
+}
+
+channel trajectory_client_describe_parameters_response {
+    property ros_name = "trajectory_client_describe_parameters_response";
+    property full_ros_name = "trajectory_client_describe_parameters_response";
+    property ros_type = "rcl_interfaces/srv/DescribeParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel ROWLET_quad_state_node_get_state_request {
+    property ros_name = "ROWLET_quad_state_node_get_state_request";
+    property full_ros_name = "ROWLET_quad_state_node_get_state_request";
+    property ros_type = "lifecycle_msgs/srv/GetState";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_twist {
+    property ros_name = "twist";
+    property full_ros_name = "/ROWLET/twist";
+    property ros_type = "geometry_msgs/msg/TwistStamped";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_twist_input_0 {
+    property ros_name = "twist_input_0";
+    property full_ros_name = "/ROWLET/twist_input_0";
+    property ros_type = "geometry_msgs/msg/Twist";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_twist_input_1 {
+    property ros_name = "twist_input_1";
+    property full_ros_name = "/ROWLET/twist_input_1";
+    property ros_type = "geometry_msgs/msg/Twist";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_twist_input_4 {
+    property ros_name = "twist_input_4";
+    property full_ros_name = "/ROWLET/twist_input_4";
+    property ros_type = "geometry_msgs/msg/Twist";
+    property ros_channel_type = "topic";
+}
+
+channel goal_pose {
+    property ros_name = "goal_pose";
+    property full_ros_name = "/goal_pose";
+    property ros_type = "geometry_msgs/msg/PoseStamped";
+    property ros_channel_type = "topic";
+}
+
+channel saft_saft_dataflow_generator_set_parameters_request {
+    property ros_name = "saft_saft_dataflow_generator_set_parameters_request";
+    property full_ros_name = "saft_saft_dataflow_generator_set_parameters_request";
+    property ros_type = "rcl_interfaces/srv/SetParameters";
+    property ros_channel_type = "service_request";
+}
+
+channel ROWLET_quad_state_node_get_parameter_types_request {
+    property ros_name = "ROWLET_quad_state_node_get_parameter_types_request";
+    property full_ros_name = "ROWLET_quad_state_node_get_parameter_types_request";
+    property ros_type = "rcl_interfaces/srv/GetParameterTypes";
+    property ros_channel_type = "service_request";
+}
+
+channel helmGelb_odom {
+    property ros_name = "odom";
+    property full_ros_name = "/helmGelb/odom";
+    property ros_type = "nav_msgs/msg/Odometry";
+    property ros_channel_type = "topic";
+}
+
+channel helmGelb_pose {
+    property ros_name = "pose";
+    property full_ros_name = "/helmGelb/pose";
+    property ros_type = "geometry_msgs/msg/PoseStamped";
+    property ros_channel_type = "topic";
+}
+
+channel trajectory_assignment {
+    property ros_name = "trajectory_assignment";
+    property full_ros_name = "/trajectory_assignment";
+    property ros_type = "sp_trajectory_msgs/msg/SeTrajectoryAssignment";
+    property ros_channel_type = "topic";
+}
+
+channel simple_trajectory_server_list_parameters_response {
+    property ros_name = "simple_trajectory_server_list_parameters_response";
+    property full_ros_name = "simple_trajectory_server_list_parameters_response";
+    property ros_type = "rcl_interfaces/srv/ListParameters";
+    property ros_channel_type = "service_response";
+}
+
+channel initialpose {
+    property ros_name = "initialpose";
+    property full_ros_name = "/initialpose";
+    property ros_type = "geometry_msgs/msg/PoseWithCovarianceStamped";
+    property ros_channel_type = "topic";
+}
+
+channel obstacles_topic {
+    property ros_name = "obstacles_topic";
+    property full_ros_name = "/obstacles_topic";
+    property ros_type = "sp_trajectory_msgs/msg/SeObstacles";
+    property ros_channel_type = "topic";
+}
+
+channel ROWLET_record {
+    property ros_name = "record";
+    property full_ros_name = "/ROWLET/record";
+    property ros_type = "std_msgs/msg/Bool";
+    property ros_channel_type = "topic";
+}
+
+channel optitrack_joy {
+    property ros_name = "joy";
+    property full_ros_name = "/optitrack/joy";
+    property ros_type = "sensor_msgs/msg/Joy";
+    property ros_channel_type = "topic";
+}
+
+channel tf_static {
+    property ros_name = "tf_static";
+    property full_ros_name = "/tf_static";
+    property ros_type = "tf2_msgs/msg/TFMessage";
+    property ros_channel_type = "topic";
+}
+
+channel trajectory_request {
+    property ros_name = "trajectory_request";
+    property full_ros_name = "/trajectory_request";
+    property ros_type = "sp_trajectory_msgs/msg/SeTrajectoryRequest";
+    property ros_channel_type = "topic";
+}
+
+connect component=ROWLET_joy_teleop <- channel=ROWLET_joy_teleop_describe_parameters_request;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_joy_teleop_describe_parameters_response;
+connect component=ROWLET_joy_teleop <- channel=ROWLET_joy_teleop_get_parameter_types_request;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_joy_teleop_get_parameter_types_response;
+connect component=ROWLET_joy_teleop <- channel=ROWLET_joy_teleop_get_parameters_request;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_joy_teleop_get_parameters_response;
+connect component=ROWLET_joy_teleop <- channel=ROWLET_joy_teleop_list_parameters_request;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_joy_teleop_list_parameters_response;
+connect component=ROWLET_joy_teleop <- channel=ROWLET_joy_teleop_set_parameters_request;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_joy_teleop_set_parameters_response;
+connect component=ROWLET_joy_teleop <- channel=ROWLET_joy_teleop_set_parameters_atomically_request;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_joy_teleop_set_parameters_atomically_response;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_bebop_driver_node_describe_parameters_request;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_bebop_driver_node_describe_parameters_response;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_bebop_driver_node_get_parameter_types_request;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_bebop_driver_node_get_parameter_types_response;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_bebop_driver_node_get_parameters_request;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_bebop_driver_node_get_parameters_response;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_bebop_driver_node_list_parameters_request;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_bebop_driver_node_list_parameters_response;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_bebop_driver_node_set_parameters_request;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_bebop_driver_node_set_parameters_response;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_bebop_driver_node_set_parameters_atomically_request;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_bebop_driver_node_set_parameters_atomically_response;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_set_camera_info_request;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_set_camera_info_response;
+connect component=saft_saft_dataflow_generator <- channel=saft_get_dataflow_request;
+connect component=saft_saft_dataflow_generator -> channel=saft_get_dataflow_response;
+connect component=saft_saft_dataflow_generator <- channel=saft_saft_dataflow_generator_describe_parameters_request;
+connect component=saft_saft_dataflow_generator -> channel=saft_saft_dataflow_generator_describe_parameters_response;
+connect component=saft_saft_dataflow_generator <- channel=saft_saft_dataflow_generator_get_parameter_types_request;
+connect component=saft_saft_dataflow_generator -> channel=saft_saft_dataflow_generator_get_parameter_types_response;
+connect component=saft_saft_dataflow_generator <- channel=saft_saft_dataflow_generator_get_parameters_request;
+connect component=saft_saft_dataflow_generator -> channel=saft_saft_dataflow_generator_get_parameters_response;
+connect component=saft_saft_dataflow_generator <- channel=saft_saft_dataflow_generator_list_parameters_request;
+connect component=saft_saft_dataflow_generator -> channel=saft_saft_dataflow_generator_list_parameters_response;
+connect component=saft_saft_dataflow_generator <- channel=saft_saft_dataflow_generator_set_parameters_request;
+connect component=saft_saft_dataflow_generator -> channel=saft_saft_dataflow_generator_set_parameters_response;
+connect component=saft_saft_dataflow_generator <- channel=saft_saft_dataflow_generator_set_parameters_atomically_request;
+connect component=saft_saft_dataflow_generator -> channel=saft_saft_dataflow_generator_set_parameters_atomically_response;
+connect component=simple_trajectory_server <- channel=simple_trajectory_server_describe_parameters_request;
+connect component=simple_trajectory_server -> channel=simple_trajectory_server_describe_parameters_response;
+connect component=simple_trajectory_server <- channel=simple_trajectory_server_get_parameter_types_request;
+connect component=simple_trajectory_server -> channel=simple_trajectory_server_get_parameter_types_response;
+connect component=simple_trajectory_server <- channel=simple_trajectory_server_get_parameters_request;
+connect component=simple_trajectory_server -> channel=simple_trajectory_server_get_parameters_response;
+connect component=simple_trajectory_server <- channel=simple_trajectory_server_list_parameters_request;
+connect component=simple_trajectory_server -> channel=simple_trajectory_server_list_parameters_response;
+connect component=simple_trajectory_server <- channel=simple_trajectory_server_set_parameters_request;
+connect component=simple_trajectory_server -> channel=simple_trajectory_server_set_parameters_response;
+connect component=simple_trajectory_server <- channel=simple_trajectory_server_set_parameters_atomically_request;
+connect component=simple_trajectory_server -> channel=simple_trajectory_server_set_parameters_atomically_response;
+connect component=simple_trajectory_visualizer <- channel=simple_trajectory_visualizer_describe_parameters_request;
+connect component=simple_trajectory_visualizer -> channel=simple_trajectory_visualizer_describe_parameters_response;
+connect component=simple_trajectory_visualizer <- channel=simple_trajectory_visualizer_get_parameter_types_request;
+connect component=simple_trajectory_visualizer -> channel=simple_trajectory_visualizer_get_parameter_types_response;
+connect component=simple_trajectory_visualizer <- channel=simple_trajectory_visualizer_get_parameters_request;
+connect component=simple_trajectory_visualizer -> channel=simple_trajectory_visualizer_get_parameters_response;
+connect component=simple_trajectory_visualizer <- channel=simple_trajectory_visualizer_list_parameters_request;
+connect component=simple_trajectory_visualizer -> channel=simple_trajectory_visualizer_list_parameters_response;
+connect component=simple_trajectory_visualizer <- channel=simple_trajectory_visualizer_set_parameters_request;
+connect component=simple_trajectory_visualizer -> channel=simple_trajectory_visualizer_set_parameters_response;
+connect component=simple_trajectory_visualizer <- channel=simple_trajectory_visualizer_set_parameters_atomically_request;
+connect component=simple_trajectory_visualizer -> channel=simple_trajectory_visualizer_set_parameters_atomically_response;
+connect component=rviz2 <- channel=rviz2_describe_parameters_request;
+connect component=rviz2 -> channel=rviz2_describe_parameters_response;
+connect component=rviz2 <- channel=rviz2_get_parameter_types_request;
+connect component=rviz2 -> channel=rviz2_get_parameter_types_response;
+connect component=rviz2 <- channel=rviz2_get_parameters_request;
+connect component=rviz2 -> channel=rviz2_get_parameters_response;
+connect component=rviz2 <- channel=rviz2_list_parameters_request;
+connect component=rviz2 -> channel=rviz2_list_parameters_response;
+connect component=rviz2 <- channel=rviz2_set_parameters_request;
+connect component=rviz2 -> channel=rviz2_set_parameters_response;
+connect component=rviz2 <- channel=rviz2_set_parameters_atomically_request;
+connect component=rviz2 -> channel=rviz2_set_parameters_atomically_response;
+connect component=vrpn_client_node <- channel=vrpn_client_node_describe_parameters_request;
+connect component=vrpn_client_node -> channel=vrpn_client_node_describe_parameters_response;
+connect component=vrpn_client_node <- channel=vrpn_client_node_get_parameter_types_request;
+connect component=vrpn_client_node -> channel=vrpn_client_node_get_parameter_types_response;
+connect component=vrpn_client_node <- channel=vrpn_client_node_get_parameters_request;
+connect component=vrpn_client_node -> channel=vrpn_client_node_get_parameters_response;
+connect component=vrpn_client_node <- channel=vrpn_client_node_list_parameters_request;
+connect component=vrpn_client_node -> channel=vrpn_client_node_list_parameters_response;
+connect component=vrpn_client_node <- channel=vrpn_client_node_set_parameters_request;
+connect component=vrpn_client_node -> channel=vrpn_client_node_set_parameters_response;
+connect component=vrpn_client_node <- channel=vrpn_client_node_set_parameters_atomically_request;
+connect component=vrpn_client_node -> channel=vrpn_client_node_set_parameters_atomically_response;
+connect component=optitrack_joy_node <- channel=optitrack_joy_node_describe_parameters_request;
+connect component=optitrack_joy_node -> channel=optitrack_joy_node_describe_parameters_response;
+connect component=optitrack_joy_node <- channel=optitrack_joy_node_get_parameter_types_request;
+connect component=optitrack_joy_node -> channel=optitrack_joy_node_get_parameter_types_response;
+connect component=optitrack_joy_node <- channel=optitrack_joy_node_get_parameters_request;
+connect component=optitrack_joy_node -> channel=optitrack_joy_node_get_parameters_response;
+connect component=optitrack_joy_node <- channel=optitrack_joy_node_list_parameters_request;
+connect component=optitrack_joy_node -> channel=optitrack_joy_node_list_parameters_response;
+connect component=optitrack_joy_node <- channel=optitrack_joy_node_set_parameters_request;
+connect component=optitrack_joy_node -> channel=optitrack_joy_node_set_parameters_response;
+connect component=optitrack_joy_node <- channel=optitrack_joy_node_set_parameters_atomically_request;
+connect component=optitrack_joy_node -> channel=optitrack_joy_node_set_parameters_atomically_response;
+connect component=trajectory_client <- channel=ROWLET_action_pose__action_cancel_goal_request;
+connect component=trajectory_client -> channel=ROWLET_action_pose__action_cancel_goal_response;
+connect component=trajectory_client <- channel=ROWLET_action_pose__action_get_result_request;
+connect component=trajectory_client -> channel=ROWLET_action_pose__action_get_result_response;
+connect component=trajectory_client <- channel=ROWLET_action_pose__action_send_goal_request;
+connect component=trajectory_client -> channel=ROWLET_action_pose__action_send_goal_response;
+connect component=trajectory_client <- channel=trajectory_client_describe_parameters_request;
+connect component=trajectory_client -> channel=trajectory_client_describe_parameters_response;
+connect component=trajectory_client <- channel=trajectory_client_get_parameter_types_request;
+connect component=trajectory_client -> channel=trajectory_client_get_parameter_types_response;
+connect component=trajectory_client <- channel=trajectory_client_get_parameters_request;
+connect component=trajectory_client -> channel=trajectory_client_get_parameters_response;
+connect component=trajectory_client <- channel=trajectory_client_list_parameters_request;
+connect component=trajectory_client -> channel=trajectory_client_list_parameters_response;
+connect component=trajectory_client <- channel=trajectory_client_set_parameters_request;
+connect component=trajectory_client -> channel=trajectory_client_set_parameters_response;
+connect component=trajectory_client <- channel=trajectory_client_set_parameters_atomically_request;
+connect component=trajectory_client -> channel=trajectory_client_set_parameters_atomically_response;
+connect component=_ros2cli_requester_std_srvs_Trigger <- channel=_ros2cli_requester_std_srvs_Trigger_describe_parameters_request;
+connect component=_ros2cli_requester_std_srvs_Trigger -> channel=_ros2cli_requester_std_srvs_Trigger_describe_parameters_response;
+connect component=_ros2cli_requester_std_srvs_Trigger <- channel=_ros2cli_requester_std_srvs_Trigger_get_parameter_types_request;
+connect component=_ros2cli_requester_std_srvs_Trigger -> channel=_ros2cli_requester_std_srvs_Trigger_get_parameter_types_response;
+connect component=_ros2cli_requester_std_srvs_Trigger <- channel=_ros2cli_requester_std_srvs_Trigger_get_parameters_request;
+connect component=_ros2cli_requester_std_srvs_Trigger -> channel=_ros2cli_requester_std_srvs_Trigger_get_parameters_response;
+connect component=_ros2cli_requester_std_srvs_Trigger <- channel=_ros2cli_requester_std_srvs_Trigger_list_parameters_request;
+connect component=_ros2cli_requester_std_srvs_Trigger -> channel=_ros2cli_requester_std_srvs_Trigger_list_parameters_response;
+connect component=_ros2cli_requester_std_srvs_Trigger <- channel=_ros2cli_requester_std_srvs_Trigger_set_parameters_request;
+connect component=_ros2cli_requester_std_srvs_Trigger -> channel=_ros2cli_requester_std_srvs_Trigger_set_parameters_response;
+connect component=_ros2cli_requester_std_srvs_Trigger <- channel=_ros2cli_requester_std_srvs_Trigger_set_parameters_atomically_request;
+connect component=_ros2cli_requester_std_srvs_Trigger -> channel=_ros2cli_requester_std_srvs_Trigger_set_parameters_atomically_response;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_bebop_position_control_describe_parameters_request;
+connect component=ROWLET_bebop_position_control -> channel=ROWLET_bebop_position_control_describe_parameters_response;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_bebop_position_control_get_parameter_types_request;
+connect component=ROWLET_bebop_position_control -> channel=ROWLET_bebop_position_control_get_parameter_types_response;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_bebop_position_control_get_parameters_request;
+connect component=ROWLET_bebop_position_control -> channel=ROWLET_bebop_position_control_get_parameters_response;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_bebop_position_control_list_parameters_request;
+connect component=ROWLET_bebop_position_control -> channel=ROWLET_bebop_position_control_list_parameters_response;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_bebop_position_control_set_parameters_request;
+connect component=ROWLET_bebop_position_control -> channel=ROWLET_bebop_position_control_set_parameters_response;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_bebop_position_control_set_parameters_atomically_request;
+connect component=ROWLET_bebop_position_control -> channel=ROWLET_bebop_position_control_set_parameters_atomically_response;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_bebop_switch_node_describe_parameters_request;
+connect component=ROWLET_bebop_switch_node -> channel=ROWLET_bebop_switch_node_describe_parameters_response;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_bebop_switch_node_get_parameter_types_request;
+connect component=ROWLET_bebop_switch_node -> channel=ROWLET_bebop_switch_node_get_parameter_types_response;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_bebop_switch_node_get_parameters_request;
+connect component=ROWLET_bebop_switch_node -> channel=ROWLET_bebop_switch_node_get_parameters_response;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_bebop_switch_node_list_parameters_request;
+connect component=ROWLET_bebop_switch_node -> channel=ROWLET_bebop_switch_node_list_parameters_response;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_bebop_switch_node_set_parameters_request;
+connect component=ROWLET_bebop_switch_node -> channel=ROWLET_bebop_switch_node_set_parameters_response;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_bebop_switch_node_set_parameters_atomically_request;
+connect component=ROWLET_bebop_switch_node -> channel=ROWLET_bebop_switch_node_set_parameters_atomically_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_change_state_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_change_state_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_describe_parameters_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_describe_parameters_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_get_available_states_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_get_available_states_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_get_available_transitions_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_get_available_transitions_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_get_parameter_types_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_get_parameter_types_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_get_parameters_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_get_parameters_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_get_state_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_get_state_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_get_transition_graph_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_get_transition_graph_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_list_parameters_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_list_parameters_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_set_parameters_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_set_parameters_response;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_quad_state_node_set_parameters_atomically_request;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_set_parameters_atomically_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_action_mission__action_cancel_goal_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_action_mission__action_cancel_goal_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_action_mission__action_get_result_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_action_mission__action_get_result_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_action_mission__action_send_goal_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_action_mission__action_send_goal_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_quad_script_node_describe_parameters_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_quad_script_node_describe_parameters_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_quad_script_node_get_parameter_types_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_quad_script_node_get_parameter_types_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_quad_script_node_get_parameters_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_quad_script_node_get_parameters_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_quad_script_node_list_parameters_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_quad_script_node_list_parameters_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_quad_script_node_set_parameters_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_quad_script_node_set_parameters_response;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_quad_script_node_set_parameters_atomically_request;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_quad_script_node_set_parameters_atomically_response;
+connect component=vrpn_client_node -> channel=ROWLET_accel;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_action_mission__action_feedback;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_action_mission__action_status;
+connect component=trajectory_client -> channel=ROWLET_action_pose__action_feedback;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_action_pose__action_feedback;
+connect component=trajectory_client -> channel=ROWLET_action_pose__action_status;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_action_pose__action_status;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_autoflight_navigate_home;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_autoflight_pause;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_autoflight_start;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_autoflight_stop;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_bebop_land;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_bebop_takeoff;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_camera_control;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_camera_control;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_camera_info;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_channel_select;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_channel_select;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_channel_select;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_channel_select;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_channel_select;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_channel_select;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_channel_select;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_channel_select;
+connect component=ROWLET_bebop_switch_node -> channel=ROWLET_cmd_vel;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_cmd_vel;
+connect component=ROWLET_bebop_position_control -> channel=ROWLET_control_vel;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_fix;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_flattrim;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_flattrim;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_flip;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_flip;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_flip;
+connect component=ROWLET_quad_script_node <- channel=ROWLET_gesture;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_image_raw;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_joint_states;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_k_acc;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_k_acc;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_k_pose;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_k_pose;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_k_vel;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_k_vel;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_land;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_land;
+connect component=ROWLET_bebop_driver_node -> channel=ROWLET_odom;
+connect component=vrpn_client_node -> channel=ROWLET_odom;
+connect component=vrpn_client_node -> channel=ROWLET_pose;
+connect component=ROWLET_quad_state_node <- channel=ROWLET_pose;
+connect component=vrpn_client_node -> channel=ROWLET_pose_cov;
+connect component=ROWLET_quad_script_node -> channel=ROWLET_print_error;
+connect component=ROWLET_quad_state_node -> channel=ROWLET_quad_state_node_transition_event;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_record;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_reset;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_reset;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_set_exposure;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_snapshot;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_snapshot;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_takeoff;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_takeoff;
+connect component=trajectory_client -> channel=ROWLET_target;
+connect component=ROWLET_bebop_position_control <- channel=ROWLET_target;
+connect component=vrpn_client_node -> channel=ROWLET_twist;
+connect component=ROWLET_joy_teleop -> channel=ROWLET_twist_input_0;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_twist_input_0;
+connect component=ROWLET_bebop_position_control -> channel=ROWLET_twist_input_1;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_twist_input_1;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_twist_input_2;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_twist_input_3;
+connect component=ROWLET_bebop_switch_node <- channel=ROWLET_twist_input_4;
+connect component=ROWLET_bebop_driver_node <- channel=ROWLET_user_takeoff;
+connect component=rviz2 -> channel=clicked_point;
+connect component=rviz2 -> channel=goal_pose;
+connect component=vrpn_client_node -> channel=helmGelb_accel;
+connect component=vrpn_client_node -> channel=helmGelb_odom;
+connect component=vrpn_client_node -> channel=helmGelb_pose;
+connect component=vrpn_client_node -> channel=helmGelb_pose_cov;
+connect component=vrpn_client_node -> channel=helmGelb_twist;
+connect component=rviz2 -> channel=initialpose;
+connect component=simple_trajectory_server <- channel=obstacles_topic;
+connect component=simple_trajectory_visualizer <- channel=obstacles_topic;
+connect component=optitrack_joy_node -> channel=optitrack_joy;
+connect component=ROWLET_joy_teleop <- channel=optitrack_joy;
+connect component=ROWLET_quad_script_node <- channel=optitrack_joy;
+connect component=optitrack_joy_node <- channel=optitrack_joy_set_feedback;
+connect component=ROWLET_joy_teleop -> channel=parameter_events;
+connect component=ROWLET_bebop_driver_node -> channel=parameter_events;
+connect component=_ros2cli_daemon_0 -> channel=parameter_events;
+connect component=saft_saft_dataflow_generator -> channel=parameter_events;
+connect component=simple_trajectory_server -> channel=parameter_events;
+connect component=simple_trajectory_visualizer -> channel=parameter_events;
+connect component=rviz2 -> channel=parameter_events;
+connect component=vrpn_client_node -> channel=parameter_events;
+connect component=optitrack_joy_node -> channel=parameter_events;
+connect component=trajectory_client -> channel=parameter_events;
+connect component=_ros2cli_requester_std_srvs_Trigger -> channel=parameter_events;
+connect component=ROWLET_bebop_position_control -> channel=parameter_events;
+connect component=ROWLET_bebop_switch_node -> channel=parameter_events;
+connect component=ROWLET_quad_state_node -> channel=parameter_events;
+connect component=ROWLET_quad_script_node -> channel=parameter_events;
+connect component=ROWLET_bebop_driver_node <- channel=parameter_events;
+connect component=saft_saft_dataflow_generator <- channel=parameter_events;
+connect component=simple_trajectory_server <- channel=parameter_events;
+connect component=transform_listener_impl_5620e574d150 <- channel=parameter_events;
+connect component=simple_trajectory_visualizer <- channel=parameter_events;
+connect component=transform_listener_impl_565005919d58 <- channel=parameter_events;
+connect component=rviz2 <- channel=parameter_events;
+connect component=transform_listener_impl_558c64acec30 <- channel=parameter_events;
+connect component=vrpn_client_node <- channel=parameter_events;
+connect component=optitrack_joy_node <- channel=parameter_events;
+connect component=trajectory_client <- channel=parameter_events;
+connect component=transform_listener_impl_55e377922250 <- channel=parameter_events;
+connect component=ROWLET_bebop_position_control <- channel=parameter_events;
+connect component=ROWLET_transform_listener_impl_5625a079d6f0 <- channel=parameter_events;
+connect component=ROWLET_bebop_switch_node <- channel=parameter_events;
+connect component=ROWLET_quad_state_node <- channel=parameter_events;
+connect component=ROWLET_quad_script_node <- channel=parameter_events;
+connect component=ROWLET_transform_listener_impl_55ef56dca3e0 <- channel=parameter_events;
+connect component=ROWLET_joy_teleop -> channel=rosout;
+connect component=ROWLET_bebop_driver_node -> channel=rosout;
+connect component=_ros2cli_daemon_0 -> channel=rosout;
+connect component=saft_saft_dataflow_generator -> channel=rosout;
+connect component=simple_trajectory_server -> channel=rosout;
+connect component=transform_listener_impl_5620e574d150 -> channel=rosout;
+connect component=simple_trajectory_visualizer -> channel=rosout;
+connect component=transform_listener_impl_565005919d58 -> channel=rosout;
+connect component=rviz2 -> channel=rosout;
+connect component=transform_listener_impl_558c64acec30 -> channel=rosout;
+connect component=vrpn_client_node -> channel=rosout;
+connect component=optitrack_joy_node -> channel=rosout;
+connect component=trajectory_client -> channel=rosout;
+connect component=transform_listener_impl_55e377922250 -> channel=rosout;
+connect component=_ros2cli_requester_std_srvs_Trigger -> channel=rosout;
+connect component=ROWLET_bebop_position_control -> channel=rosout;
+connect component=ROWLET_transform_listener_impl_5625a079d6f0 -> channel=rosout;
+connect component=ROWLET_bebop_switch_node -> channel=rosout;
+connect component=ROWLET_quad_state_node -> channel=rosout;
+connect component=ROWLET_quad_script_node -> channel=rosout;
+connect component=ROWLET_transform_listener_impl_55ef56dca3e0 -> channel=rosout;
+connect component=simple_trajectory_server -> channel=server_pathfinding_output;
+connect component=simple_trajectory_visualizer <- channel=server_pathfinding_output;
+connect component=ROWLET_bebop_driver_node -> channel=tf;
+connect component=vrpn_client_node -> channel=tf;
+connect component=ROWLET_bebop_position_control -> channel=tf;
+connect component=transform_listener_impl_5620e574d150 <- channel=tf;
+connect component=transform_listener_impl_565005919d58 <- channel=tf;
+connect component=transform_listener_impl_558c64acec30 <- channel=tf;
+connect component=transform_listener_impl_55e377922250 <- channel=tf;
+connect component=ROWLET_transform_listener_impl_5625a079d6f0 <- channel=tf;
+connect component=ROWLET_transform_listener_impl_55ef56dca3e0 <- channel=tf;
+connect component=transform_listener_impl_5620e574d150 <- channel=tf_static;
+connect component=transform_listener_impl_565005919d58 <- channel=tf_static;
+connect component=transform_listener_impl_558c64acec30 <- channel=tf_static;
+connect component=transform_listener_impl_55e377922250 <- channel=tf_static;
+connect component=ROWLET_transform_listener_impl_5625a079d6f0 <- channel=tf_static;
+connect component=ROWLET_transform_listener_impl_55ef56dca3e0 <- channel=tf_static;
+connect component=simple_trajectory_server -> channel=trajectory_assignment;
+connect component=simple_trajectory_visualizer <- channel=trajectory_assignment;
+connect component=trajectory_client <- channel=trajectory_assignment;
+connect component=simple_trajectory_server -> channel=trajectory_hold;
+connect component=simple_trajectory_visualizer <- channel=trajectory_hold;
+connect component=trajectory_client <- channel=trajectory_hold;
+connect component=trajectory_client -> channel=trajectory_request;
+connect component=simple_trajectory_server <- channel=trajectory_request;
+connect component=simple_trajectory_visualizer -> channel=trajectory_visualization;
+connect component=rviz2 <- channel=trajectory_visualization;
+connect component=rviz2 <- channel=trajectory_visualization_array;

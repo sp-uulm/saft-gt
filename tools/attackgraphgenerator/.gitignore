@@ -1,0 +1,6 @@
+api.txt
+.ipynb*
+__pycache__
+/generated
+/local
+api.json

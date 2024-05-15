@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  maria_db:
+    image: mariadb
+    environment:
+      MARIADB_USER: attackGraphGeneration
+      MARIADB_PASSWORD: test
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: attackGraphGeneration
+    ports:
+      - "3306:3306"
+  pma:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - maria_db
+    environment:
+      PMA_HOST: maria_db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - "8081:80"

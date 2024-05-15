@@ -1,0 +1,43 @@
+Hazard description = "Drone crashes into a person"{
+	OR 
+	{
+		IntermediateEvent description = "Trajectory out of control" {
+			OR {
+				BasicEvent description = "Miscalculation" probability = 0.2,
+				BasicEvent description = "Errorenous messages" probability = 0.3,
+				DisruptDroneControl,
+				IntermediateEvent description = "Messages get lost" {
+					OR {
+						BasicEvent description = "Poor connection" probability = 0.8,
+						IntermediateEvent description = "Too many incoming messages" {
+							OR {
+								BasicEvent description = "Poor configuration of a node" probability = 0.8,
+								AttackEvent description = "Attacker performs flooding-attack on trajectory request topic" deploymentElement=ros_nodes  cost=0.8 lambda=0.00012 CVSSREQ = CVSS:3.1/C:=*/I:*/A:H,
+								
+								AttackEvent description = "Attacker performs flooding-attack on trajectory request topic" dataflowElement = trajectory_request  cost=0.8 lambda=0.00012 cvssreq = CVSS:3.1/C:=*/I:*/A:H,
+								AttackEvent description = "Attacker performs flooding-attack on trajectory assignment topic" dataflowElement = trajectory_assignment cost=0.8 lambda=0.00012 CVSSreq = CVSS:3.1/C:=*/I:*/A:H,
+								AttackEvent description = "Attacker performs flooding-attack on trajectory control target topic" dataflowElement = ROWLET_target  cost=0.8 lambda=0.00012 CVSSreq = CVSS:3.1/C:=*/I:*/A:H
+//								AttackEvent description = "Attacker performs flooding-attack on trajectory command velocity topic" dataflowElement = default_FARFETCH_control_vel cost=0.8 CVSSreq = CVSS:3.1/C:*,I:*,A:H
+							}
+						} 
+						 
+					}
+				}, 
+				TakeOverTrajectoryNode
+			}
+		},
+		IntermediateEvent description = "Drone unable to fly" {
+			OR {
+				BasicEvent description = "Damaged rotor" probability = 0.7,
+				IntermediateEvent description = "No power supply" {
+					OR {
+						BasicEvent description = "Battery dead" probability = 0.7,
+						AttackEvent description = "Attacker manipulates battery status indicator" dataflowElement = BatteryStateChanged cost = 6.0 lambda=0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L ,
+						AttackEvent description = "Attack switches off flight control" dataflowElement = bebop2 cost = 6.0 lambda=0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L 
+					}
+				}
+			}
+		}
+	}
+}
+

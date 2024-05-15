@@ -1,0 +1,164 @@
+
+Channel BatteryStateChanged {
+	property ros_channel_type = "topic";
+}
+Connect Component=rostopic <- Channel=BatteryStateChanged;
+
+Component rostopic {	
+}
+
+Component bebop_guard_node {
+}
+
+Connect Component=bebop_guard_node -> Channel=ROWLET_channel_select;
+Connect Component=bebop_guard_node -> Channel=ROWLET_bebop_land ;
+Connect Component=bebop_guard_node <- Channel=ROWLET_pose ;
+
+Component bebop_switch_node {
+}
+
+Channel TwistInput0 {
+	property ros_channel_type = "topic";
+}
+
+Connect Component=bebop_switch_node -> Channel=CmdVel ;
+Connect Component=bebop_switch_node <- Channel=ROWLET_channel_select ;
+Connect Component=bebop_switch_node <- Channel=TwistInput0 ;
+Connect Component=bebop_switch_node <- Channel=ROWLET_twist_input_1 ;
+
+Component joy_teleop {
+}
+
+Connect Component=joy_teleop -> Channel=ROWLET_bebop_land ;
+Connect Component=joy_teleop -> Channel=ROWLET_bebop_takeoff ;
+Connect Component=joy_teleop -> Channel=ROWLET_channel_select ;
+Connect Component=joy_teleop -> Channel=TwistInput0 ;
+Connect Component=joy_teleop <- Channel=optitrack_joy ;
+
+Connect Component=ROWLET_quad_script_node -> Channel=PhotoServiceRequest ;
+Connect Component=ROWLET_quad_script_node <- Channel=PhotoServiceResponse ;
+
+Component ROWLET_quad_script_node {
+}
+
+Component quad_state_node {
+}
+
+Connect Component=quad_state_node -> Channel=ROWLET_k_acc ;
+Connect Component=quad_state_node -> Channel=ROWLET_k_vel ;
+Connect Component=quad_state_node <- Channel=ROWLET_pose ;
+
+Component sim_photo_node {
+}
+
+Channel PhotoServiceResponse {
+	property ros_channel_type = "service_response";
+}
+Channel PhotoServiceRequest {
+	property ros_channel_type = "service_request";
+}
+
+Connect Component=sim_photo_node -> Channel=Snapshot ;
+Connect Component=sim_photo_node -> Channel=PhotoServiceResponse ;
+Connect Component=sim_photo_node <- Channel=PhotoServiceRequest ;
+
+
+Component bebop_driver_node {
+}
+
+Channel JointStates {
+	property ros_channel_type = "topic";
+}
+Channel CmdVel {
+	property ros_channel_type = "topic";
+}
+Channel Snapshot {
+	property ros_channel_type = "topic";
+}
+Connect Component=bebop_driver_node -> Channel=BatteryStateChanged ;
+Connect Component=bebop_driver_node -> Channel=JointStates ;
+Connect Component=bebop_driver_node -> Channel=tf ;
+Connect Component=bebop_driver_node <- Channel=CmdVel ;
+Connect Component=bebop_driver_node <- Channel=ROWLET_bebop_takeoff ;
+Connect Component=bebop_driver_node <- Channel=ROWLET_bebop_land ;
+Connect Component=bebop_driver_node <- Channel=Snapshot ;
+
+Component robot_state_publisher {
+}
+
+Connect Component=robot_state_publisher <- Channel=JointStates ;
+Connect Component=robot_state_publisher -> Channel=tf ;
+
+Component gesture_node {
+}
+
+Connect Component=gesture_node -> Channel=ROWLET_gesture ;
+Connect Component=gesture_node <- Channel=tf ;
+
+Component joy_node {
+}
+
+Connect Component=joy_node -> Channel=optitrack_joy ;
+
+Component vrpn_client_node {
+}
+
+Connect Component=vrpn_client_node -> Channel=ROWLET_pose ;
+Connect Component=vrpn_client_node <- Channel=VRPNData ;
+
+Component optitrack_motive {
+}
+
+Connect Component=optitrack_motive <- Channel=CameraData ;
+Connect Component=optitrack_motive -> Channel=VRPNData ;
+
+Channel VRPNData {
+	property type = "vrpn";
+}
+
+Component optitrack_prime_13 {
+	Property class="Sensor";
+}
+
+Component optitrack_prime_13W {
+	Property class="Sensor";
+}
+
+Channel OpticalTracking {}
+Channel CameraData {}
+
+Connect Component=optitrack_prime_13 <- Channel=OpticalTracking ;
+Connect Component=optitrack_prime_13W <- Channel=OpticalTracking ;
+Connect Component=bebop2 -> Channel=OpticalTracking ;
+Connect Component=optitrack_prime_13 -> Channel=CameraData ;
+Connect Component=optitrack_prime_13W -> Channel=CameraData ;
+
+Component bebop2 {
+	Property class="Sensor;Actor";
+	Property name="FARFETCH";
+}
+
+Channel DroneCommands {}
+Channel DroneTelemetry {}
+Channel DronePhotoData {
+	Property type="ftp";
+}
+
+Connect Component=bebop2 -> Channel=DronePhotoData ;
+Connect Component=sim_photo_node <- Channel=DronePhotoData ;
+
+Connect Component=bebop_driver_node <- Channel=DroneTelemetry ;
+Connect Component=bebop_driver_node -> Channel=DroneCommands ;
+Connect Component=bebop2 -> Channel=DroneTelemetry ;
+Connect Component=bebop2 <- Channel=DroneCommands ;
+
+Component Gamepad {
+	Property class="Input";
+}
+
+Channel GamepadData {
+	property type = "usb";
+}
+
+Connect Component=joy_node <- Channel=GamepadData ;
+Connect Component=Gamepad -> Channel=GamepadData ;

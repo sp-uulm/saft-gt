@@ -1,0 +1,5 @@
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-406 cweNotes="Insufficient Control of Network Message Volume (Network Amplification)" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+OR {
+AttackStep CVE202138425 description="eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." CVE=CVE-2021-38425 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H BaseScore=9.1 ImpactScore=5.2 ExploitabilityScore=3.9
+} 
+}

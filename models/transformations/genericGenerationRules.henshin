@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_Zt28cGECEe2e3NZDS3P7Ig">
+  <imports href="http://www.ulm.uni/safesec/AttackFaultTree#/"/>
+  <imports href="http://www.ulm.uni/safesec/Util#/"/>
+  <imports href="http://www.ulm.uni/safesec/dataflow/Dataflow#/"/>
+  <imports href="http://www.ulm.uni/safesec/deployment/Deployment#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_TddXoG7zEe2rqYVhtsdH5g" name="corruptChannel">
+    <parameters xmi:id="_8RMP4G7zEe2rqYVhtsdH5g" name="aftIntermediateEvent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent"/>
+    </parameters>
+    <parameters xmi:id="__lSd4G7zEe2rqYVhtsdH5g" name="sender" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+    </parameters>
+    <parameters xmi:id="_OHMBEG70Ee2rqYVhtsdH5g" name="cvss" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_10CFUHR8Ee2ERrK3Niwweg" name="newAFTAttackEvent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+    </parameters>
+    <parameters xmi:id="_PpPmoMqHEe6Pyom45T5THQ" name="cost" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </parameters>
+    <parameters xmi:id="_DZp84MtOEe632_wjkAo5nA" name="lambda" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </parameters>
+    <lhs xmi:id="_TdhpEG7zEe2rqYVhtsdH5g" name="Lhs">
+      <nodes xmi:id="_FisQcG70Ee2rqYVhtsdH5g" name="sender">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_TdiQIG7zEe2rqYVhtsdH5g" name="Rhs">
+      <nodes xmi:id="_WAIIsG7zEe2rqYVhtsdH5g" name="aftIntermediateEvent" outgoing="_eltecG7zEe2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent"/>
+        <attributes xmi:id="_mhY7kG7zEe2rqYVhtsdH5g" value="&quot;Channel is corrupted&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/description"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_dyQoQG7zEe2rqYVhtsdH5g" incoming="_eltecG7zEe2rqYVhtsdH5g" outgoing="_HChEcG70Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_rIGoAG7zEe2rqYVhtsdH5g" name="newAFTAttackEvent" incoming="_HChEcG70Ee2rqYVhtsdH5g" outgoing="_HUGjsG70Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+        <attributes xmi:id="_sS8qgG7zEe2rqYVhtsdH5g" value="&quot;Sender is corrupted&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/description"/>
+        </attributes>
+        <attributes xmi:id="_yzqmUBTHEe61O6NGg1422Q" value="cvss">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/cvss"/>
+        </attributes>
+        <attributes xmi:id="_W59bMMqHEe6Pyom45T5THQ" value="cost">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/cost"/>
+        </attributes>
+        <attributes xmi:id="_K0hL8MtOEe632_wjkAo5nA" value="lambda">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/lambda"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_FitekG70Ee2rqYVhtsdH5g" name="sender" incoming="_HUGjsG70Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+      </nodes>
+      <edges xmi:id="_eltecG7zEe2rqYVhtsdH5g" source="_WAIIsG7zEe2rqYVhtsdH5g" target="_dyQoQG7zEe2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/subTree"/>
+      </edges>
+      <edges xmi:id="_HChEcG70Ee2rqYVhtsdH5g" source="_dyQoQG7zEe2rqYVhtsdH5g" target="_rIGoAG7zEe2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_HUGjsG70Ee2rqYVhtsdH5g" source="_rIGoAG7zEe2rqYVhtsdH5g" target="_FitekG70Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/linkedDataflowElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_FitekW70Ee2rqYVhtsdH5g" origin="_FisQcG70Ee2rqYVhtsdH5g" image="_FitekG70Ee2rqYVhtsdH5g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_g3FxkG77Ee2rqYVhtsdH5g" name="corruptReceiver">
+    <parameters xmi:id="_uyNBkG77Ee2rqYVhtsdH5g" name="aftIntermediateEvent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent"/>
+    </parameters>
+    <parameters xmi:id="_UMQoQG78Ee2rqYVhtsdH5g" name="channel" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+    </parameters>
+    <parameters xmi:id="_bn-y8G78Ee2rqYVhtsdH5g" name="cvss" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_hB4PkHR9Ee2ERrK3Niwweg" name="newaftAttackEvent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+    </parameters>
+    <lhs xmi:id="_g3KqEG77Ee2rqYVhtsdH5g" name="Lhs">
+      <nodes xmi:id="_3cLIEG77Ee2rqYVhtsdH5g" name="channel">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_g3KqEW77Ee2rqYVhtsdH5g" name="Rhs">
+      <nodes xmi:id="_lO7UgG77Ee2rqYVhtsdH5g" name="aftIntermediateEvent" outgoing="_5rJhEG77Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent"/>
+        <attributes xmi:id="_9T-o8G77Ee2rqYVhtsdH5g" value="&quot;Receiver is corrupted&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/description"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_zQUysG77Ee2rqYVhtsdH5g" incoming="_5rJhEG77Ee2rqYVhtsdH5g" outgoing="_31DawG7-Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_0lLFwG77Ee2rqYVhtsdH5g" name="newaftAttackEvent" incoming="_9HtAIG7-Ee2rqYVhtsdH5g" outgoing="_6a0qgG77Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+        <attributes xmi:id="_BAYpQG78Ee2rqYVhtsdH5g" value="&quot;Channel is corrupted&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/description"/>
+        </attributes>
+        <attributes xmi:id="_RobUABTIEe61O6NGg1422Q" value="cvss">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/cvss"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_3cLvIG77Ee2rqYVhtsdH5g" name="channel" incoming="_6a0qgG77Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+      </nodes>
+      <nodes xmi:id="_zMzdQG7-Ee2rqYVhtsdH5g" incoming="_31DawG7-Ee2rqYVhtsdH5g" outgoing="_4D8LUG7-Ee2rqYVhtsdH5g _8h2hEG7-Ee2rqYVhtsdH5g _IqzP4G7_Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+      </nodes>
+      <nodes xmi:id="_0Vj1EG7-Ee2rqYVhtsdH5g" incoming="_4D8LUG7-Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate"/>
+        <attributes xmi:id="_43sjgG7-Ee2rqYVhtsdH5g" value="&quot;AND&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_7rSFcG7-Ee2rqYVhtsdH5g" incoming="_8h2hEG7-Ee2rqYVhtsdH5g" outgoing="_9HtAIG7-Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="__6EaEG7-Ee2rqYVhtsdH5g" incoming="_IqzP4G7_Ee2rqYVhtsdH5g" outgoing="_JPyMQG7_Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_BrCocG7_Ee2rqYVhtsdH5g" incoming="_JPyMQG7_Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//BasicFaultEvent"/>
+        <attributes xmi:id="_CkG-cG7_Ee2rqYVhtsdH5g" value="&quot;No input validation&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//BasicFaultEvent/description"/>
+        </attributes>
+        <attributes xmi:id="_G-YKUG7_Ee2rqYVhtsdH5g" value="0.05">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//BasicFaultEvent/probability"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_5rJhEG77Ee2rqYVhtsdH5g" source="_lO7UgG77Ee2rqYVhtsdH5g" target="_zQUysG77Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/subTree"/>
+      </edges>
+      <edges xmi:id="_6a0qgG77Ee2rqYVhtsdH5g" source="_0lLFwG77Ee2rqYVhtsdH5g" target="_3cLvIG77Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent/linkedDataflowElement"/>
+      </edges>
+      <edges xmi:id="_31DawG7-Ee2rqYVhtsdH5g" source="_zQUysG77Ee2rqYVhtsdH5g" target="_zMzdQG7-Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_4D8LUG7-Ee2rqYVhtsdH5g" source="_zMzdQG7-Ee2rqYVhtsdH5g" target="_0Vj1EG7-Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree/gate"/>
+      </edges>
+      <edges xmi:id="_8h2hEG7-Ee2rqYVhtsdH5g" source="_zMzdQG7-Ee2rqYVhtsdH5g" target="_7rSFcG7-Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree/subTreeElements"/>
+      </edges>
+      <edges xmi:id="_9HtAIG7-Ee2rqYVhtsdH5g" source="_7rSFcG7-Ee2rqYVhtsdH5g" target="_0lLFwG77Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_IqzP4G7_Ee2rqYVhtsdH5g" source="_zMzdQG7-Ee2rqYVhtsdH5g" target="__6EaEG7-Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree/subTreeElements"/>
+      </edges>
+      <edges xmi:id="_JPyMQG7_Ee2rqYVhtsdH5g" source="__6EaEG7-Ee2rqYVhtsdH5g" target="_BrCocG7_Ee2rqYVhtsdH5g">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_3cLvIW77Ee2rqYVhtsdH5g" origin="_3cLIEG77Ee2rqYVhtsdH5g" image="_3cLvIG77Ee2rqYVhtsdH5g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_HFACwHJMEe2qtJ014VARDw" name="corruptPlatform">
+    <parameters xmi:id="_O7pO4HJMEe2qtJ014VARDw" name="aftIntermediateEvent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent"/>
+    </parameters>
+    <lhs xmi:id="_HFIloHJMEe2qtJ014VARDw" name="Lhs"/>
+    <rhs xmi:id="_HFIloXJMEe2qtJ014VARDw" name="Rhs">
+      <nodes xmi:id="_L1v08HJMEe2qtJ014VARDw" name="aftIntermediateEvent" outgoing="_emmr4HJMEe2qtJ014VARDw">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent"/>
+        <attributes xmi:id="_aZiOgHJMEe2qtJ014VARDw" value="&quot;Platform is corrupted&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/description"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_d88D0HJMEe2qtJ014VARDw" incoming="_emmr4HJMEe2qtJ014VARDw" outgoing="_rTP9oHJMEe2qtJ014VARDw">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference"/>
+      </nodes>
+      <nodes xmi:id="_kJ8_sHJMEe2qtJ014VARDw" incoming="_rTP9oHJMEe2qtJ014VARDw" outgoing="_r4Xc4HJMEe2qtJ014VARDw">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree"/>
+      </nodes>
+      <nodes xmi:id="_ldIe0HJMEe2qtJ014VARDw" incoming="_r4Xc4HJMEe2qtJ014VARDw">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate"/>
+        <attributes xmi:id="_nEWUQHJMEe2qtJ014VARDw" value="&quot;OR&quot;">
+          <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_emmr4HJMEe2qtJ014VARDw" source="_L1v08HJMEe2qtJ014VARDw" target="_d88D0HJMEe2qtJ014VARDw">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTIntermediateEvent/subTree"/>
+      </edges>
+      <edges xmi:id="_rTP9oHJMEe2qtJ014VARDw" source="_d88D0HJMEe2qtJ014VARDw" target="_kJ8_sHJMEe2qtJ014VARDw">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTreeOrReference/subtree"/>
+      </edges>
+      <edges xmi:id="_r4Xc4HJMEe2qtJ014VARDw" source="_kJ8_sHJMEe2qtJ014VARDw" target="_ldIe0HJMEe2qtJ014VARDw">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTSubTree/gate"/>
+      </edges>
+    </rhs>
+  </units>
+</henshin:Module>

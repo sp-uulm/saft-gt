@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_PPlDYJV-Ee2A7LLFW__1pA">
+  <imports href="http://www.ulm.uni/safesec/deployment/Deployment#/"/>
+  <imports href="http://www.ulm.uni/safesec/AttackFaultTree#/"/>
+  <imports href="http://www.ulm.uni/safesec/Util#/"/>
+  <imports href="http://www.ulm.uni/safesec/dataflow/Dataflow#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_mK9yUJWEEe2A7LLFW__1pA" name="checkDeploymentElementType">
+    <parameters xmi:id="_xU4tEJWEEe2A7LLFW__1pA" name="deploymentElement" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_5mfW4JWEEe2A7LLFW__1pA" name="type" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_mLLNsJWEEe2A7LLFW__1pA" name="Lhs">
+      <nodes xmi:id="_n6P-oJWEEe2A7LLFW__1pA" outgoing="_sgkpgJWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+        <attributes xmi:id="_u_cfsJWEEe2A7LLFW__1pA" value="deploymentElement">
+          <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_pZHwYJWEEe2A7LLFW__1pA" incoming="_sgkpgJWEEe2A7LLFW__1pA" outgoing="_s0LiAJWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//TypesList"/>
+      </nodes>
+      <nodes xmi:id="_qmwoMJWEEe2A7LLFW__1pA" incoming="_s0LiAJWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/Util#//Type"/>
+        <attributes xmi:id="_ByS6sJWFEe2A7LLFW__1pA" value="type">
+          <type href="http://www.ulm.uni/safesec/Util#//Type/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_sgkpgJWEEe2A7LLFW__1pA" source="_n6P-oJWEEe2A7LLFW__1pA" target="_pZHwYJWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/type"/>
+      </edges>
+      <edges xmi:id="_s0LiAJWEEe2A7LLFW__1pA" source="_pZHwYJWEEe2A7LLFW__1pA" target="_qmwoMJWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//TypesList/type"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_mLLNsZWEEe2A7LLFW__1pA" name="Rhs">
+      <nodes xmi:id="_n6QlsJWEEe2A7LLFW__1pA" outgoing="_sgkpgZWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+        <attributes xmi:id="_u_cfsZWEEe2A7LLFW__1pA" value="deploymentElement">
+          <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_pZHwYZWEEe2A7LLFW__1pA" incoming="_sgkpgZWEEe2A7LLFW__1pA" outgoing="_s0LiAZWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//TypesList"/>
+      </nodes>
+      <nodes xmi:id="_qmxPQJWEEe2A7LLFW__1pA" incoming="_s0LiAZWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/Util#//Type"/>
+        <attributes xmi:id="_ByThwJWFEe2A7LLFW__1pA" value="type">
+          <type href="http://www.ulm.uni/safesec/Util#//Type/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_sgkpgZWEEe2A7LLFW__1pA" source="_n6QlsJWEEe2A7LLFW__1pA" target="_pZHwYZWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/type"/>
+      </edges>
+      <edges xmi:id="_s0LiAZWEEe2A7LLFW__1pA" source="_pZHwYZWEEe2A7LLFW__1pA" target="_qmxPQJWEEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//TypesList/type"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_n6QlsZWEEe2A7LLFW__1pA" origin="_n6P-oJWEEe2A7LLFW__1pA" image="_n6QlsJWEEe2A7LLFW__1pA"/>
+    <mappings xmi:id="_pZPsMJWEEe2A7LLFW__1pA" origin="_pZHwYJWEEe2A7LLFW__1pA" image="_pZHwYZWEEe2A7LLFW__1pA"/>
+    <mappings xmi:id="_qmxPQZWEEe2A7LLFW__1pA" origin="_qmwoMJWEEe2A7LLFW__1pA" image="_qmxPQJWEEe2A7LLFW__1pA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="__jDTgJZWEe2A7LLFW__1pA" name="getConnectedChannel">
+    <parameters xmi:id="_Ed4OwJZXEe2A7LLFW__1pA" name="component" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_FL_R8JZXEe2A7LLFW__1pA" name="direction" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_F67bkJZXEe2A7LLFW__1pA" name="channel" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+    </parameters>
+    <lhs xmi:id="__jMdcJZWEe2A7LLFW__1pA" name="Lhs">
+      <nodes xmi:id="_YWCE8JZXEe2A7LLFW__1pA" name="channel" incoming="_utYhcJZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+      </nodes>
+      <nodes xmi:id="_mvXiAJZXEe2A7LLFW__1pA" outgoing="_utYhcJZXEe2A7LLFW__1pA _vKAzEJZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection"/>
+        <attributes xmi:id="_sYtJEJZXEe2A7LLFW__1pA" value="direction">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_pfkYwJZXEe2A7LLFW__1pA" incoming="_vKAzEJZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+        <attributes xmi:id="_qnwv4JZXEe2A7LLFW__1pA" value="component">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_utYhcJZXEe2A7LLFW__1pA" source="_mvXiAJZXEe2A7LLFW__1pA" target="_YWCE8JZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/channel"/>
+      </edges>
+      <edges xmi:id="_vKAzEJZXEe2A7LLFW__1pA" source="_mvXiAJZXEe2A7LLFW__1pA" target="_pfkYwJZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/component"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="__jMdcZZWEe2A7LLFW__1pA" name="Rhs">
+      <nodes xmi:id="_YWDTEJZXEe2A7LLFW__1pA" name="channel" incoming="_utYhcZZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+      </nodes>
+      <nodes xmi:id="_mvYwIJZXEe2A7LLFW__1pA" outgoing="_utYhcZZXEe2A7LLFW__1pA _vKAzEZZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection"/>
+        <attributes xmi:id="_sYwzcJZXEe2A7LLFW__1pA" value="direction">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_pfkYwZZXEe2A7LLFW__1pA" incoming="_vKAzEZZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+        <attributes xmi:id="_qnwv4ZZXEe2A7LLFW__1pA" value="component">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_utYhcZZXEe2A7LLFW__1pA" source="_mvYwIJZXEe2A7LLFW__1pA" target="_YWDTEJZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/channel"/>
+      </edges>
+      <edges xmi:id="_vKAzEZZXEe2A7LLFW__1pA" source="_mvYwIJZXEe2A7LLFW__1pA" target="_pfkYwZZXEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/component"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_YWKAwJZXEe2A7LLFW__1pA" origin="_YWCE8JZXEe2A7LLFW__1pA" image="_YWDTEJZXEe2A7LLFW__1pA"/>
+    <mappings xmi:id="_mvYwIZZXEe2A7LLFW__1pA" origin="_mvXiAJZXEe2A7LLFW__1pA" image="_mvYwIJZXEe2A7LLFW__1pA"/>
+    <mappings xmi:id="_pfkYwpZXEe2A7LLFW__1pA" origin="_pfkYwJZXEe2A7LLFW__1pA" image="_pfkYwZZXEe2A7LLFW__1pA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CWEtYJZaEe2A7LLFW__1pA" name="getConnectedComponent">
+    <parameters xmi:id="_JKm8QJZaEe2A7LLFW__1pA" name="channel" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_MS6xAJZaEe2A7LLFW__1pA" name="direction" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_UanQ4JZaEe2A7LLFW__1pA" name="component" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+    </parameters>
+    <lhs xmi:id="_CWPsgJZaEe2A7LLFW__1pA" name="Lhs">
+      <nodes xmi:id="_dxXk4JZaEe2A7LLFW__1pA" incoming="_yl_qYJZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+        <attributes xmi:id="_nK11sJZaEe2A7LLFW__1pA" value="channel">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gPz9QJZaEe2A7LLFW__1pA" outgoing="_yl_qYJZaEe2A7LLFW__1pA _y3CXEJZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection"/>
+        <attributes xmi:id="_s3q1oJZaEe2A7LLFW__1pA" value="direction">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_hjFjAJZaEe2A7LLFW__1pA" name="component" incoming="_y3CXEJZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+      </nodes>
+      <edges xmi:id="_yl_qYJZaEe2A7LLFW__1pA" source="_gPz9QJZaEe2A7LLFW__1pA" target="_dxXk4JZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/channel"/>
+      </edges>
+      <edges xmi:id="_y3CXEJZaEe2A7LLFW__1pA" source="_gPz9QJZaEe2A7LLFW__1pA" target="_hjFjAJZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/component"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CWPsgZZaEe2A7LLFW__1pA" name="Rhs">
+      <nodes xmi:id="_dxZaEJZaEe2A7LLFW__1pA" incoming="_yl_qYZZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+        <attributes xmi:id="_nK3D0JZaEe2A7LLFW__1pA" value="channel">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gPz9QZZaEe2A7LLFW__1pA" outgoing="_yl_qYZZaEe2A7LLFW__1pA _y3CXEZZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection"/>
+        <attributes xmi:id="_s3q1oZZaEe2A7LLFW__1pA" value="direction">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/direction"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_hjGKEJZaEe2A7LLFW__1pA" name="component" incoming="_y3CXEZZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+      </nodes>
+      <edges xmi:id="_yl_qYZZaEe2A7LLFW__1pA" source="_gPz9QZZaEe2A7LLFW__1pA" target="_dxZaEJZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/channel"/>
+      </edges>
+      <edges xmi:id="_y3CXEZZaEe2A7LLFW__1pA" source="_gPz9QZZaEe2A7LLFW__1pA" target="_hjGKEJZaEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Connection/component"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_dxZaEZZaEe2A7LLFW__1pA" origin="_dxXk4JZaEe2A7LLFW__1pA" image="_dxZaEJZaEe2A7LLFW__1pA"/>
+    <mappings xmi:id="_gPz9QpZaEe2A7LLFW__1pA" origin="_gPz9QJZaEe2A7LLFW__1pA" image="_gPz9QZZaEe2A7LLFW__1pA"/>
+    <mappings xmi:id="_hjGKEZZaEe2A7LLFW__1pA" origin="_hjFjAJZaEe2A7LLFW__1pA" image="_hjGKEJZaEe2A7LLFW__1pA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_tbxjEJZsEe2A7LLFW__1pA" name="getChannelDefFromDeployment">
+    <parameters xmi:id="_yYWx0JZsEe2A7LLFW__1pA" name="dataflowChannelName" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_2SXJQJZsEe2A7LLFW__1pA" name="channelDeployment" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/deployment/Deployment#//Channel"/>
+    </parameters>
+    <lhs xmi:id="_tb430JZsEe2A7LLFW__1pA" name="Lhs">
+      <nodes xmi:id="_BGA5EJZtEe2A7LLFW__1pA" name="dataflowChannel" incoming="_Mx9i0JZtEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+        <attributes xmi:id="_F0BgUJZtEe2A7LLFW__1pA" value="dataflowChannelName">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_DtOL4JZtEe2A7LLFW__1pA" name="channelDeployment" outgoing="_Mx9i0JZtEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//Channel"/>
+      </nodes>
+      <edges xmi:id="_Mx9i0JZtEe2A7LLFW__1pA" source="_DtOL4JZtEe2A7LLFW__1pA" target="_BGA5EJZtEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//Channel/linkedDataflowChannel"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_tb5e4JZsEe2A7LLFW__1pA" name="Rhs">
+      <nodes xmi:id="_BGCuQJZtEe2A7LLFW__1pA" name="dataflowChannel" incoming="_Mx9i0ZZtEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Channel"/>
+        <attributes xmi:id="_F0BgUZZtEe2A7LLFW__1pA" value="dataflowChannelName">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_DtOL4ZZtEe2A7LLFW__1pA" name="channelDeployment" outgoing="_Mx9i0ZZtEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//Channel"/>
+      </nodes>
+      <edges xmi:id="_Mx9i0ZZtEe2A7LLFW__1pA" source="_DtOL4ZZtEe2A7LLFW__1pA" target="_BGCuQJZtEe2A7LLFW__1pA">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//Channel/linkedDataflowChannel"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_BGCuQZZtEe2A7LLFW__1pA" origin="_BGA5EJZtEe2A7LLFW__1pA" image="_BGCuQJZtEe2A7LLFW__1pA"/>
+    <mappings xmi:id="_DtOL4pZtEe2A7LLFW__1pA" origin="_DtOL4JZtEe2A7LLFW__1pA" image="_DtOL4ZZtEe2A7LLFW__1pA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_mJnqcJZ0Ee2IX9O5SNqX_A" name="checkRefComponentType">
+    <parameters xmi:id="_sD6eoJZ0Ee2IX9O5SNqX_A" name="refComponentName" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_2PKxsJZ0Ee2IX9O5SNqX_A" name="type" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_mMeKIJZ0Ee2IX9O5SNqX_A" name="Lhs">
+      <nodes xmi:id="_9hlPYJZ0Ee2IX9O5SNqX_A" incoming="_E3OAMJZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+        <attributes xmi:id="_-bR3gJZ0Ee2IX9O5SNqX_A" value="refComponentName">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="__5wnsJZ0Ee2IX9O5SNqX_A" outgoing="_E3OAMJZ1Ee2IX9O5SNqX_A _FooPAJZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent"/>
+      </nodes>
+      <nodes xmi:id="_BIH4QJZ1Ee2IX9O5SNqX_A" incoming="_FooPAJZ1Ee2IX9O5SNqX_A" outgoing="_GDFWYJZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//TypesList"/>
+      </nodes>
+      <nodes xmi:id="_CAwJYJZ1Ee2IX9O5SNqX_A" incoming="_GDFWYJZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/Util#//Type"/>
+        <attributes xmi:id="_DYbuAJZ1Ee2IX9O5SNqX_A" value="type">
+          <type href="http://www.ulm.uni/safesec/Util#//Type/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_E3OAMJZ1Ee2IX9O5SNqX_A" source="__5wnsJZ0Ee2IX9O5SNqX_A" target="_9hlPYJZ0Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent/linkedDataflowComponent"/>
+      </edges>
+      <edges xmi:id="_FooPAJZ1Ee2IX9O5SNqX_A" source="__5wnsJZ0Ee2IX9O5SNqX_A" target="_BIH4QJZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent/type"/>
+      </edges>
+      <edges xmi:id="_GDFWYJZ1Ee2IX9O5SNqX_A" source="_BIH4QJZ1Ee2IX9O5SNqX_A" target="_CAwJYJZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//TypesList/type"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_mMexMJZ0Ee2IX9O5SNqX_A" name="Rhs">
+      <nodes xmi:id="_9hqu8JZ0Ee2IX9O5SNqX_A" incoming="_E3OAMZZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//Component"/>
+        <attributes xmi:id="_-bR3gZZ0Ee2IX9O5SNqX_A" value="refComponentName">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="__5xOwJZ0Ee2IX9O5SNqX_A" outgoing="_E3OAMZZ1Ee2IX9O5SNqX_A _FooPAZZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent"/>
+      </nodes>
+      <nodes xmi:id="_BIH4QZZ1Ee2IX9O5SNqX_A" incoming="_FooPAZZ1Ee2IX9O5SNqX_A" outgoing="_GDFWYZZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//TypesList"/>
+      </nodes>
+      <nodes xmi:id="_CAwwcJZ1Ee2IX9O5SNqX_A" incoming="_GDFWYZZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/Util#//Type"/>
+        <attributes xmi:id="_DYbuAZZ1Ee2IX9O5SNqX_A" value="type">
+          <type href="http://www.ulm.uni/safesec/Util#//Type/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_E3OAMZZ1Ee2IX9O5SNqX_A" source="__5xOwJZ0Ee2IX9O5SNqX_A" target="_9hqu8JZ0Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent/linkedDataflowComponent"/>
+      </edges>
+      <edges xmi:id="_FooPAZZ1Ee2IX9O5SNqX_A" source="__5xOwJZ0Ee2IX9O5SNqX_A" target="_BIH4QZZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent/type"/>
+      </edges>
+      <edges xmi:id="_GDFWYZZ1Ee2IX9O5SNqX_A" source="_BIH4QZZ1Ee2IX9O5SNqX_A" target="_CAwwcJZ1Ee2IX9O5SNqX_A">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//TypesList/type"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_9hqu8ZZ0Ee2IX9O5SNqX_A" origin="_9hlPYJZ0Ee2IX9O5SNqX_A" image="_9hqu8JZ0Ee2IX9O5SNqX_A"/>
+    <mappings xmi:id="__5xOwZZ0Ee2IX9O5SNqX_A" origin="__5wnsJZ0Ee2IX9O5SNqX_A" image="__5xOwJZ0Ee2IX9O5SNqX_A"/>
+    <mappings xmi:id="_BIIfUJZ1Ee2IX9O5SNqX_A" origin="_BIH4QJZ1Ee2IX9O5SNqX_A" image="_BIH4QZZ1Ee2IX9O5SNqX_A"/>
+    <mappings xmi:id="_CAwwcZZ1Ee2IX9O5SNqX_A" origin="_CAwJYJZ1Ee2IX9O5SNqX_A" image="_CAwwcJZ1Ee2IX9O5SNqX_A"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_C1MnoJaBEe2878XtIpL05g" name="checkRefComponent">
+    <parameters xmi:id="_NeycgJaBEe2878XtIpL05g" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_C3u-QJaBEe2878XtIpL05g" name="Lhs">
+      <nodes xmi:id="_Fjpx8JaBEe2878XtIpL05g" outgoing="_JTDb4JaBEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent"/>
+      </nodes>
+      <nodes xmi:id="_InPewJaBEe2878XtIpL05g" incoming="_JTDb4JaBEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement"/>
+        <attributes xmi:id="_KvLboJaBEe2878XtIpL05g" value="name">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_JTDb4JaBEe2878XtIpL05g" source="_Fjpx8JaBEe2878XtIpL05g" target="_InPewJaBEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent/linkedDataflowComponent"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_C3u-QZaBEe2878XtIpL05g" name="Rhs">
+      <nodes xmi:id="_Fjpx8ZaBEe2878XtIpL05g" outgoing="_JTEC8JaBEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent"/>
+      </nodes>
+      <nodes xmi:id="_InRT8JaBEe2878XtIpL05g" incoming="_JTEC8JaBEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement"/>
+        <attributes xmi:id="_KvMCsJaBEe2878XtIpL05g" value="name">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_JTEC8JaBEe2878XtIpL05g" source="_Fjpx8ZaBEe2878XtIpL05g" target="_InRT8JaBEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent/linkedDataflowComponent"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Fjpx8paBEe2878XtIpL05g" origin="_Fjpx8JaBEe2878XtIpL05g" image="_Fjpx8ZaBEe2878XtIpL05g"/>
+    <mappings xmi:id="_InRT8ZaBEe2878XtIpL05g" origin="_InPewJaBEe2878XtIpL05g" image="_InRT8JaBEe2878XtIpL05g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_XVop4JgCEe2878XtIpL05g" name="getRefComponent">
+    <parameters xmi:id="_htWEkJgCEe2878XtIpL05g" name="deployComponent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent"/>
+    </parameters>
+    <parameters xmi:id="_kwGD4JgCEe2878XtIpL05g" name="elementName" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_XVxz0JgCEe2878XtIpL05g" name="Lhs">
+      <nodes xmi:id="_gP2y4JgCEe2878XtIpL05g" name="deployComponent" outgoing="_tY2pcJgCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent"/>
+      </nodes>
+      <nodes xmi:id="_rtgh8JgCEe2878XtIpL05g" incoming="_tY2pcJgCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement"/>
+        <attributes xmi:id="_sgeP8JgCEe2878XtIpL05g" value="elementName">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_tY2pcJgCEe2878XtIpL05g" source="_gP2y4JgCEe2878XtIpL05g" target="_rtgh8JgCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent/linkedDataflowComponent"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_XVxz0ZgCEe2878XtIpL05g" name="Rhs">
+      <nodes xmi:id="_gP2y4ZgCEe2878XtIpL05g" name="deployComponent" outgoing="_tY3QgJgCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent"/>
+      </nodes>
+      <nodes xmi:id="_rtmokJgCEe2878XtIpL05g" incoming="_tY3QgJgCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement"/>
+        <attributes xmi:id="_sge3AJgCEe2878XtIpL05g" value="elementName">
+          <type href="http://www.ulm.uni/safesec/dataflow/Dataflow#//DataflowElement/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_tY3QgJgCEe2878XtIpL05g" source="_gP2y4ZgCEe2878XtIpL05g" target="_rtmokJgCEe2878XtIpL05g">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//RefComponent/linkedDataflowComponent"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_gP2y4pgCEe2878XtIpL05g" origin="_gP2y4JgCEe2878XtIpL05g" image="_gP2y4ZgCEe2878XtIpL05g"/>
+    <mappings xmi:id="_rtmokZgCEe2878XtIpL05g" origin="_rtgh8JgCEe2878XtIpL05g" image="_rtmokJgCEe2878XtIpL05g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Le9kkJgHEe2878XtIpL05g" name="getAttackEvent">
+    <parameters xmi:id="_Q-5_EJgHEe2878XtIpL05g" name="attackEvent" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+    </parameters>
+    <lhs xmi:id="_LfHVkJgHEe2878XtIpL05g" name="Lhs">
+      <nodes xmi:id="_lKa2IJgHEe2878XtIpL05g" name="attackEvent">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_LfHVkZgHEe2878XtIpL05g" name="Rhs">
+      <nodes xmi:id="_lKkAEJgHEe2878XtIpL05g" name="attackEvent">
+        <type href="http://www.ulm.uni/safesec/AttackFaultTree#//AFTAttackEvent"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_lKkAEZgHEe2878XtIpL05g" origin="_lKa2IJgHEe2878XtIpL05g" image="_lKkAEJgHEe2878XtIpL05g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_TcgCQBTfEe61O6NGg1422Q" name="getDeploymentElementDep">
+    <parameters xmi:id="_TcgCQRTfEe61O6NGg1422Q" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_TcgCQhTfEe61O6NGg1422Q" name="element" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+    </parameters>
+    <lhs xmi:id="_TcgCQxTfEe61O6NGg1422Q" name="Lhs">
+      <nodes xmi:id="_TcgCRBTfEe61O6NGg1422Q" name="element" outgoing="_jaVX8BTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+        <attributes xmi:id="_TcgCRRTfEe61O6NGg1422Q" value="name">
+          <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_TcgCRhTfEe61O6NGg1422Q" incoming="_jaVX8BTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//Definition"/>
+      </nodes>
+      <edges xmi:id="_jaVX8BTfEe61O6NGg1422Q" source="_TcgCRBTfEe61O6NGg1422Q" target="_TcgCRhTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/definitionDep"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_TcgCSBTfEe61O6NGg1422Q" name="Rhs">
+      <nodes xmi:id="_TcgCSRTfEe61O6NGg1422Q" name="element" outgoing="_jaV_ABTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+        <attributes xmi:id="_TcgCShTfEe61O6NGg1422Q" value="name">
+          <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_TcgCSxTfEe61O6NGg1422Q" incoming="_jaV_ABTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//Definition"/>
+      </nodes>
+      <edges xmi:id="_jaV_ABTfEe61O6NGg1422Q" source="_TcgCSRTfEe61O6NGg1422Q" target="_TcgCSxTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/definitionDep"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_TcgCTRTfEe61O6NGg1422Q" origin="_TcgCRBTfEe61O6NGg1422Q" image="_TcgCSRTfEe61O6NGg1422Q"/>
+    <mappings xmi:id="_TcgCThTfEe61O6NGg1422Q" origin="_TcgCRhTfEe61O6NGg1422Q" image="_TcgCSxTfEe61O6NGg1422Q"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_cSBRcBTfEe61O6NGg1422Q" name="getDeploymentElementExec">
+    <parameters xmi:id="_cSBRcRTfEe61O6NGg1422Q" name="name" kind="IN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_cSBRchTfEe61O6NGg1422Q" name="element" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+    </parameters>
+    <lhs xmi:id="_cSBRcxTfEe61O6NGg1422Q" name="Lhs">
+      <nodes xmi:id="_cSBRdBTfEe61O6NGg1422Q" name="element" outgoing="_izG_4BTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+        <attributes xmi:id="_cSBRdRTfEe61O6NGg1422Q" value="name">
+          <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_cSBRdhTfEe61O6NGg1422Q" incoming="_izG_4BTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//Definition"/>
+      </nodes>
+      <edges xmi:id="_izG_4BTfEe61O6NGg1422Q" source="_cSBRdBTfEe61O6NGg1422Q" target="_cSBRdhTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/definitionExec"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_cSBRdxTfEe61O6NGg1422Q" name="Rhs">
+      <nodes xmi:id="_cSBReBTfEe61O6NGg1422Q" name="element" outgoing="_izI1EBTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement"/>
+        <attributes xmi:id="_cSBReRTfEe61O6NGg1422Q" value="name">
+          <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_cSBRehTfEe61O6NGg1422Q" incoming="_izI1EBTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//Definition"/>
+      </nodes>
+      <edges xmi:id="_izI1EBTfEe61O6NGg1422Q" source="_cSBReBTfEe61O6NGg1422Q" target="_cSBRehTfEe61O6NGg1422Q">
+        <type href="http://www.ulm.uni/safesec/deployment/Deployment#//DeploymentElement/definitionExec"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_cSBRexTfEe61O6NGg1422Q" origin="_cSBRdBTfEe61O6NGg1422Q" image="_cSBReBTfEe61O6NGg1422Q"/>
+    <mappings xmi:id="_cSBRfBTfEe61O6NGg1422Q" origin="_cSBRdhTfEe61O6NGg1422Q" image="_cSBRehTfEe61O6NGg1422Q"/>
+  </units>
+</henshin:Module>

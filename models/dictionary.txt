@@ -1,0 +1,3 @@
+ros-foxy-=
+fastrtps=fast_dds
+libc6=glibc

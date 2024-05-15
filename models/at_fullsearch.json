@@ -1,0 +1,1532 @@
+[
+    {
+        "id": "librapid_quadrotor_trajectories",
+        "synonyms": [
+            "/home/ros/ros2_ws/install/rapid_quadrotor_trajectories/lib/librapid_quadrotor_trajectories.so"
+        ]
+    },
+    {
+        "id": "libsp_trajectory_msgs__rosidl_typesupport_cpp",
+        "synonyms": [
+            "/home/ros/ros2_ws/install/sp_trajectory_msgs/lib/libsp_trajectory_msgs__rosidl_typesupport_cpp.so"
+        ]
+    },
+    {
+        "id": "libsp_trajectory_msgs__rosidl_typesupport_fastrtps_cpp",
+        "synonyms": [
+            "/home/ros/ros2_ws/install/sp_trajectory_msgs/lib/libsp_trajectory_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ]
+    },
+    {
+        "id": "libstdc++",
+        "synonyms": [
+            "/lib/x86_64-linux-gnu/libstdc++.so.6"
+        ]
+    },
+    {
+        "id": "ld-2.31",
+        "synonyms": [
+            "/usr/lib/x86_64-linux-gnu/ld-2.31.so"
+        ]
+    },
+    {
+        "id": "libc-2.31",
+        "synonyms": [
+            "/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+        ]
+    },
+    {
+        "id": "libdl-2.31",
+        "synonyms": [
+            "/usr/lib/x86_64-linux-gnu/libdl-2.31.so"
+        ]
+    },
+    {
+        "id": "libgcc_s",
+        "synonyms": [
+            "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1"
+        ]
+    },
+    {
+        "id": "libm-2.31",
+        "synonyms": [
+            "/usr/lib/x86_64-linux-gnu/libm-2.31.so"
+        ]
+    },
+    {
+        "id": "libnss_files-2.31",
+        "synonyms": [
+            "/usr/lib/x86_64-linux-gnu/libnss_files-2.31.so"
+        ]
+    },
+    {
+        "id": "libpthread-2.31",
+        "synonyms": [
+            "/usr/lib/x86_64-linux-gnu/libpthread-2.31.so"
+        ]
+    },
+    {
+        "id": "librt-2.31",
+        "synonyms": [
+            "/usr/lib/x86_64-linux-gnu/librt-2.31.so"
+        ]
+    },
+    {
+        "id": "libaction_msgs__rosidl_typesupport_cpp",
+        "synonyms": [
+            "libaction_msgs__rosidl_typesupport_cpp.so"
+        ]
+    },
+    {
+        "id": "libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp",
+        "synonyms": [
+            "libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so"
+        ]
+    },
+    {
+        "id": "libfastcdr",
+        "synonyms": [
+            "libfastcdr.so.1"
+        ]
+    },
+    {
+        "id": "libgeometry_msgs__rosidl_typesupport_fastrtps_cpp",
+        "synonyms": [
+            "libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ]
+    },
+    {
+        "id": "librosidl_runtime_c",
+        "synonyms": [
+            "librosidl_runtime_c.so"
+        ]
+    },
+    {
+        "id": "librosidl_typesupport_cpp",
+        "synonyms": [
+            "librosidl_typesupport_cpp.so"
+        ]
+    },
+    {
+        "id": "librosidl_typesupport_fastrtps_cpp",
+        "synonyms": [
+            "librosidl_typesupport_fastrtps_cpp.so"
+        ]
+    },
+    {
+        "id": "libstd_msgs__rosidl_typesupport_fastrtps_cpp",
+        "synonyms": [
+            "libstd_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ]
+    },
+    {
+        "id": "libunique_identifier_msgs__rosidl_typesupport_fastrtps_cpp",
+        "synonyms": [
+            "libunique_identifier_msgs__rosidl_typesupport_fastrtps_cpp.so"
+        ]
+    },
+    {
+        "id": "cmake-data",
+        "synonyms": [
+            "cmake-data"
+        ]
+    },
+    {
+        "id": "debconf",
+        "synonyms": [
+            "debconf"
+        ]
+    },
+    {
+        "id": "docutils-common",
+        "synonyms": [
+            "docutils-common"
+        ]
+    },
+    {
+        "id": "gcc-10-base",
+        "synonyms": [
+            "gcc-10-base"
+        ]
+    },
+    {
+        "id": "gcc-10-base",
+        "synonyms": [
+            "gcc-10-base"
+        ]
+    },
+    {
+        "id": "google-mock",
+        "synonyms": [
+            "google-mock"
+        ]
+    },
+    {
+        "id": "googletest",
+        "synonyms": [
+            "googletest"
+        ]
+    },
+    {
+        "id": "init-system-helpers",
+        "synonyms": [
+            "init-system-helpers"
+        ]
+    },
+    {
+        "id": "install-info",
+        "synonyms": [
+            "install-info"
+        ]
+    },
+    {
+        "id": "libacl1",
+        "synonyms": [
+            "libacl1"
+        ]
+    },
+    {
+        "id": "libarchive13",
+        "synonyms": [
+            "libarchive13"
+        ]
+    },
+    {
+        "id": "libasn1-8-heimdal",
+        "synonyms": [
+            "libasn1-8-heimdal"
+        ]
+    },
+    {
+        "id": "libblas3",
+        "synonyms": [
+            "libblas3"
+        ]
+    },
+    {
+        "id": "libblkid1",
+        "synonyms": [
+            "libblkid1"
+        ]
+    },
+    {
+        "id": "libbrotli1",
+        "synonyms": [
+            "libbrotli1"
+        ]
+    },
+    {
+        "id": "libbz2-1.0",
+        "synonyms": [
+            "libbz2-1.0"
+        ]
+    },
+    {
+        "id": "libc-dev-bin",
+        "synonyms": [
+            "libc-dev-bin"
+        ]
+    },
+    {
+        "id": "libc6-dev",
+        "synonyms": [
+            "libc6-dev"
+        ]
+    },
+    {
+        "id": "libcom-err2",
+        "synonyms": [
+            "libcom-err2"
+        ]
+    },
+    {
+        "id": "libconsole-bridge-dev",
+        "synonyms": [
+            "libconsole-bridge-dev"
+        ]
+    },
+    {
+        "id": "libconsole-bridge0.4",
+        "synonyms": [
+            "libconsole-bridge0.4"
+        ]
+    },
+    {
+        "id": "libcrypt-dev",
+        "synonyms": [
+            "libcrypt-dev"
+        ]
+    },
+    {
+        "id": "libcrypt1",
+        "synonyms": [
+            "libcrypt1"
+        ]
+    },
+    {
+        "id": "libcrypt1",
+        "synonyms": [
+            "libcrypt1"
+        ]
+    },
+    {
+        "id": "libcurl4",
+        "synonyms": [
+            "libcurl4"
+        ]
+    },
+    {
+        "id": "libdb5.3",
+        "synonyms": [
+            "libdb5.3"
+        ]
+    },
+    {
+        "id": "libdpkg-perl",
+        "synonyms": [
+            "libdpkg-perl"
+        ]
+    },
+    {
+        "id": "libeigen3-dev",
+        "synonyms": [
+            "libeigen3-dev"
+        ]
+    },
+    {
+        "id": "libexpat1",
+        "synonyms": [
+            "libexpat1"
+        ]
+    },
+    {
+        "id": "libexpat1",
+        "synonyms": [
+            "libexpat1"
+        ]
+    },
+    {
+        "id": "libexpat1-dev",
+        "synonyms": [
+            "libexpat1-dev"
+        ]
+    },
+    {
+        "id": "libffi7",
+        "synonyms": [
+            "libffi7"
+        ]
+    },
+    {
+        "id": "libffi7",
+        "synonyms": [
+            "libffi7"
+        ]
+    },
+    {
+        "id": "libgcc-s1",
+        "synonyms": [
+            "libgcc-s1"
+        ]
+    },
+    {
+        "id": "libgcc-s1",
+        "synonyms": [
+            "libgcc-s1"
+        ]
+    },
+    {
+        "id": "libgfortran5",
+        "synonyms": [
+            "libgfortran5"
+        ]
+    },
+    {
+        "id": "libglib2.0-0",
+        "synonyms": [
+            "libglib2.0-0"
+        ]
+    },
+    {
+        "id": "libgmp10",
+        "synonyms": [
+            "libgmp10"
+        ]
+    },
+    {
+        "id": "libgnutls30",
+        "synonyms": [
+            "libgnutls30"
+        ]
+    },
+    {
+        "id": "libgssapi-krb5-2",
+        "synonyms": [
+            "libgssapi-krb5-2"
+        ]
+    },
+    {
+        "id": "libgssapi3-heimdal",
+        "synonyms": [
+            "libgssapi3-heimdal"
+        ]
+    },
+    {
+        "id": "libgtest-dev",
+        "synonyms": [
+            "libgtest-dev"
+        ]
+    },
+    {
+        "id": "libhcrypto4-heimdal",
+        "synonyms": [
+            "libhcrypto4-heimdal"
+        ]
+    },
+    {
+        "id": "libheimbase1-heimdal",
+        "synonyms": [
+            "libheimbase1-heimdal"
+        ]
+    },
+    {
+        "id": "libheimntlm0-heimdal",
+        "synonyms": [
+            "libheimntlm0-heimdal"
+        ]
+    },
+    {
+        "id": "libhogweed5",
+        "synonyms": [
+            "libhogweed5"
+        ]
+    },
+    {
+        "id": "libhx509-5-heimdal",
+        "synonyms": [
+            "libhx509-5-heimdal"
+        ]
+    },
+    {
+        "id": "libicu66",
+        "synonyms": [
+            "libicu66"
+        ]
+    },
+    {
+        "id": "libidn2-0",
+        "synonyms": [
+            "libidn2-0"
+        ]
+    },
+    {
+        "id": "libidn2-0",
+        "synonyms": [
+            "libidn2-0"
+        ]
+    },
+    {
+        "id": "libjsoncpp1",
+        "synonyms": [
+            "libjsoncpp1"
+        ]
+    },
+    {
+        "id": "libk5crypto3",
+        "synonyms": [
+            "libk5crypto3"
+        ]
+    },
+    {
+        "id": "libkeyutils1",
+        "synonyms": [
+            "libkeyutils1"
+        ]
+    },
+    {
+        "id": "libkrb5-26-heimdal",
+        "synonyms": [
+            "libkrb5-26-heimdal"
+        ]
+    },
+    {
+        "id": "libkrb5-3",
+        "synonyms": [
+            "libkrb5-3"
+        ]
+    },
+    {
+        "id": "libkrb5support0",
+        "synonyms": [
+            "libkrb5support0"
+        ]
+    },
+    {
+        "id": "liblapack3",
+        "synonyms": [
+            "liblapack3"
+        ]
+    },
+    {
+        "id": "libldap-2.4-2",
+        "synonyms": [
+            "libldap-2.4-2"
+        ]
+    },
+    {
+        "id": "libldap-common",
+        "synonyms": [
+            "libldap-common"
+        ]
+    },
+    {
+        "id": "liblz4-1",
+        "synonyms": [
+            "liblz4-1"
+        ]
+    },
+    {
+        "id": "liblzma5",
+        "synonyms": [
+            "liblzma5"
+        ]
+    },
+    {
+        "id": "libmount1",
+        "synonyms": [
+            "libmount1"
+        ]
+    },
+    {
+        "id": "libmpdec2",
+        "synonyms": [
+            "libmpdec2"
+        ]
+    },
+    {
+        "id": "libncurses6",
+        "synonyms": [
+            "libncurses6"
+        ]
+    },
+    {
+        "id": "libncursesw6",
+        "synonyms": [
+            "libncursesw6"
+        ]
+    },
+    {
+        "id": "libnettle7",
+        "synonyms": [
+            "libnettle7"
+        ]
+    },
+    {
+        "id": "libnghttp2-14",
+        "synonyms": [
+            "libnghttp2-14"
+        ]
+    },
+    {
+        "id": "libp11-kit0",
+        "synonyms": [
+            "libp11-kit0"
+        ]
+    },
+    {
+        "id": "libpcre2-8-0",
+        "synonyms": [
+            "libpcre2-8-0"
+        ]
+    },
+    {
+        "id": "libpcre3",
+        "synonyms": [
+            "libpcre3"
+        ]
+    },
+    {
+        "id": "libprocps8",
+        "synonyms": [
+            "libprocps8"
+        ]
+    },
+    {
+        "id": "libpsl5",
+        "synonyms": [
+            "libpsl5"
+        ]
+    },
+    {
+        "id": "libpython3-dev",
+        "synonyms": [
+            "libpython3-dev"
+        ]
+    },
+    {
+        "id": "libpython3-stdlib",
+        "synonyms": [
+            "libpython3-stdlib"
+        ]
+    },
+    {
+        "id": "libpython3.8",
+        "synonyms": [
+            "libpython3.8"
+        ]
+    },
+    {
+        "id": "libpython3.8-dev",
+        "synonyms": [
+            "libpython3.8-dev"
+        ]
+    },
+    {
+        "id": "libpython3.8-minimal",
+        "synonyms": [
+            "libpython3.8-minimal"
+        ]
+    },
+    {
+        "id": "libpython3.8-stdlib",
+        "synonyms": [
+            "libpython3.8-stdlib"
+        ]
+    },
+    {
+        "id": "libquadmath0",
+        "synonyms": [
+            "libquadmath0"
+        ]
+    },
+    {
+        "id": "libreadline8",
+        "synonyms": [
+            "libreadline8"
+        ]
+    },
+    {
+        "id": "librhash0",
+        "synonyms": [
+            "librhash0"
+        ]
+    },
+    {
+        "id": "libroken18-heimdal",
+        "synonyms": [
+            "libroken18-heimdal"
+        ]
+    },
+    {
+        "id": "librtmp1",
+        "synonyms": [
+            "librtmp1"
+        ]
+    },
+    {
+        "id": "libsasl2-2",
+        "synonyms": [
+            "libsasl2-2"
+        ]
+    },
+    {
+        "id": "libsasl2-modules-db",
+        "synonyms": [
+            "libsasl2-modules-db"
+        ]
+    },
+    {
+        "id": "libselinux1",
+        "synonyms": [
+            "libselinux1"
+        ]
+    },
+    {
+        "id": "libspdlog-dev",
+        "synonyms": [
+            "libspdlog-dev"
+        ]
+    },
+    {
+        "id": "libspdlog1",
+        "synonyms": [
+            "libspdlog1"
+        ]
+    },
+    {
+        "id": "libsqlite3-0",
+        "synonyms": [
+            "libsqlite3-0"
+        ]
+    },
+    {
+        "id": "libssh-4",
+        "synonyms": [
+            "libssh-4"
+        ]
+    },
+    {
+        "id": "libssl-dev",
+        "synonyms": [
+            "libssl-dev"
+        ]
+    },
+    {
+        "id": "libssl1.1",
+        "synonyms": [
+            "libssl1.1"
+        ]
+    },
+    {
+        "id": "libstdc++6",
+        "synonyms": [
+            "libstdc++6"
+        ]
+    },
+    {
+        "id": "libstdc++6",
+        "synonyms": [
+            "libstdc++6"
+        ]
+    },
+    {
+        "id": "libsystemd0",
+        "synonyms": [
+            "libsystemd0"
+        ]
+    },
+    {
+        "id": "libtasn1-6",
+        "synonyms": [
+            "libtasn1-6"
+        ]
+    },
+    {
+        "id": "libtinfo6",
+        "synonyms": [
+            "libtinfo6"
+        ]
+    },
+    {
+        "id": "libtinfo6",
+        "synonyms": [
+            "libtinfo6"
+        ]
+    },
+    {
+        "id": "libtinyxml2-6a",
+        "synonyms": [
+            "libtinyxml2-6a"
+        ]
+    },
+    {
+        "id": "libtinyxml2-dev",
+        "synonyms": [
+            "libtinyxml2-dev"
+        ]
+    },
+    {
+        "id": "libunistring2",
+        "synonyms": [
+            "libunistring2"
+        ]
+    },
+    {
+        "id": "libunistring2",
+        "synonyms": [
+            "libunistring2"
+        ]
+    },
+    {
+        "id": "libuuid1",
+        "synonyms": [
+            "libuuid1"
+        ]
+    },
+    {
+        "id": "libuv1",
+        "synonyms": [
+            "libuv1"
+        ]
+    },
+    {
+        "id": "libwind0-heimdal",
+        "synonyms": [
+            "libwind0-heimdal"
+        ]
+    },
+    {
+        "id": "libyaml-0-2",
+        "synonyms": [
+            "libyaml-0-2"
+        ]
+    },
+    {
+        "id": "libyaml-dev",
+        "synonyms": [
+            "libyaml-dev"
+        ]
+    },
+    {
+        "id": "libzstd1",
+        "synonyms": [
+            "libzstd1"
+        ]
+    },
+    {
+        "id": "libzstd1",
+        "synonyms": [
+            "libzstd1"
+        ]
+    },
+    {
+        "id": "linux-libc-dev",
+        "synonyms": [
+            "linux-libc-dev"
+        ]
+    },
+    {
+        "id": "lsb-base",
+        "synonyms": [
+            "lsb-base"
+        ]
+    },
+    {
+        "id": "perl-base",
+        "synonyms": [
+            "perl-base"
+        ]
+    },
+    {
+        "id": "pkg-config",
+        "synonyms": [
+            "pkg-config"
+        ]
+    },
+    {
+        "id": "python3",
+        "synonyms": [
+            "python3"
+        ]
+    },
+    {
+        "id": "python3-atomicwrites",
+        "synonyms": [
+            "python3-atomicwrites"
+        ]
+    },
+    {
+        "id": "python3-attr",
+        "synonyms": [
+            "python3-attr"
+        ]
+    },
+    {
+        "id": "python3-catkin-pkg-modules",
+        "synonyms": [
+            "python3-catkin-pkg-modules"
+        ]
+    },
+    {
+        "id": "python3-dateutil",
+        "synonyms": [
+            "python3-dateutil"
+        ]
+    },
+    {
+        "id": "python3-dev",
+        "synonyms": [
+            "python3-dev"
+        ]
+    },
+    {
+        "id": "python3-distutils",
+        "synonyms": [
+            "python3-distutils"
+        ]
+    },
+    {
+        "id": "python3-docutils",
+        "synonyms": [
+            "python3-docutils"
+        ]
+    },
+    {
+        "id": "python3-empy",
+        "synonyms": [
+            "python3-empy"
+        ]
+    },
+    {
+        "id": "python3-importlib-metadata",
+        "synonyms": [
+            "python3-importlib-metadata"
+        ]
+    },
+    {
+        "id": "python3-lark",
+        "synonyms": [
+            "python3-lark"
+        ]
+    },
+    {
+        "id": "python3-lib2to3",
+        "synonyms": [
+            "python3-lib2to3"
+        ]
+    },
+    {
+        "id": "python3-more-itertools",
+        "synonyms": [
+            "python3-more-itertools"
+        ]
+    },
+    {
+        "id": "python3-numpy",
+        "synonyms": [
+            "python3-numpy"
+        ]
+    },
+    {
+        "id": "python3-packaging",
+        "synonyms": [
+            "python3-packaging"
+        ]
+    },
+    {
+        "id": "python3-pkg-resources",
+        "synonyms": [
+            "python3-pkg-resources"
+        ]
+    },
+    {
+        "id": "python3-pluggy",
+        "synonyms": [
+            "python3-pluggy"
+        ]
+    },
+    {
+        "id": "python3-py",
+        "synonyms": [
+            "python3-py"
+        ]
+    },
+    {
+        "id": "python3-pyparsing",
+        "synonyms": [
+            "python3-pyparsing"
+        ]
+    },
+    {
+        "id": "python3-pytest",
+        "synonyms": [
+            "python3-pytest"
+        ]
+    },
+    {
+        "id": "python3-roman",
+        "synonyms": [
+            "python3-roman"
+        ]
+    },
+    {
+        "id": "python3-setuptools",
+        "synonyms": [
+            "python3-setuptools"
+        ]
+    },
+    {
+        "id": "python3-six",
+        "synonyms": [
+            "python3-six"
+        ]
+    },
+    {
+        "id": "python3-wcwidth",
+        "synonyms": [
+            "python3-wcwidth"
+        ]
+    },
+    {
+        "id": "python3-zipp",
+        "synonyms": [
+            "python3-zipp"
+        ]
+    },
+    {
+        "id": "python3.8",
+        "synonyms": [
+            "python3.8"
+        ]
+    },
+    {
+        "id": "python3.8-dev",
+        "synonyms": [
+            "python3.8-dev"
+        ]
+    },
+    {
+        "id": "python3.8-minimal",
+        "synonyms": [
+            "python3.8-minimal"
+        ]
+    },
+    {
+        "id": "readline-common",
+        "synonyms": [
+            "readline-common"
+        ]
+    },
+    {
+        "id": "ros-foxy-action-msgs",
+        "synonyms": [
+            "ros-foxy-action-msgs"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake",
+        "synonyms": [
+            "ros-foxy-ament-cmake"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-core",
+        "synonyms": [
+            "ros-foxy-ament-cmake-core"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-export-definitions",
+        "synonyms": [
+            "ros-foxy-ament-cmake-export-definitions"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-export-dependencies",
+        "synonyms": [
+            "ros-foxy-ament-cmake-export-dependencies"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-export-include-directories",
+        "synonyms": [
+            "ros-foxy-ament-cmake-export-include-directories"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-export-interfaces",
+        "synonyms": [
+            "ros-foxy-ament-cmake-export-interfaces"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-export-libraries",
+        "synonyms": [
+            "ros-foxy-ament-cmake-export-libraries"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-export-link-flags",
+        "synonyms": [
+            "ros-foxy-ament-cmake-export-link-flags"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-export-targets",
+        "synonyms": [
+            "ros-foxy-ament-cmake-export-targets"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-gmock",
+        "synonyms": [
+            "ros-foxy-ament-cmake-gmock"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-gtest",
+        "synonyms": [
+            "ros-foxy-ament-cmake-gtest"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-include-directories",
+        "synonyms": [
+            "ros-foxy-ament-cmake-include-directories"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-libraries",
+        "synonyms": [
+            "ros-foxy-ament-cmake-libraries"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-pytest",
+        "synonyms": [
+            "ros-foxy-ament-cmake-pytest"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-python",
+        "synonyms": [
+            "ros-foxy-ament-cmake-python"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-ros",
+        "synonyms": [
+            "ros-foxy-ament-cmake-ros"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-target-dependencies",
+        "synonyms": [
+            "ros-foxy-ament-cmake-target-dependencies"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-test",
+        "synonyms": [
+            "ros-foxy-ament-cmake-test"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-cmake-version",
+        "synonyms": [
+            "ros-foxy-ament-cmake-version"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-index-cpp",
+        "synonyms": [
+            "ros-foxy-ament-index-cpp"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-index-python",
+        "synonyms": [
+            "ros-foxy-ament-index-python"
+        ]
+    },
+    {
+        "id": "ros-foxy-ament-package",
+        "synonyms": [
+            "ros-foxy-ament-package"
+        ]
+    },
+    {
+        "id": "ros-foxy-builtin-interfaces",
+        "synonyms": [
+            "ros-foxy-builtin-interfaces"
+        ]
+    },
+    {
+        "id": "ros-foxy-class-loader",
+        "synonyms": [
+            "ros-foxy-class-loader"
+        ]
+    },
+    {
+        "id": "ros-foxy-composition-interfaces",
+        "synonyms": [
+            "ros-foxy-composition-interfaces"
+        ]
+    },
+    {
+        "id": "ros-foxy-console-bridge-vendor",
+        "synonyms": [
+            "ros-foxy-console-bridge-vendor"
+        ]
+    },
+    {
+        "id": "ros-foxy-domain-coordinator",
+        "synonyms": [
+            "ros-foxy-domain-coordinator"
+        ]
+    },
+    {
+        "id": "ros-foxy-eigen3-cmake-module",
+        "synonyms": [
+            "ros-foxy-eigen3-cmake-module"
+        ]
+    },
+    {
+        "id": "ros-foxy-fastcdr",
+        "synonyms": [
+            "ros-foxy-fastcdr"
+        ]
+    },
+    {
+        "id": "ros-foxy-fastrtps-cmake-module",
+        "synonyms": [
+            "ros-foxy-fastrtps-cmake-module"
+        ]
+    },
+    {
+        "id": "ros-foxy-foonathan-memory-vendor",
+        "synonyms": [
+            "ros-foxy-foonathan-memory-vendor"
+        ]
+    },
+    {
+        "id": "ros-foxy-geometry-msgs",
+        "synonyms": [
+            "ros-foxy-geometry-msgs"
+        ]
+    },
+    {
+        "id": "ros-foxy-gmock-vendor",
+        "synonyms": [
+            "ros-foxy-gmock-vendor"
+        ]
+    },
+    {
+        "id": "ros-foxy-gtest-vendor",
+        "synonyms": [
+            "ros-foxy-gtest-vendor"
+        ]
+    },
+    {
+        "id": "ros-foxy-libstatistics-collector",
+        "synonyms": [
+            "ros-foxy-libstatistics-collector"
+        ]
+    },
+    {
+        "id": "ros-foxy-libyaml-vendor",
+        "synonyms": [
+            "ros-foxy-libyaml-vendor"
+        ]
+    },
+    {
+        "id": "ros-foxy-message-filters",
+        "synonyms": [
+            "ros-foxy-message-filters"
+        ]
+    },
+    {
+        "id": "ros-foxy-nav-msgs",
+        "synonyms": [
+            "ros-foxy-nav-msgs"
+        ]
+    },
+    {
+        "id": "ros-foxy-orocos-kdl",
+        "synonyms": [
+            "ros-foxy-orocos-kdl"
+        ]
+    },
+    {
+        "id": "ros-foxy-python-cmake-module",
+        "synonyms": [
+            "ros-foxy-python-cmake-module"
+        ]
+    },
+    {
+        "id": "ros-foxy-rcl",
+        "synonyms": [
+            "ros-foxy-rcl"
+        ]
+    },
+    {
+        "id": "ros-foxy-rcl-action",
+        "synonyms": [
+            "ros-foxy-rcl-action"
+        ]
+    },
+    {
+        "id": "ros-foxy-rcl-interfaces",
+        "synonyms": [
+            "ros-foxy-rcl-interfaces"
+        ]
+    },
+    {
+        "id": "ros-foxy-rcl-logging-spdlog",
+        "synonyms": [
+            "ros-foxy-rcl-logging-spdlog"
+        ]
+    },
+    {
+        "id": "ros-foxy-rcl-yaml-param-parser",
+        "synonyms": [
+            "ros-foxy-rcl-yaml-param-parser"
+        ]
+    },
+    {
+        "id": "ros-foxy-rclcpp",
+        "synonyms": [
+            "ros-foxy-rclcpp"
+        ]
+    },
+    {
+        "id": "ros-foxy-rclcpp-action",
+        "synonyms": [
+            "ros-foxy-rclcpp-action"
+        ]
+    },
+    {
+        "id": "ros-foxy-rclcpp-components",
+        "synonyms": [
+            "ros-foxy-rclcpp-components"
+        ]
+    },
+    {
+        "id": "ros-foxy-rclpy",
+        "synonyms": [
+            "ros-foxy-rclpy"
+        ]
+    },
+    {
+        "id": "ros-foxy-rcpputils",
+        "synonyms": [
+            "ros-foxy-rcpputils"
+        ]
+    },
+    {
+        "id": "ros-foxy-rcutils",
+        "synonyms": [
+            "ros-foxy-rcutils"
+        ]
+    },
+    {
+        "id": "ros-foxy-rmw",
+        "synonyms": [
+            "ros-foxy-rmw"
+        ]
+    },
+    {
+        "id": "ros-foxy-rmw-dds-common",
+        "synonyms": [
+            "ros-foxy-rmw-dds-common"
+        ]
+    },
+    {
+        "id": "ros-foxy-rmw-fastrtps-cpp",
+        "synonyms": [
+            "ros-foxy-rmw-fastrtps-cpp"
+        ]
+    },
+    {
+        "id": "ros-foxy-rmw-fastrtps-shared-cpp",
+        "synonyms": [
+            "ros-foxy-rmw-fastrtps-shared-cpp"
+        ]
+    },
+    {
+        "id": "ros-foxy-rmw-implementation",
+        "synonyms": [
+            "ros-foxy-rmw-implementation"
+        ]
+    },
+    {
+        "id": "ros-foxy-rmw-implementation-cmake",
+        "synonyms": [
+            "ros-foxy-rmw-implementation-cmake"
+        ]
+    },
+    {
+        "id": "ros-foxy-ros-workspace",
+        "synonyms": [
+            "ros-foxy-ros-workspace"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosgraph-msgs",
+        "synonyms": [
+            "ros-foxy-rosgraph-msgs"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-adapter",
+        "synonyms": [
+            "ros-foxy-rosidl-adapter"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-cmake",
+        "synonyms": [
+            "ros-foxy-rosidl-cmake"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-default-runtime",
+        "synonyms": [
+            "ros-foxy-rosidl-default-runtime"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-generator-c",
+        "synonyms": [
+            "ros-foxy-rosidl-generator-c"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-generator-py",
+        "synonyms": [
+            "ros-foxy-rosidl-generator-py"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-parser",
+        "synonyms": [
+            "ros-foxy-rosidl-parser"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-runtime-c",
+        "synonyms": [
+            "ros-foxy-rosidl-runtime-c"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-runtime-cpp",
+        "synonyms": [
+            "ros-foxy-rosidl-runtime-cpp"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-typesupport-c",
+        "synonyms": [
+            "ros-foxy-rosidl-typesupport-c"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-typesupport-cpp",
+        "synonyms": [
+            "ros-foxy-rosidl-typesupport-cpp"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-typesupport-fastrtps-c",
+        "synonyms": [
+            "ros-foxy-rosidl-typesupport-fastrtps-c"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-typesupport-fastrtps-cpp",
+        "synonyms": [
+            "ros-foxy-rosidl-typesupport-fastrtps-cpp"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-typesupport-interface",
+        "synonyms": [
+            "ros-foxy-rosidl-typesupport-interface"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-typesupport-introspection-c",
+        "synonyms": [
+            "ros-foxy-rosidl-typesupport-introspection-c"
+        ]
+    },
+    {
+        "id": "ros-foxy-rosidl-typesupport-introspection-cpp",
+        "synonyms": [
+            "ros-foxy-rosidl-typesupport-introspection-cpp"
+        ]
+    },
+    {
+        "id": "ros-foxy-rpyutils",
+        "synonyms": [
+            "ros-foxy-rpyutils"
+        ]
+    },
+    {
+        "id": "ros-foxy-spdlog-vendor",
+        "synonyms": [
+            "ros-foxy-spdlog-vendor"
+        ]
+    },
+    {
+        "id": "ros-foxy-statistics-msgs",
+        "synonyms": [
+            "ros-foxy-statistics-msgs"
+        ]
+    },
+    {
+        "id": "ros-foxy-std-msgs",
+        "synonyms": [
+            "ros-foxy-std-msgs"
+        ]
+    },
+    {
+        "id": "ros-foxy-tf2",
+        "synonyms": [
+            "ros-foxy-tf2"
+        ]
+    },
+    {
+        "id": "ros-foxy-tf2-msgs",
+        "synonyms": [
+            "ros-foxy-tf2-msgs"
+        ]
+    },
+    {
+        "id": "ros-foxy-tf2-py",
+        "synonyms": [
+            "ros-foxy-tf2-py"
+        ]
+    },
+    {
+        "id": "ros-foxy-tf2-ros",
+        "synonyms": [
+            "ros-foxy-tf2-ros"
+        ]
+    },
+    {
+        "id": "ros-foxy-tracetools",
+        "synonyms": [
+            "ros-foxy-tracetools"
+        ]
+    },
+    {
+        "id": "ros-foxy-unique-identifier-msgs",
+        "synonyms": [
+            "ros-foxy-unique-identifier-msgs"
+        ]
+    },
+    {
+        "id": "ros-foxy-visualization-msgs",
+        "synonyms": [
+            "ros-foxy-visualization-msgs"
+        ]
+    },
+    {
+        "id": "sgml-base",
+        "synonyms": [
+            "sgml-base"
+        ]
+    },
+    {
+        "id": "tzdata",
+        "synonyms": [
+            "tzdata"
+        ]
+    },
+    {
+        "id": "xml-core",
+        "synonyms": [
+            "xml-core"
+        ]
+    },
+    {
+        "id": "zlib1g",
+        "synonyms": [
+            "zlib1g"
+        ]
+    },
+    {
+        "id": "zlib1g",
+        "synonyms": [
+            "zlib1g"
+        ]
+    },
+    {
+        "id": "zlib1g-dev",
+        "synonyms": [
+            "zlib1g-dev"
+        ]
+    }
+]

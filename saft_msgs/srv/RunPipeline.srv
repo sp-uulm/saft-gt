@@ -1,0 +1,53 @@
+# bits in stages_to_run to signify which stages to run
+int32 CLEAN_ALL_DATA           =    1  # clean all data
+int32 CREATE_DATAFLOW_MODEL    =    2  # create dataflow model
+int32 FETCH_DATAFLOW_MODEL     =    4  # fetch dataflow model
+int32 COMBINE_DATAFLOW_MODELS  =    8  # combine different dataflow models
+int32 CLEANUP_DATAFLOW_MODEL   =   16  # clean up dataflow model (remove unconnected topics)
+int32 CREATE_DEPLOYMENT_MODEL  =   32  # create initial deployment model
+int32 ENHANCE_DEPLOYMENT_MODEL =   64  # enhance deployment model
+int32 EXTRACT_PACKAGES_FILES   =  128  # extract packages and files
+int32 CREATE_INPUT_FOR_ATG     =  256  # create input files for AT generation (incl. replacements)
+int32 ATTACK_GEN_CPE           =  512  # run AT generation with CPEs
+int32 ATTACK_GEN_FILES         = 1024  # run AT generation with files (full text search)
+int32 AFT_COMBINATION          = 2048  # run AFT generation
+int32 AFT_TO_DFT               = 4096  # run AFT2DFT-Tool
+int32 RUN_MC                   = 8192  # run Storm Model Checker
+
+
+#                        CREATE_DATAFLOW_MODEL         2
+#                      + FETCH_DATAFLOW_MODEL          4
+#                      + COMBINE_DATAFLOW_MODELS       8
+#                      + CLEANUP_DATAFLOW_MODEL       16
+int32 DATAFLOW_PART   = 30
+
+#                       CREATE_DEPLOYMENT_MODEL       32
+#                     + ENHANCE_DEPLOYMENT_MODEL      64
+#                     + EXTRACT_PACKAGES_FILES       128
+int32 DEPLOYMENT_PART = 224
+
+#                       CREATE_INPUT_FOR_ATG         256
+#                     + ATTACK_GEN_CPE               512
+#                     + ATTACK_GEN_FILES            1024
+int32 ATG_PART        = 1792
+
+#                       AFT_COMBINATION             2048
+#                     + AFT2DFT                     4096
+int32 AFT_PART        = 6144
+
+#                       CLEAN_ALL_DATA                 1
+#                     + DATAFLOW_PART                 30  
+#                     + DEPLOYMENT_PART              224
+#                     + ATG_PART                    1792
+#                     + AFT_PART                    6144
+#                     + RUN_MC                      8192
+int32 ALL             = 16383
+
+int32 stages_to_run
+---
+
+# result to acknowledge that the run is accepted and started
+bool run_accepted
+
+# error message if the run was declined
+string error_msg

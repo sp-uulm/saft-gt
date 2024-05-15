@@ -1,0 +1,490 @@
+Component ROWLET_transform_listener_impl_55ef56dca3e0 {
+	property ros_name = "transform_listener_impl_55ef56dca3e0";
+	property full_ros_name = "/ROWLET/transform_listener_impl_55ef56dca3e0";
+}
+Component ROWLET_quad_script_node {
+	property ros_name = "quad_script_node";
+	property full_ros_name = "/ROWLET/quad_script_node";
+}
+Component ROWLET_quad_state_node {
+	property ros_name = "quad_state_node";
+	property full_ros_name = "/ROWLET/quad_state_node";
+	property lifecycle_state = "active";
+}
+Component ROWLET_bebop_switch_node {
+	property ros_name = "bebop_switch_node";
+	property full_ros_name = "/ROWLET/bebop_switch_node";
+}
+Component ROWLET_transform_listener_impl_5625a079d6f0 {
+	property ros_name = "transform_listener_impl_5625a079d6f0";
+	property full_ros_name = "/ROWLET/transform_listener_impl_5625a079d6f0";
+}
+Component ROWLET_bebop_position_control {
+	property ros_name = "bebop_position_control";
+	property full_ros_name = "/ROWLET/bebop_position_control";
+}
+Component _ros2cli_requester_std_srvs_Trigger {
+	property ros_name = "_ros2cli_requester_std_srvs_Trigger";
+	property full_ros_name = "/_ros2cli_requester_std_srvs_Trigger";
+}
+Component transform_listener_impl_55e377922250 {
+	property ros_name = "transform_listener_impl_55e377922250";
+	property full_ros_name = "/transform_listener_impl_55e377922250";
+}
+Component ROWLET_joy_teleop {
+	property ros_name = "joy_teleop";
+	property full_ros_name = "/ROWLET/joy_teleop";
+}
+Component transform_listener_impl_558c64acec30 {
+	property ros_name = "transform_listener_impl_558c64acec30";
+	property full_ros_name = "/transform_listener_impl_558c64acec30";
+}
+Component trajectory_client {
+	property ros_name = "trajectory_client";
+	property full_ros_name = "/trajectory_client";
+}
+Component _ros2cli_daemon_0 {
+	property ros_name = "_ros2cli_daemon_0";
+	property full_ros_name = "/_ros2cli_daemon_0";
+}
+Component vrpn_client_node {
+	property ros_name = "vrpn_client_node";
+	property full_ros_name = "/vrpn_client_node";
+}
+Component saft_saft_dataflow_generator {
+	property ros_name = "saft_dataflow_generator";
+	property full_ros_name = "/saft/saft_dataflow_generator";
+}
+Component simple_trajectory_server {
+	property ros_name = "simple_trajectory_server";
+	property full_ros_name = "/simple_trajectory_server";
+}
+Component transform_listener_impl_5620e574d150 {
+	property ros_name = "transform_listener_impl_5620e574d150";
+	property full_ros_name = "/transform_listener_impl_5620e574d150";
+}
+Component ROWLET_bebop_driver_node {
+	property ros_name = "bebop_driver_node";
+	property full_ros_name = "/ROWLET/bebop_driver_node";
+}
+Component transform_listener_impl_565005919d58 {
+	property ros_name = "transform_listener_impl_565005919d58";
+	property full_ros_name = "/transform_listener_impl_565005919d58";
+}
+Component simple_trajectory_visualizer {
+	property ros_name = "simple_trajectory_visualizer";
+	property full_ros_name = "/simple_trajectory_visualizer";
+}
+Component rviz2 {
+	property ros_name = "rviz2";
+	property full_ros_name = "/rviz2";
+}
+Component optitrack_joy_node {
+	property ros_name = "joy_node";
+	property full_ros_name = "/optitrack/joy_node";
+}
+Component rostopic {
+}
+Component bebop_guard_node {
+}
+Component bebop_switch_node {
+}
+Component joy_teleop {
+}
+Component ROWLET_quad_script_node {
+}
+Component quad_state_node {
+}
+Component sim_photo_node {
+}
+Component bebop_driver_node {
+}
+Component robot_state_publisher {
+}
+Component gesture_node {
+}
+Component joy_node {
+}
+Component vrpn_client_node {
+}
+Component optitrack_motive {
+}
+Component optitrack_prime_13 {
+	property class = "Sensor";
+}
+Component optitrack_prime_13W {
+	property class = "Sensor";
+}
+Component bebop2 {
+	property class = "Sensor;Actor";
+	property name = "FARFETCH";
+}
+Component Gamepad {
+	property class = "Input";
+}
+
+Channel trajectory_visualization {
+	property ros_name = "trajectory_visualization";
+	property full_ros_name = "/trajectory_visualization";
+	property ros_type = "visualization_msgs/msg/Marker";
+	property ros_channel_type = "topic";
+}
+Connect Component=simple_trajectory_visualizer -> Channel=trajectory_visualization ; 
+Connect Component=rviz2 <- Channel=trajectory_visualization ; 
+Channel ROWLET_land {
+	property ros_name = "land";
+	property full_ros_name = "/ROWLET/land";
+	property ros_type = "std_msgs/msg/Empty";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_land ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=ROWLET_land ; 
+Channel ROWLET_action_pose__action_feedback {
+	property ros_name = "feedback";
+	property full_ros_name = "/ROWLET/action/pose/_action/feedback";
+	property ros_type = "nav2_msgs/action/NavigateToPose_FeedbackMessage";
+	property ros_channel_type = "topic";
+}
+Connect Component=trajectory_client -> Channel=ROWLET_action_pose__action_feedback ; 
+Connect Component=ROWLET_quad_script_node <- Channel=ROWLET_action_pose__action_feedback ; 
+Channel parameter_events {
+	property ros_name = "parameter_events";
+	property full_ros_name = "/parameter_events";
+	property ros_type = "rcl_interfaces/msg/ParameterEvent";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=parameter_events ; 
+Connect Component=ROWLET_bebop_driver_node -> Channel=parameter_events ; 
+Connect Component=_ros2cli_daemon_0 -> Channel=parameter_events ; 
+Connect Component=saft_saft_dataflow_generator -> Channel=parameter_events ; 
+Connect Component=simple_trajectory_server -> Channel=parameter_events ; 
+Connect Component=simple_trajectory_visualizer -> Channel=parameter_events ; 
+Connect Component=rviz2 -> Channel=parameter_events ; 
+Connect Component=vrpn_client_node -> Channel=parameter_events ; 
+Connect Component=optitrack_joy_node -> Channel=parameter_events ; 
+Connect Component=trajectory_client -> Channel=parameter_events ; 
+Connect Component=_ros2cli_requester_std_srvs_Trigger -> Channel=parameter_events ; 
+Connect Component=ROWLET_bebop_position_control -> Channel=parameter_events ; 
+Connect Component=ROWLET_bebop_switch_node -> Channel=parameter_events ; 
+Connect Component=ROWLET_quad_state_node -> Channel=parameter_events ; 
+Connect Component=ROWLET_quad_script_node -> Channel=parameter_events ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=parameter_events ; 
+Connect Component=saft_saft_dataflow_generator <- Channel=parameter_events ; 
+Connect Component=simple_trajectory_server <- Channel=parameter_events ; 
+Connect Component=transform_listener_impl_5620e574d150 <- Channel=parameter_events ; 
+Connect Component=simple_trajectory_visualizer <- Channel=parameter_events ; 
+Connect Component=transform_listener_impl_565005919d58 <- Channel=parameter_events ; 
+Connect Component=rviz2 <- Channel=parameter_events ; 
+Connect Component=transform_listener_impl_558c64acec30 <- Channel=parameter_events ; 
+Connect Component=vrpn_client_node <- Channel=parameter_events ; 
+Connect Component=optitrack_joy_node <- Channel=parameter_events ; 
+Connect Component=trajectory_client <- Channel=parameter_events ; 
+Connect Component=transform_listener_impl_55e377922250 <- Channel=parameter_events ; 
+Connect Component=ROWLET_bebop_position_control <- Channel=parameter_events ; 
+Connect Component=ROWLET_transform_listener_impl_5625a079d6f0 <- Channel=parameter_events ; 
+Connect Component=ROWLET_bebop_switch_node <- Channel=parameter_events ; 
+Connect Component=ROWLET_quad_state_node <- Channel=parameter_events ; 
+Connect Component=ROWLET_quad_script_node <- Channel=parameter_events ; 
+Connect Component=ROWLET_transform_listener_impl_55ef56dca3e0 <- Channel=parameter_events ; 
+Channel server_pathfinding_output {
+	property ros_name = "server_pathfinding_output";
+	property full_ros_name = "/server_pathfinding_output";
+	property ros_type = "sp_trajectory_msgs/msg/SeTrajectoryAssignment";
+	property ros_channel_type = "topic";
+}
+Connect Component=simple_trajectory_server -> Channel=server_pathfinding_output ; 
+Connect Component=simple_trajectory_visualizer <- Channel=server_pathfinding_output ; 
+Channel tf {
+	property ros_name = "tf";
+	property full_ros_name = "/tf";
+	property ros_type = "tf2_msgs/msg/TFMessage";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_bebop_driver_node -> Channel=tf ; 
+Connect Component=vrpn_client_node -> Channel=tf ; 
+Connect Component=ROWLET_bebop_position_control -> Channel=tf ; 
+Connect Component=bebop_driver_node -> Channel=tf ; 
+Connect Component=robot_state_publisher -> Channel=tf ; 
+Connect Component=transform_listener_impl_5620e574d150 <- Channel=tf ; 
+Connect Component=transform_listener_impl_565005919d58 <- Channel=tf ; 
+Connect Component=transform_listener_impl_558c64acec30 <- Channel=tf ; 
+Connect Component=transform_listener_impl_55e377922250 <- Channel=tf ; 
+Connect Component=ROWLET_transform_listener_impl_5625a079d6f0 <- Channel=tf ; 
+Connect Component=ROWLET_transform_listener_impl_55ef56dca3e0 <- Channel=tf ; 
+Connect Component=gesture_node <- Channel=tf ; 
+Channel ROWLET_channel_select {
+	property ros_name = "channel_select";
+	property full_ros_name = "/ROWLET/channel_select";
+	property ros_type = "std_msgs/msg/Int32";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_channel_select ; 
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_channel_select ; 
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_channel_select ; 
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_channel_select ; 
+Connect Component=ROWLET_quad_script_node -> Channel=ROWLET_channel_select ; 
+Connect Component=ROWLET_quad_script_node -> Channel=ROWLET_channel_select ; 
+Connect Component=ROWLET_quad_script_node -> Channel=ROWLET_channel_select ; 
+Connect Component=bebop_guard_node -> Channel=ROWLET_channel_select ; 
+Connect Component=joy_teleop -> Channel=ROWLET_channel_select ; 
+Connect Component=ROWLET_bebop_switch_node <- Channel=ROWLET_channel_select ; 
+Connect Component=bebop_switch_node <- Channel=ROWLET_channel_select ; 
+Channel ROWLET_snapshot {
+	property ros_name = "snapshot";
+	property full_ros_name = "/ROWLET/snapshot";
+	property ros_type = "std_msgs/msg/Empty";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_snapshot ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=ROWLET_snapshot ; 
+Channel ROWLET_k_pose {
+	property ros_name = "k_pose";
+	property full_ros_name = "/ROWLET/k_pose";
+	property ros_type = "geometry_msgs/msg/PoseStamped";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_quad_state_node -> Channel=ROWLET_k_pose ; 
+Connect Component=ROWLET_bebop_position_control <- Channel=ROWLET_k_pose ; 
+Channel ROWLET_bebop_land {
+	property ros_name = "land";
+	property full_ros_name = "/ROWLET/bebop/land";
+	property ros_type = "std_msgs/msg/Empty";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_quad_script_node -> Channel=ROWLET_bebop_land ; 
+Connect Component=bebop_guard_node -> Channel=ROWLET_bebop_land ; 
+Connect Component=joy_teleop -> Channel=ROWLET_bebop_land ; 
+Connect Component=bebop_driver_node <- Channel=ROWLET_bebop_land ; 
+Channel ROWLET_pose {
+	property ros_name = "pose";
+	property full_ros_name = "/ROWLET/pose";
+	property ros_type = "geometry_msgs/msg/PoseStamped";
+	property ros_channel_type = "topic";
+}
+Connect Component=vrpn_client_node -> Channel=ROWLET_pose ; 
+Connect Component=vrpn_client_node -> Channel=ROWLET_pose ; 
+Connect Component=ROWLET_quad_state_node <- Channel=ROWLET_pose ; 
+Connect Component=bebop_guard_node <- Channel=ROWLET_pose ; 
+Connect Component=quad_state_node <- Channel=ROWLET_pose ; 
+Channel ROWLET_camera_control {
+	property ros_name = "camera_control";
+	property full_ros_name = "/ROWLET/camera_control";
+	property ros_type = "geometry_msgs/msg/Twist";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_camera_control ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=ROWLET_camera_control ; 
+Channel ROWLET_k_acc {
+	property ros_name = "k_acc";
+	property full_ros_name = "/ROWLET/k_acc";
+	property ros_type = "geometry_msgs/msg/AccelStamped";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_quad_state_node -> Channel=ROWLET_k_acc ; 
+Connect Component=quad_state_node -> Channel=ROWLET_k_acc ; 
+Connect Component=ROWLET_bebop_position_control <- Channel=ROWLET_k_acc ; 
+Channel ROWLET_takeoff {
+	property ros_name = "takeoff";
+	property full_ros_name = "/ROWLET/takeoff";
+	property ros_type = "std_msgs/msg/Empty";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_takeoff ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=ROWLET_takeoff ; 
+Channel ROWLET_bebop_takeoff {
+	property ros_name = "takeoff";
+	property full_ros_name = "/ROWLET/bebop/takeoff";
+	property ros_type = "std_msgs/msg/Empty";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_quad_script_node -> Channel=ROWLET_bebop_takeoff ; 
+Connect Component=joy_teleop -> Channel=ROWLET_bebop_takeoff ; 
+Connect Component=bebop_driver_node <- Channel=ROWLET_bebop_takeoff ; 
+Channel ROWLET_action_pose__action_status {
+	property ros_name = "status";
+	property full_ros_name = "/ROWLET/action/pose/_action/status";
+	property ros_type = "action_msgs/msg/GoalStatusArray";
+	property ros_channel_type = "topic";
+}
+Connect Component=trajectory_client -> Channel=ROWLET_action_pose__action_status ; 
+Connect Component=ROWLET_quad_script_node <- Channel=ROWLET_action_pose__action_status ; 
+Channel ROWLET_cmd_vel {
+	property ros_name = "cmd_vel";
+	property full_ros_name = "/ROWLET/cmd_vel";
+	property ros_type = "geometry_msgs/msg/Twist";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_bebop_switch_node -> Channel=ROWLET_cmd_vel ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=ROWLET_cmd_vel ; 
+Channel ROWLET_flattrim {
+	property ros_name = "flattrim";
+	property full_ros_name = "/ROWLET/flattrim";
+	property ros_type = "std_msgs/msg/Empty";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_flattrim ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=ROWLET_flattrim ; 
+Channel ROWLET_flip {
+	property ros_name = "flip";
+	property full_ros_name = "/ROWLET/flip";
+	property ros_type = "bebop_msgs/msg/FlipAnimation";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_flip ; 
+Connect Component=ROWLET_quad_script_node -> Channel=ROWLET_flip ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=ROWLET_flip ; 
+Channel ROWLET_gesture {
+	property ros_name = "gesture";
+	property full_ros_name = "/ROWLET/gesture";
+	property ros_type = "gesture_msgs/msg/Gesture";
+	property ros_channel_type = "topic";
+}
+Connect Component=gesture_node -> Channel=ROWLET_gesture ; 
+Connect Component=ROWLET_quad_script_node <- Channel=ROWLET_gesture ; 
+Channel ROWLET_k_vel {
+	property ros_name = "k_vel";
+	property full_ros_name = "/ROWLET/k_vel";
+	property ros_type = "geometry_msgs/msg/TwistStamped";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_quad_state_node -> Channel=ROWLET_k_vel ; 
+Connect Component=quad_state_node -> Channel=ROWLET_k_vel ; 
+Connect Component=ROWLET_bebop_position_control <- Channel=ROWLET_k_vel ; 
+Channel trajectory_hold {
+	property ros_name = "trajectory_hold";
+	property full_ros_name = "/trajectory_hold";
+	property ros_type = "sp_trajectory_msgs/msg/SeTrajectoryHold";
+	property ros_channel_type = "topic";
+}
+Connect Component=simple_trajectory_server -> Channel=trajectory_hold ; 
+Connect Component=simple_trajectory_visualizer <- Channel=trajectory_hold ; 
+Connect Component=trajectory_client <- Channel=trajectory_hold ; 
+Channel ROWLET_reset {
+	property ros_name = "reset";
+	property full_ros_name = "/ROWLET/reset";
+	property ros_type = "std_msgs/msg/Empty";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_reset ; 
+Connect Component=ROWLET_bebop_driver_node <- Channel=ROWLET_reset ; 
+Channel ROWLET_target {
+	property ros_name = "target";
+	property full_ros_name = "/ROWLET/target";
+	property ros_type = "sp_trajectory_msgs/msg/ControlTarget";
+	property ros_channel_type = "topic";
+}
+Connect Component=trajectory_client -> Channel=ROWLET_target ; 
+Connect Component=ROWLET_bebop_position_control <- Channel=ROWLET_target ; 
+Channel ROWLET_twist_input_0 {
+	property ros_name = "twist_input_0";
+	property full_ros_name = "/ROWLET/twist_input_0";
+	property ros_type = "geometry_msgs/msg/Twist";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_joy_teleop -> Channel=ROWLET_twist_input_0 ; 
+Connect Component=ROWLET_bebop_switch_node <- Channel=ROWLET_twist_input_0 ; 
+Channel ROWLET_twist_input_1 {
+	property ros_name = "twist_input_1";
+	property full_ros_name = "/ROWLET/twist_input_1";
+	property ros_type = "geometry_msgs/msg/Twist";
+	property ros_channel_type = "topic";
+}
+Connect Component=ROWLET_bebop_position_control -> Channel=ROWLET_twist_input_1 ; 
+Connect Component=ROWLET_bebop_switch_node <- Channel=ROWLET_twist_input_1 ; 
+Connect Component=bebop_switch_node <- Channel=ROWLET_twist_input_1 ; 
+Channel trajectory_assignment {
+	property ros_name = "trajectory_assignment";
+	property full_ros_name = "/trajectory_assignment";
+	property ros_type = "sp_trajectory_msgs/msg/SeTrajectoryAssignment";
+	property ros_channel_type = "topic";
+}
+Connect Component=simple_trajectory_server -> Channel=trajectory_assignment ; 
+Connect Component=simple_trajectory_visualizer <- Channel=trajectory_assignment ; 
+Connect Component=trajectory_client <- Channel=trajectory_assignment ; 
+Channel optitrack_joy {
+	property ros_name = "joy";
+	property full_ros_name = "/optitrack/joy";
+	property ros_type = "sensor_msgs/msg/Joy";
+	property ros_channel_type = "topic";
+}
+Connect Component=optitrack_joy_node -> Channel=optitrack_joy ; 
+Connect Component=joy_node -> Channel=optitrack_joy ; 
+Connect Component=ROWLET_joy_teleop <- Channel=optitrack_joy ; 
+Connect Component=ROWLET_quad_script_node <- Channel=optitrack_joy ; 
+Connect Component=joy_teleop <- Channel=optitrack_joy ; 
+Channel trajectory_request {
+	property ros_name = "trajectory_request";
+	property full_ros_name = "/trajectory_request";
+	property ros_type = "sp_trajectory_msgs/msg/SeTrajectoryRequest";
+	property ros_channel_type = "topic";
+}
+Connect Component=trajectory_client -> Channel=trajectory_request ; 
+Connect Component=simple_trajectory_server <- Channel=trajectory_request ; 
+Channel BatteryStateChanged {
+	property ros_channel_type = "topic";
+}
+Connect Component=bebop_driver_node -> Channel=BatteryStateChanged ; 
+Connect Component=rostopic <- Channel=BatteryStateChanged ; 
+Channel TwistInput0 {
+	property ros_channel_type = "topic";
+}
+Connect Component=joy_teleop -> Channel=TwistInput0 ; 
+Connect Component=bebop_switch_node <- Channel=TwistInput0 ; 
+Channel PhotoServiceResponse {
+	property ros_channel_type = "service_response";
+}
+Connect Component=sim_photo_node -> Channel=PhotoServiceResponse ; 
+Connect Component=ROWLET_quad_script_node <- Channel=PhotoServiceResponse ; 
+Channel PhotoServiceRequest {
+	property ros_channel_type = "service_request";
+}
+Connect Component=ROWLET_quad_script_node -> Channel=PhotoServiceRequest ; 
+Connect Component=sim_photo_node <- Channel=PhotoServiceRequest ; 
+Channel JointStates {
+	property ros_channel_type = "topic";
+}
+Connect Component=bebop_driver_node -> Channel=JointStates ; 
+Connect Component=robot_state_publisher <- Channel=JointStates ; 
+Channel CmdVel {
+	property ros_channel_type = "topic";
+}
+Connect Component=bebop_switch_node -> Channel=CmdVel ; 
+Connect Component=bebop_driver_node <- Channel=CmdVel ; 
+Channel Snapshot {
+	property ros_channel_type = "topic";
+}
+Connect Component=sim_photo_node -> Channel=Snapshot ; 
+Connect Component=bebop_driver_node <- Channel=Snapshot ; 
+Channel VRPNData {
+	property type = "vrpn";
+}
+Connect Component=optitrack_motive -> Channel=VRPNData ; 
+Connect Component=vrpn_client_node <- Channel=VRPNData ; 
+Channel OpticalTracking {
+}
+Connect Component=bebop2 -> Channel=OpticalTracking ; 
+Connect Component=optitrack_prime_13 <- Channel=OpticalTracking ; 
+Connect Component=optitrack_prime_13W <- Channel=OpticalTracking ; 
+Channel CameraData {
+}
+Connect Component=optitrack_prime_13 -> Channel=CameraData ; 
+Connect Component=optitrack_prime_13W -> Channel=CameraData ; 
+Connect Component=optitrack_motive <- Channel=CameraData ; 
+Channel DroneCommands {
+}
+Connect Component=bebop_driver_node -> Channel=DroneCommands ; 
+Connect Component=bebop2 <- Channel=DroneCommands ; 
+Channel DroneTelemetry {
+}
+Connect Component=bebop2 -> Channel=DroneTelemetry ; 
+Connect Component=bebop_driver_node <- Channel=DroneTelemetry ; 
+Channel DronePhotoData {
+	property type = "ftp";
+}
+Connect Component=bebop2 -> Channel=DronePhotoData ; 
+Connect Component=sim_photo_node <- Channel=DronePhotoData ; 
+Channel GamepadData {
+	property type = "usb";
+}
+Connect Component=Gamepad -> Channel=GamepadData ; 
+Connect Component=joy_node <- Channel=GamepadData ; 

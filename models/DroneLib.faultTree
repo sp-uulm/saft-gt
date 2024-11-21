@@ -1,0 +1,33 @@
+IntermediateEvent TakeOverTrajectoryNode description = "Attacker takes over a trajectory node" {
+	OR {
+		AttackEvent description ="Attacker takes over the trajectory server node" dataflowElement = simple_trajectory_server cost = 6.0 lambda=0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L ,
+		AttackEvent description ="Attacker takes over the trajectory client node" dataflowElement = trajectory_client cost = 6.0 lambda=0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L 
+	} 
+}
+
+IntermediateEvent GetDroneCameraData description = "Attacker captures video/image data from the drone" {
+	OR {
+		AttackEvent description = "Attacker reads messages from the drone's video stream" dataflowElement = DroneTelemetry cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L ,
+		AttackEvent description = "Attacker gets picture data from the drone" dataflowElement = DronePhotoData cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L 
+	}
+}
+
+IntermediateEvent DisruptDroneControl description = "The position control loop of the drone is disrupted" {
+	OR {
+		AttackEvent description = "The camera tracking does not work" dataflowElement = OpticalTracking cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+		AttackEvent description = "The camera data is not received" dataflowElement = CameraData cost=0.9 lambda=0.000012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+		AND {
+			AttackEvent description = "The tracking cameras do not work" dataflowElement = optitrack_prime_13 cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+			AttackEvent description = "The tracking cameras do not work" dataflowElement = optitrack_prime_13W cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N
+		},
+		AttackEvent description = "The tracking software does not work" dataflowElement = optitrack_motive cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+		AttackEvent description = "VRPN data is not transmitted" dataflowElement = VRPNData cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+		AttackEvent description = "The VRPN client node does not work" dataflowElement = vrpn_client_node cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+		AttackEvent description = "The position controller does not work" dataflowElement = ROWLET_bebop_position_control cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>=N/A:>=N,
+		AttackEvent description = "Quadcopter pose data is not transmitted" dataflowElement = vrpn_client_node cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+//		AttackEvent description = "Control data is not transmitted" dataflowElement = default_FARFETCH_control_vel cost=0.9 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+		AttackEvent description = "The Bebop Driver does not work" dataflowElement = bebop_driver_node cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+		AttackEvent description = "Commands are not sent to the drone" dataflowElement = DroneCommands cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N,
+		AttackEvent description = "The flight controller does not work" dataflowElement = bebop2 cost=0.9 lambda=0.00012 CVSSreq = CVSS:3.1/C:~L/I:>N/A:>N
+	}
+}

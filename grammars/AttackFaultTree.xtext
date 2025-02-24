@@ -1,0 +1,65 @@
+grammar uni.ulm.safesec.AttackFaultTree with uni.ulm.safesec.Util 
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.ulm.uni/safesec/dataflow/Dataflow" as dataflow
+import "http://www.ulm.uni/safesec/deployment/Deployment" as deployment
+
+generate attackFaultTree "http://www.ulm.uni/safesec/AttackFaultTree"
+
+@Override
+Model:
+	aftModel+=(AFTTopEvent|MetricDeclaration)*
+;
+
+AFTTopEvent:
+	'Hazard' (('description' '=' description=STRING) & ('note' '=' note=STRING)?) ('{'tree=AFTSubTreeElements'}')?
+;
+
+	
+AFTSubTree:
+	//TODO: Validation rule for SPARE-Gate (dependents on the definition of the gate)
+	gate=Gate (name=ID)? ('note' '=' note=STRING)? '{' subTreeElements+=AFTSubTreeOrReference (',' subTreeElements+=AFTSubTreeOrReference)* '}'
+;
+
+AFTSubTreeOrReference:
+	subtree=AFTSubTreeElements | ref=[AFTSubTreeElements]
+;
+
+Gate: 
+	 name='AND'|name='OR'|name='SAND'|name='PAND'|name='SOR'|name='FDEP' 'trigger' '='trigger=AFTSubTreeOrReference |name='SPARE' 'primaryBasicEvent' '='primary=AFTSubTreeOrReference|name='VOT' 'numberOfDisrubtions' '=' numberOfDisrubtions=INT 
+;
+
+AFTSubTreeElements:
+	BasicFaultEvent | AFTIntermediateEvent | BasicAttackStep | AFTAttackEvent | AFTSubTree
+;
+
+BasicFaultEvent:
+	 'BasicEvent' (name=ID)? (('description' '=' description=STRING) & ('probability' '=' probability=REAL) & ('note' '=' note=STRING)? & ('metrics' '=' metrics=PropertyList)?)
+;
+
+AFTIntermediateEvent:
+	'IntermediateEvent' (name=ID)?  (('description' '=' description=STRING) & ('note' '=' note=STRING)?  & ('metrics' '=' metrics=PropertyList)?) '{' subTree=AFTSubTreeOrReference '}'
+;
+
+AFTAttackEvent: 
+	'AttackEvent' (name=ID)?  (('description' '=' description=STRING) & (('dataflowElement' '=' linkedDataflowElement=[dataflow::DataflowElement|ID]) | ('deploymentElement' '=' linkedDeploymentElement=[deployment::DeploymentElement|ID]) ) & ('cost' '=' cost=REAL) 
+		& ("CVSS" "=" cvss=CVSSVECTOR) &('type' '=' type=Type)?
+	) 
+;
+
+
+BasicAttackStep: 
+	'AttackStep' (name=ID)? (('description' '=' description=STRING) & (('CVE' '=' cve=CVE)?) & (('CVSS' '=' cvss=CVSSVECTOR)?) & 
+		(('probability' '=' probability=REAL)?) & (('BaseScore' '=' baseScore=REAL)?) & (('ImpactScore' '=' impactScore=REAL)?) & 
+		(('ExploitabilityScore' '=' exploitabilityScore=REAL)?)& (("epss" "=" epss=REAL)?)& (("note" '=' note=STRING)?)  & (('metrics' '=' metrics=PropertyList)?)
+	) //("{" attackTree=AttackTree "}")?
+;
+
+MetricDeclaration:
+	'Metric' ('event' '=' event=[AFTSubTreeElements|ID]) & ('description' '=' description=STRING)? & metrics=PropertyList
+;
+
+IDorSTRING:
+	ID | STRING
+;
+

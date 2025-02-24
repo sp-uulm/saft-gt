@@ -1,0 +1,63 @@
+grammar uni.ulm.safesec.deployment.Deployment with uni.ulm.safesec.Util
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.ulm.uni/safesec/dataflow/Dataflow" as dataflow
+
+generate deployment "http://www.ulm.uni/safesec/deployment/Deployment"
+
+@Override 
+Model:
+	elements+=Element*;
+
+Element:
+	(
+		((RefComponent | DeploymentElement) (DEPENDS_ON (definitionDep=Definition))?) | 
+		((RefComponent | DeploymentElement) EXECUTES (definitionExec=SetDefinition)) |
+		Channel 
+	)
+;
+
+DeploymentElement:
+	'Component'? name=ID ((cpe=CPE)? & (cvss=CVSSVECTOR)? & (cveReq=CVEREQUIREMENT)?) (type=TypesList)? (properties=PropertyList)? 
+;
+	
+RefComponent:
+	'RefComponent' linkedDataflowComponent=[dataflow::Component|ID] (type=TypesList)?  (properties=PropertyList)? // a reference to the dataflow model 
+;
+
+Channel:
+	('RefChannel' (linkedDataflowChannel=([dataflow::Channel|ID])) | 'Channel' (channel=DeploymentElement) ) 
+	   (('(' from+=(RefComponent | DeploymentElement)? '->' to+=(RefComponent | DeploymentElement)? ')') (properties+=PropertyList)? (DEPENDS_ON (definitions+=Definition))?)+    
+;
+
+
+
+Definition:
+	(Alternative | AlternativeElementWise | SetDefinition | finaldef=STRING)
+;
+
+SetDefinition:
+	('{' def+=DeploymentElement (',' def+=DeploymentElement)* '}')
+;
+
+Alternative:
+	('(' altdef+=SetDefinition ('|' altdef+= SetDefinition)+ ')') 
+;
+
+AlternativeElementWise:
+	('(' union1+=SetDefinition '.U' (union2= Alternative) ')')
+;
+
+
+TypesList:
+	':' type+=Type ('|' type+=Type)*
+;
+	
+
+DEPENDS_ON : 
+	'=' | 'depends_on'
+;
+
+EXECUTES :
+	'executes'
+;

@@ -1,0 +1,60 @@
+grammar uni.ulm.safesec.FaultTree with uni.ulm.safesec.Util 
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.ulm.uni/safesec/dataflow/Dataflow" as dataflow
+import "http://www.ulm.uni/safesec/deployment/Deployment" as deployment
+
+generate faultTree "http://www.ulm.uni/safesec/FaultTree"
+
+@Override 
+Model:
+	(faultTreeModel+=FaultTreeModel*)
+;
+FaultTreeModel:
+	TopEvent|SubTree|Events
+;
+	
+
+TopEvent:
+	'Hazard' (('description' '=' description=STRING) & ('note' '=' note=STRING)?) ('{'tree=SubTreeElements'}')?
+;
+
+
+SubTree:
+	//TODO: Validation rule for SPARE-Gate (dependents on the definition of the gate)
+	gate=Gate (name=ID)? ('note' '=' note=STRING)? '{' subTreeElements+=SubTreeElements (','subTreeElements+=SubTreeElements)* '}'
+;
+
+SubTreeElements:
+	subtree=SubTree | event=Events | ref=[RefElements]
+;
+RefElements:
+	SubTree |BasicEvent | IntermediateEvent | AttackEvent
+;
+
+IntermediateEventChild:
+	subtree=SubTree | ref=[SubTree]
+;
+
+Gate: 
+	 name='AND'| name='OR'|name='SAND'|name='PAND'|name='SOR'|name='FDEP' 'trigger' '='trigger=SubTreeElements |name='SPARE' 'primaryBasicEvent' '='primary=SubTreeElements| name='VOT' 'numberOfDisrubtions' '=' numberOfDisrubtions=INT 
+;
+
+Events:
+	BasicEvent | IntermediateEvent | AttackEvent
+;
+
+BasicEvent:
+	 'BasicEvent' (name=ID)? (('description' '=' description=STRING) & ('probability' '=' probability=REAL) & ('note' '=' note=STRING)? & ('metrics' '=' metrics=PropertyList)?)
+;
+
+IntermediateEvent:
+	'IntermediateEvent' (name=ID)?  (('description' '=' description=STRING) & ('note' '=' note=STRING)? & ('metrics' '=' metrics=PropertyList)?)'{'child=IntermediateEventChild'}'
+;
+
+AttackEvent:
+	'AttackEvent' (name=ID)?  (('description' '=' description=STRING) & (('dataflowElement' '=' linkedDataflowElement=[dataflow::DataflowElement|ID]) | ('deploymentElement' '=' linkedDeploymentElement=[deployment::DeploymentElement|ID]) ) & ('cost' '=' cost=REAL) & ("CVSS" "=" cvss=CVSSVECTOR)&('type' '=' type=Type)?) 
+;
+
+
+	

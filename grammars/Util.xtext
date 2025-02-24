@@ -1,0 +1,97 @@
+grammar uni.ulm.safesec.Util with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate util "http://www.ulm.uni/safesec/Util"
+
+Model:
+	(utility=CVSSVECTOR)?;
+
+
+//TODO cvss maybe other version
+terminal CVSSVECTOR : 'CVSS:3.1' ('/' 'AV'':'('N'|'A'|'L'|'P'|'*')) ('/' 'AC'':'('L'|'H'|'*')) ('/' 'PR'':'('N'|'L'|'H'|'*')) ('/' 'UI'':'('N'|'R'|'*'))
+   ('/' 'S'':'('U'|'C'|'*')) ('/' 'C'':'('N'|'L'|'H'|'*')) ('/' 'I'':'('N'|'L'|'H'|'*')) ('/' 'A'':'('H'|'N'|'L'|'*'))
+   ('/' 'E'':'('X'|'H'|'F'|'P'|'U'|'*'))? ('/' 'RL'':'('X'|'U'|'W'|'T'|'O'|'*'))? ('/' 'RC'':'('X'|'C'|'R'|'U'|'*'))? ('/' 'CR'':'('X'|'H'|'M'|'L'|'*'))?
+   ('/' 'IR'':'('X'|'H'|'M'|'L'|'*'))? ('/' 'AR'':'('X'|'H'|'M'|'L'|'*'))? ('/' 'MAV'':'('X'|'N'|'A'|'L'|'P'|'*'))? ('/' 'MAC'':'('X'|'L'|'H'|'*'))?
+   ('/' 'MPR'':'('X'|'N'|'L'|'H'|'*'))? ('/' 'MUI'':'('X'|'N'|'R'|'*'))? ('/' 'MS'':'('X'|'C'|'U'|'*'))? ('/' 'MC'':'('X'|'H'|'N'|'L'|'*'))? 
+   ('/' 'MI'':'('X'|'H'|'N'|'L'|'*'))? ('/' 'MA'':'('X'|'H'|'N'|'L'|'*'))?
+;
+
+terminal CVETERMINAL:'CVE-'('0'..'9')('0'..'9')('0'..'9')('0'..'9')'-'('0'..'9')+;
+
+terminal CVEREQUIREMENT:'C'':'('='|'>'|'<'|'>='|'<='|'~')?('N'|'L'|'H'|'*')','
+	'I'':'('='|'>'|'<'|'>='|'<='|'~')?('N'|'L'|'H'|'*')','
+	'A'':'('='|'>'|'<'|'>='|'<='|'~')?('N'|'L'|'H'|'*')
+;
+
+terminal CPE:'cpe:2.3'(':'('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'-'|'.'|'*')*)+;
+
+terminal REAL returns ecore::EDouble: (('0'..'9')+'.'('0'..'9')+);
+terminal BOOL returns ecore::EBoolean: ('true'|'false');
+
+CWE: 
+	'CWE-'id=INT ('cweNotes''='notes=STRING)?
+;
+
+CVE:
+	cve=CVETERMINAL ('cveDescription''='description=STRING)?
+;	
+
+PropertyList:
+	('(' properties+=Property (',' properties+=Property)*')')
+;
+
+Property:
+	key=ID (':' type=PropertyType)? '=' value=Value;
+	
+PropertyType:
+	'Integer'|'String'|'Boolean'|'Real';
+	
+//FQN: ID '.' ID;
+	
+Value:
+	STRING|INT|REAL|BOOL;
+	
+Type: 
+	name=(Package | Protocol | Library | Hardware | Proxy | File | OS | Sensor | Actor)
+;
+
+Protocol:
+	'Protocol'
+;
+
+Library:
+	'Library'
+;
+
+Hardware:
+	'Hardware' | 'HW'
+;
+
+Package:
+	'Package'
+;
+
+Proxy:
+	'Proxy' | 'Platform'
+;
+
+File:
+	'File'
+;
+
+OS:
+	'OS'
+;
+
+Sensor:
+	'Sensor'
+;
+
+Actor:
+	'Actor'
+;
+
+
+
+

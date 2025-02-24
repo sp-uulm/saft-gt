@@ -90,17 +90,17 @@ Hazard description = "Drone crashes into a person"
 						, 
 						 IntermediateEvent description = "Corrupt simple_trajectory_server Dataflow: simple_trajectory_server" {
 							 OR {
-							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
-								 OR {
-								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
-								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
-								}
-							}
-							, 
 							 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
 								 OR {
 								 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
 								   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+								}
+							}
+							, 
+							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+								 OR {
+								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
 								}
 							}
 							}
@@ -114,17 +114,17 @@ Hazard description = "Drone crashes into a person"
 						, 
 						 IntermediateEvent description = "Corrupt simple_trajectory_visualizer Dataflow: simple_trajectory_visualizer" {
 							 OR {
-							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
-								 OR {
-								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
-								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
-								}
-							}
-							, 
 							 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
 								 OR {
 								 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
 								   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+								}
+							}
+							, 
+							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+								 OR {
+								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
 								}
 							}
 							}
@@ -166,17 +166,17 @@ Hazard description = "Drone crashes into a person"
 						, 
 						 IntermediateEvent description = "Corrupt vrpn_client_node Dataflow: vrpn_client_node" {
 							 OR {
-							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
-								 OR {
-								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
-								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
-								}
-							}
-							, 
 							 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
 								 OR {
 								 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
 								   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+								}
+							}
+							, 
+							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+								 OR {
+								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
 								}
 							}
 							}
@@ -196,36 +196,1656 @@ Hazard description = "Drone crashes into a person"
 				}
 				, 
 				 IntermediateEvent description = "Attacker performs flooding-attack on trajectory request topic Dataflow: trajectory_request" {
+					 OR {
+					 IntermediateEvent description = "Attacker performs flooding-attack on trajectory request topic" {
+						 SAND {
+						 IntermediateEvent description = "Determine communication mechanism" {
+							 OR {
+							 AND {
+							 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							, 
+							 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: trajectory_request" {
+								 OR {
+								 IntermediateEvent description = "Observe communication to determine communication protocol" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: trajectory_request" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: trajectory_request" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Channel is corrupted" {
+									 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+								}
+								}
+							}
+							}
+							, 
+							 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Position in between the target" {
+							 OR {
+							 AND {
+							 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+							, 
+							 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: trajectory_request" {
+								 OR {
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: trajectory_request" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: trajectory_request" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: trajectory_request" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: trajectory_request" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_request 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_request 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Channel is corrupted" {
+									 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_client 
+								}
+								}
+							}
+							}
+						}
+						, 
+						 AttackStep  description = "Attacker performs denial-of-service attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+					}
+					, 
 					 IntermediateEvent description = "Channel is corrupted" {
 						 AttackEvent  description = "Sender is corrupted" cost = 0.8 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = trajectory_client 
+					}
 					}
 				}
 				, 
 				 IntermediateEvent description = "Attacker performs flooding-attack on trajectory assignment topic Dataflow: trajectory_assignment" {
-					 IntermediateEvent description = "Channel is corrupted" {
-						 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+					 OR {
+					 IntermediateEvent description = "Attacker performs flooding-attack on trajectory assignment topic" {
+						 SAND {
+						 IntermediateEvent description = "Determine communication mechanism" {
 							 OR {
-							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+							 AND {
+							 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							, 
+							 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: trajectory_assignment" {
 								 OR {
-								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
-								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+								 IntermediateEvent description = "Observe communication to determine communication protocol" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: trajectory_assignment" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+													 OR {
+													 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+														 OR {
+														 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+														   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+														}
+													}
+													, 
+													 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+														 OR {
+														 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+														   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+														}
+													}
+													}
+												}
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+											 OR {
+											 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+												 OR {
+												 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+												   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+												}
+											}
+											, 
+											 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+												 OR {
+												 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+												   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+												}
+											}
+											}
+										}
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: trajectory_assignment" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+													 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+														 OR {
+														 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+														   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+														}
+													}
+												}
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Channel is corrupted" {
+									 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+										 OR {
+										 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+											 OR {
+											 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+											   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+											}
+										}
+										, 
+										 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+											 OR {
+											 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+											   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+											}
+										}
+										}
+									}
+								}
+								}
+							}
+							}
+							, 
+							 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Position in between the target" {
+							 OR {
+							 AND {
+							 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+								 OR {
+								 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+									 OR {
+									 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+									   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+									}
+								}
+								, 
+								 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+									 OR {
+									 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+									   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+									}
+								}
 								}
 							}
 							, 
+							 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: trajectory_assignment" {
+								 OR {
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: trajectory_assignment" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+													 OR {
+													 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+														 OR {
+														 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+														   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+														}
+													}
+													, 
+													 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+														 OR {
+														 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+														   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+														}
+													}
+													}
+												}
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+											 OR {
+											 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+												 OR {
+												 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+												   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+												}
+											}
+											, 
+											 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+												 OR {
+												 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+												   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+												}
+											}
+											}
+										}
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: trajectory_assignment" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+													 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+														 OR {
+														 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+														   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+														}
+													}
+												}
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: trajectory_assignment" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+													 OR {
+													 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+														 OR {
+														 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+														   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+														}
+													}
+													, 
+													 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+														 OR {
+														 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+														   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+														}
+													}
+													}
+												}
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+											 OR {
+											 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+												 OR {
+												 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+												   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+												}
+											}
+											, 
+											 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+												 OR {
+												 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+												   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+												}
+											}
+											}
+										}
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: trajectory_assignment" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_assignment 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 IntermediateEvent description = "Install spyware on client Dataflow: simple_trajectory_server" {
+														 OR {
+														 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
+															 OR {
+															 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
+															   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
+															}
+														}
+														, 
+														 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+															 OR {
+															 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+															   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+															}
+														}
+														}
+													}
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_assignment 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+													 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+														 OR {
+														 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+														   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+														}
+													}
+												}
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Channel is corrupted" {
+									 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+										 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+											 OR {
+											 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+											   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+											}
+										}
+									}
+								}
+								}
+							}
+							}
+						}
+						, 
+						 AttackStep  description = "Attacker performs denial-of-service attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+					}
+					, 
+					 IntermediateEvent description = "Channel is corrupted" {
+						 IntermediateEvent description = "Sender is corrupted Dataflow: simple_trajectory_server" {
+							 OR {
 							 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1 Insufficient Control of Network Message Volume (Network Amplification)" {
 								 OR {
 								 AttackStep  CVE202138425  description = "eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." probability = 0.0  CVE = CVE-2021-38425 
 								   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H  BaseScore = 9.1 ImpactScore = 5.2 ExploitabilityScore = 3.9
 								}
 							}
+							, 
+							 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+								 OR {
+								 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+								   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+								}
+							}
 							}
 						}
+					}
 					}
 				}
 				, 
 				 IntermediateEvent description = "Attacker performs flooding-attack on trajectory control target topic Dataflow: ROWLET_target" {
+					 OR {
+					 IntermediateEvent description = "Attacker performs flooding-attack on trajectory control target topic" {
+						 SAND {
+						 IntermediateEvent description = "Determine communication mechanism" {
+							 OR {
+							 AND {
+							 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							, 
+							 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: ROWLET_target" {
+								 OR {
+								 IntermediateEvent description = "Observe communication to determine communication protocol" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: ROWLET_target" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: ROWLET_target" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Channel is corrupted" {
+									 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+								}
+								}
+							}
+							}
+							, 
+							 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Position in between the target" {
+							 OR {
+							 AND {
+							 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+							, 
+							 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: ROWLET_target" {
+								 OR {
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: ROWLET_target" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: ROWLET_target" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+									 SAND {
+									 IntermediateEvent description = "Determine communication mechanism" {
+										 OR {
+										 AND {
+										 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										, 
+										 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: ROWLET_target" {
+											 OR {
+											 IntermediateEvent description = "Observe communication to determine communication protocol" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+										, 
+										 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Position in between the target" {
+										 OR {
+										 AND {
+										 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+										, 
+										 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: ROWLET_target" {
+											 OR {
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+												 SAND {
+												 IntermediateEvent description = "Determine communication mechanism" {
+													 OR {
+													 AND {
+													 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													, 
+													 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = ROWLET_target 
+													}
+													, 
+													 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+													}
+												}
+												, 
+												 IntermediateEvent description = "Position in between the target" {
+													 OR {
+													 AND {
+													 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = trajectory_client 
+													, 
+													 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+													}
+													, 
+													 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = ROWLET_target 
+													}
+												}
+												, 
+												 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Channel is corrupted" {
+												 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_client 
+											}
+											}
+										}
+										}
+									}
+									, 
+									 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Channel is corrupted" {
+									 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = trajectory_client 
+								}
+								}
+							}
+							}
+						}
+						, 
+						 AttackStep  description = "Attacker performs denial-of-service attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+					}
+					, 
 					 IntermediateEvent description = "Channel is corrupted" {
 						 AttackEvent  description = "Sender is corrupted" cost = 0.8 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=*/I:*/A:H dataflowElement = trajectory_client 
+					}
 					}
 				}
 				}
@@ -259,8 +1879,886 @@ Hazard description = "Drone crashes into a person"
 			 BasicEvent description = "Battery dead" probability = 0.7
 			, 
 			 IntermediateEvent description = "Attacker manipulates battery status indicator Dataflow: BatteryStateChanged" {
+				 OR {
+				 IntermediateEvent description = "Attacker manipulates battery status indicator" {
+					 SAND {
+					 IntermediateEvent description = "Determine communication mechanism" {
+						 OR {
+						 AND {
+						 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						, 
+						 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: BatteryStateChanged" {
+							 OR {
+							 IntermediateEvent description = "Observe communication to determine communication protocol" {
+								 SAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+							}
+							}
+						}
+						}
+						, 
+						 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+						}
+					}
+					, 
+					 IntermediateEvent description = "Position in between the target" {
+						 OR {
+						 AND {
+						 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+						, 
+						 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+						, 
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: BatteryStateChanged" {
+							 OR {
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 SAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 SAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop_driver_node 
+							}
+							}
+						}
+						}
+					}
+					, 
+					 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					}
+				}
+				, 
+				 IntermediateEvent description = "Attacker manipulates battery status indicator" {
+					 SAND {
+					 IntermediateEvent description = "Determine communication mechanism" {
+						 OR {
+						 AND {
+						 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						, 
+						 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: BatteryStateChanged" {
+							 OR {
+							 IntermediateEvent description = "Observe communication to determine communication protocol" {
+								 SAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+							}
+							}
+						}
+						}
+						, 
+						 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+						}
+					}
+					, 
+					 IntermediateEvent description = "Position in between the target" {
+						 OR {
+						 AND {
+						 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+						, 
+						 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+						, 
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: BatteryStateChanged" {
+							 OR {
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 SAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 SAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: BatteryStateChanged" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 SAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = BatteryStateChanged 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop_driver_node 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = BatteryStateChanged 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop_driver_node 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop_driver_node 
+							}
+							}
+						}
+						}
+					}
+					, 
+					 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					}
+				}
+				, 
 				 IntermediateEvent description = "Channel is corrupted" {
 					 AttackEvent  description = "Sender is corrupted" cost = 6.0 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L dataflowElement = bebop_driver_node 
+				}
 				}
 			}
 			, 

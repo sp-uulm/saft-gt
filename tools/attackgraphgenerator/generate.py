@@ -171,7 +171,7 @@ class Generator:
         #relations = SandRelationsCalculator().calculate(dataFrame, pandas.DataFrame(self.databaseConnector.cursor), self.properties['maxRelationDepth'])
         #print('Calculating Relationships ...')
         #for relation in relations:
-        #    subTree = SubTree(gate=Gate(GateEnum.SAND, id),
+        #    subTree = SubTree(gate=Gate(GateEnum.PAND, id),
         #                      id=relations[relation], attackTrees=[])
         #    subTree.attackTrees.append(AttackTree(
         #        ref=str(relation[0].replace('-', ''))))

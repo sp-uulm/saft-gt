@@ -64,7 +64,7 @@
       </nodes>
       <nodes xmi:id="_WjM8wGzTEe2rqYVhtsdH5g" name="gate" incoming="_X0lsIGzTEe2rqYVhtsdH5g">
         <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate"/>
-        <attributes xmi:id="_ZOxyMGzTEe2rqYVhtsdH5g" value="&quot;SAND&quot;">
+        <attributes xmi:id="_ZOxyMGzTEe2rqYVhtsdH5g" value="&quot;PAND&quot;">
           <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate/name"/>
         </attributes>
       </nodes>
@@ -357,7 +357,7 @@
       </nodes>
       <nodes xmi:id="_lhZ80HI2Ee2qtJ014VARDw" incoming="_eWpw4HI3Ee2qtJ014VARDw">
         <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate"/>
-        <attributes xmi:id="_uF008HI2Ee2qtJ014VARDw" value="&quot;SAND&quot;">
+        <attributes xmi:id="_uF008HI2Ee2qtJ014VARDw" value="&quot;PAND&quot;">
           <type href="http://www.ulm.uni/safesec/AttackFaultTree#//Gate/name"/>
         </attributes>
       </nodes>

@@ -1,0 +1,331 @@
+NOTE: The transcript was translated (from German language), anonymized and corrected to make it more "reader-friendly".
+
+*Introductory round*
+
+We have a few participants whose native language is not German. Nevertheless, we’ve decided to hold the workshop mostly in German. The slides are in English, however. We believe discussions in German will be more lively and efficient—if that’s acceptable to everyone.
+
+The workshop is divided into three parts. Each part combines a presentation with a discussion round.
+
+I will start with the first talk, which provides an overview of the analysis approaches we developed in the SAFESEC project.
+
+The second talk focuses on the required inputs for the toolchain and the process of automated model generation.
+
+The third presentation will explain how to merge partial models into a complete system model for analysis.
+
+This workshop also serves as part of the project’s evaluation phase. SAFESEC is about jointly analyzing safety and security in self-adaptive systems.
+
+As already mentioned in the introduction round, safety and security can no longer be viewed in isolation in many domains.
+
+Self-adaptive systems—those capable of changing their software architecture at runtime—pose particular challenges, especially when trying to evaluate safety and security properties.
+
+We’ve developed a toolchain that makes such analysis possible and automatable.
+
+Our example use case is a quadcopter system developed at the University of Ulm:
+
+Multiple drones are tracked using an optical tracking system.
+
+Control is implemented using the Robot Operating System (ROS).
+
+The architecture is component-based and adaptable at runtime.
+
+Example scenario:
+
+A tampered message is sent to the drone.
+
+The drone exits the Wi-Fi range.
+
+Control is lost → potential safety hazards, like collisions.
+
+The toolchain consists of five core steps leading to a final “Attack-Fault Tree” model, which is then analyzed using a model checker.
+
+The partial models provide:
+
+A logical view (components and data flows)
+
+A technical view (deployment details, libraries, platforms)
+
+Attack Trees represent potential security threats.
+Fault Trees represent system failures.
+
+These are automatically and rule-based combined into a Hybrid Attack-Fault Tree (AFT).
+
+This allows for cross-layer analysis on both logical and technical abstraction levels—automatically and at runtime.
+
+
+
+The first technical presentation gives an overview of the analysis concept developed in the SAFESEC project.
+
+The objective is to build a toolchain that enables the joint analysis of safety and security risks in self-adaptive systems.
+
+As a running example, we use a quadcopter system consisting of multiple drones and a ground control station connected via Wi-Fi.
+
+System structure:
+
+Drones are tracked via an optical tracking system.
+
+Control is handled through ROS (Robot Operating System), which supports a component-based architecture.
+
+The drones are reconfigurable at runtime, meaning they can adapt dynamically to new conditions.
+
+Example scenario for analysis:
+
+A manipulated message is sent to a drone.
+
+This causes the drone to fly beyond the Wi-Fi range.
+
+The ground station loses control.
+
+Potential consequence: Collision with people or objects → a safety hazard.
+
+The developed toolchain automatically generates models and merges them into a “Hybrid Attack-Fault Tree” (AFT) through five major steps:
+
+Runtime data capture: Collect information on components and data flows during execution.
+
+Logical sub-model generation: Create a model showing logical components and their interconnections.
+
+Deployment model generation: In parallel, generate a technical model capturing actual implementation details (e.g., libraries, hardware, platforms).
+
+Derive Attack Trees and Fault Trees:
+
+Attack Trees: Model potential attack vectors targeting components or communication channels.
+
+Fault Trees: Model system failures and their causes at different abstraction levels.
+
+Merge into an AFT and analyze:
+
+All partial models are automatically merged using rule-based logic.
+
+The resulting AFT is analyzed using a probabilistic model checker.
+
+Advantages of this approach:
+
+It covers self-adaptive systems whose architectures may change dynamically.
+
+New vulnerabilities (CVEs) can be identified and automatically integrated into the model.
+
+Analysis results can trigger countermeasures (e.g., reconfiguration) at runtime.
+
+
+Question from Participant A:
+Where is this ultimately headed? It’s clear that safety and security need to be considered together—but what exactly is the goal of this modeling?
+
+Moderator’s Answer:
+The goal is to generate a probabilistic model that can be evaluated with a model checker.
+This lets us assess which failure paths are most probable—and use that information to trigger preemptive reconfiguration in the adaptive system.
+
+Participant B adds:
+It’s also about automation and model freshness:
+
+Systems evolve constantly; new vulnerabilities (CVEs) arise.
+
+Therefore, models must be automatically updated.
+
+The aim is to stay consistent, current, and maintainable.
+
+Participant C:
+If the vulnerabilities (CVEs) are already known, why not handle everything during design-time? You could just design security mechanisms in advance.
+
+Moderator’s Response:
+True in theory, but:
+
+Not all vulnerabilities are known at design-time.
+
+Many relevant system states only occur during runtime.
+
+Runtime monitoring enables detection of unexpected situations and dynamic reaction.
+
+Participant D:
+We've had similar runtime mining efforts to detect new weaknesses.
+But countermeasures are hard to pre-plan if the threat is unknown in advance.
+→ Often you’re stuck with generic actions like shutting systems down, isolating, or adjusting resources.
+
+Moderator:
+Exactly. These challenges justify our approach—to automate the analysis and act at runtime.
+
+Discussion prompt to the group:
+What’s your experience with integrating safety and security in self-adaptive systems?
+
+Participant E:
+I did my PhD on safety in adaptive systems.
+If the configuration space isn’t even known during design-time, it's extremely difficult.
+→ You need to model at a meta-level.
+
+Participant F:
+We have no choice but to treat both aspects together.
+For example:
+
+If your sensor system fails, is it due to a performance problem (safety)?
+
+Or due to an attack (security)?
+→ Without considering security, you can’t ensure safety.
+
+Participant G:
+It depends on how you define “security.”
+
+If you use the CIA (Confidentiality, Integrity, Availability) model, there’s overlap with safety.
+
+Whenever harm to life and limb is possible, it must be addressed jointly.
+
+Participant H:
+I’m still new to adaptive systems, but:
+
+They dramatically expand the attack surface.
+
+Communication between subsystems (e.g., drone and controller) is a vulnerability.
+
+The real challenge is modeling circular dependencies and their quantitative effects.
+
+Participant A:
+In an adaptive system that permits new configurations, doesn’t that open up additional attack surfaces?
+How does that affect modeling? And how do you handle circular dependencies between states in quantitative analysis?
+
+Participant B:
+Our experience shows that in networked systems, the attack surface naturally increases.
+If the system is closed (no external comms), it’s far less vulnerable.
+
+Moderator:
+Self-adaptive does not mean the system behaves arbitrarily.
+→ All behaviors are defined; the system selects them based on context.
+The architecture adapts to meet updated safety/security guarantees.
+
+Example:
+
+A medical system detects a new device.
+
+If that device doesn’t meet the required security level, the system can block or isolate it.
+
+Participant C:
+Even when collaboration models are pre-defined (e.g., drone + control station), security issues still arise from network exposure.
+The system must sometimes adapt not for functionality, but to maintain safety/security guarantees.
+
+Moderator:
+Right. Networking always increases complexity and with it, vulnerability—both for safety and security.
+
+Discussion on Fault Modeling:
+
+Participant D:
+In practice, we model different failure modes for the same component depending on usage context.
+How does your model support situational variation?
+
+Answer:
+Our framework allows specification of preconditions for each attack (e.g., via CWSS vectors).
+These include context: component role, presence of vulnerabilities, etc.
+
+Participant E:
+But how can we realistically estimate the probability of an attack?
+
+Attacks are rarely independent.
+
+An attacker often performs multiple, coordinated actions.
+→ Classic fault tree probabilities are unreliable for security analysis.
+
+Answer:
+Agreed. This is a known limitation.
+We currently model change in probability over time, not absolute values.
+Example:
+
+If the likelihood of a collision increases due to a new CVE, that increase alone can trigger reconfiguration.
+→ The delta is the trigger, not the probability itself.
+
+Participant F:
+That’s a pragmatic compromise. Absolute values are often speculative anyway.
+
+Participant G:
+Have you considered using state-based models instead of static fault trees?
+Different states could map to different models.
+
+Moderator’s Answer:
+Yes, in earlier work, we used separate fault trees per system configuration.
+→ This is something we plan to integrate in future extensions of the tool.
+
+Final remarks:
+
+The tool supports varying levels of modeling detail.
+
+You can inject manual attacks or CVEs.
+
+Scalability depends heavily on the number of configurations.
+
+Real-world applications will require further optimization.
+
+Participant A:
+Is the model checker fed a single, unified model that includes both the fault trees and attack trees?
+
+Answer:
+Yes, the final model is monolithic. All components, error paths, and attack vectors are merged into one structure.
+
+Participant B:
+How well does that scale? In previous projects, similar tools failed even on moderately complex models—especially with intricate probability distributions.
+
+Answer:
+We're using the probabilistic model checker STORM, which includes several optimizations:
+
+The model is translated directly into GALILEO format.
+
+It performed well on smaller-scale test systems.
+
+We don’t yet have real-world benchmarks for large-scale models.
+
+Participant C:
+Monte Carlo simulation approaches were painfully slow in our experience—especially with high-fidelity probabilities.
+
+Answer:
+That’s precisely why we chose STORM:
+
+It relies on native probabilistic models, not pure simulations.
+
+This helps avoid subtle implementation errors.
+
+Participant D:
+I'm still skeptical about the quality of the probability values:
+
+Attacks are deliberate, not random.
+
+It's difficult to model their probability in a meaningful way.
+
+Answer:
+That’s why we focus on relative change over time rather than absolute values:
+
+If likelihood increases significantly over time, that’s enough to trigger mitigation.
+
+Participant E:
+Does the model actually reflect changing system behavior over time or state?
+
+Answer:
+Not yet—but future work will include that.
+
+Previous projects explored state-dependent configurations.
+
+The goal is to support runtime models with state-aware failure trees.
+
+Participant F:
+That would be extremely useful. We're already working with state-based component perspectives.
+
+Final question – Participant G:
+Why use a probabilistic model checker at all instead of standard FTA tools?
+
+Answer:
+
+A model checker lets us handle time-dependent probabilities.
+
+That’s crucial for self-adaptive systems.
+
+It also allows more complex fault chains to be analyzed.
+
+Technical Note:
+STORM is modern and more robust than older tools in this domain.
+
+Survey and feedback round:
+The session ended with a short anonymous poll:
+
+How understandable were the models?
+
+Is the hybrid safety/security approach convincing?
+
+Does a runtime-focused approach make sense?
+
+Feedback was positive:
+
+Most participants found the approach innovative and promising.
+
+The combination of adaptive system modeling with runtime security triggers was seen as valuable.

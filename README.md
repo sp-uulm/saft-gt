@@ -32,7 +32,7 @@ Besides the pipeline itself, we have added the following additional files
 - `/grammars`  
   contains the Xtext grammars of all introduced domain-specific languages (DSLs)
 - `/workshop_presentations`  
-  contains the presentations given at the workshop with experts to evaluate our approach
+  contains the presentations given at the workshop with experts to evaluate our approach, transcript of discussions, linked survey questions and consent forms.
 - `/saft-gt-evaluation_rawdata.xlsx`
   contains the raw results of the performance measurement
 

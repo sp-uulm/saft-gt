@@ -1,0 +1,5 @@
+AttackTarget synonyms=("tzdata") CWE=CWE-763 cweNotes="Release of Invalid Pointer or Reference" note="Generated for search by description for keyword: tzdata" {
+OR {
+AttackStep CVE20199290 description="In tzdata there is possible memory corruption due to a mismatch between allocation and deallocation functions. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Product: AndroidVersions: Android-10Android ID: A-113039724" CVE=CVE-2019-9290 CVSS=CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H BaseScore=7.8 ImpactScore=5.9 ExploitabilityScore=1.8
+} 
+}

@@ -4,10 +4,9 @@ Hazard description = "violation of privacy" {
 			OR {
 				BasicEvent description = "Errorenous messages" probability = 0.7,
 				BasicEvent description = "Loss of control" probability = 0.7 
-				
 			}
 		},
-		SAND{
+		PAND{
 
 			TakeOverTrajectoryNode,
 			IntermediateEvent description = "Leak of camera information"{ 

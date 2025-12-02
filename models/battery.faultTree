@@ -1,0 +1,31 @@
+Hazard description = "Drone catches fire"{
+	OR 
+	{
+		BasicEvent description = "Old battery" probability = 0.1,
+		BasicEvent description = "Battery is misused" probability = 0.3,
+		BasicEvent description = "Battery is damaged" probability = 0.3,
+		BasicEvent description = "Short circuit" probability = 0.2,
+		IntermediateEvent description = "Overheating" {
+			OR {
+				BasicEvent description = "Sensor for temperature is broken" probability = 0.2,
+				AttackEvent description = "Attacker manipulates sensor data" dataflowElement=BatteryStateChanged cost=0.9 lambda=0.00012 CVSSREQ = CVSS:3.1/C:>=L/I:>=N/A:*
+								
+			}
+		},
+		IntermediateEvent description = "Overcharging" {
+			OR {
+				BasicEvent description = "Careless handling" probability = 0.4,
+				IntermediateEvent description = "Overcharging 2" {
+					OR {
+						BasicEvent description = "Error in measuring battery status" probability = 0.1,
+					
+						AttackEvent description = "Attacker manipulates battery status data" dataflowElement=BatteryStateChanged cost=0.9 lambda=0.00012 CVSSREQ = CVSS:3.1/C:>=L/I:>=N/A:*
+									
+						}
+					}				
+				}
+		}
+	}
+}
+	
+		

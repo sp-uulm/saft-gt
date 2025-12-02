@@ -1,0 +1,2803 @@
+Hazard description = "violation of privacy" 
+ { 
+	OR {
+	 IntermediateEvent description = "Loss of control over drone" {
+		 OR {
+		 BasicEvent description = "Errorenous messages" probability = 0.7
+		, 
+		 BasicEvent description = "Loss of control" probability = 0.7
+		}
+	}
+	, 
+	 PAND {
+	 IntermediateEvent TakeOverTrajectoryNode  description = "Attacker takes over a trajectory node" {
+		 OR {
+		 IntermediateEvent description = "Attacker takes over the trajectory server node Dataflow: simple_trajectory_server" {
+			 OR {
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:debian:dpkg:1.19.7ubuntu3.2 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')" {
+				 OR {
+				 AttackStep  CVE20221664  description = "Dpkg::Source::Archive in dpkg, the Debian package management system, before version 1.21.8, 1.20.10, 1.19.8, 1.18.26 is prone to a directory traversal vulnerability. When extracting untrusted source packages in v2 and v3 source package formats that include a debian.tar, the in-place extraction can lead to directory traversal situations on specially crafted orig.tar and debian.tar tarballs." probability = 0.0  CVE = CVE-2022-1664 
+				   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H  BaseScore = 9.8 ImpactScore = 5.9 ExploitabilityScore = 3.9
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:gnu:glibc:2.31 Return of Pointer Value Outside of Expected Range" {
+				 OR {
+				 AttackStep  CVE202433602  description = "nscd: netgroup cache assumes NSS callback uses in-buffer strings
+				
+				The Name Service Cache Daemon's (nscd) netgroup cache can corrupt memory
+				when the NSS callback does not store all strings in the provided buffer.
+				The flaw was introduced in glibc 2.15 when the cache was added to nscd.
+				
+				This vulnerability is only present in the nscd binary.
+				
+				" probability = 0.0  CVE = CVE-2024-33602 
+				   CVSS = CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H  BaseScore = 7.4 ImpactScore = 5.9 ExploitabilityScore = 1.4
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by description for keyword: python3" {
+				 OR {
+				 AttackStep  CVE20204636  description = "IBM Resilient OnPrem 38.2 could allow a privileged user to inject malicious commands through Python3 scripting. IBM X-Force ID: 185503." probability = 0.0  CVE = CVE-2020-4636 
+				   CVSS = CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H  BaseScore = 7.2 ImpactScore = 5.9 ExploitabilityScore = 1.2
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+				 OR {
+				 AttackStep  CVE202350716  description = "eProsima Fast DDS (formerly Fast RTPS) is a C++ implementation of the Data Distribution Service standard of the Object Management Group. Prior to versions 2.13.0, 2.12.2, 2.11.3, 2.10.3, and 2.6.7, an invalid DATA_FRAG Submessage causes a bad-free error, and the Fast-DDS process can be remotely terminated. If an invalid Data_Frag packet is sent, the `Inline_qos, SerializedPayload` member of object `ch` will attempt to release memory without initialization, resulting in a 'bad-free' error. Versions 2.13.0, 2.12.2, 2.11.3, 2.10.2, and 2.6.7 fix this issue." probability = 0.0  CVE = CVE-2023-50716 
+				   CVSS = CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H  BaseScore = 9.6 ImpactScore = 6.0 ExploitabilityScore = 2.8
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10 Double Free" {
+				 OR {
+				 AttackStep  CVE202240304  description = "An issue was discovered in libxml2 before 2.10.3. Certain invalid XML entity definitions can corrupt a hash table key, potentially leading to subsequent logic errors. In one case, a double-free can be provoked." probability = 0.0  CVE = CVE-2022-40304 
+				   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+				, 
+				 AttackStep  CVE202329469  description = "An issue was discovered in libxml2 before 2.10.4. When hashing empty dict strings in a crafted XML document, xmlDictComputeFastKey in dict.c can produce non-deterministic values, leading to various logic and memory errors, such as a double free. This behavior occurs because there is an attempt to use the first byte of an empty string, and any value is possible (not solely the '0' value)." probability = 0.0  CVE = CVE-2023-29469 
+				   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H  BaseScore = 6.5 ImpactScore = 3.6 ExploitabilityScore = 2.8
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Untrusted Search Path" {
+				 OR {
+				 AttackStep  CVE202126807  description = "GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." probability = 0.0  CVE = CVE-2021-26807 
+				   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+				 OR {
+				 AttackStep  CVE202428231  description = "eprosima Fast DDS is a C++ implementation of the Data Distribution Service standard of the Object Management Group. Prior to versions 2.14.0, 2.13.4, 2.12.3, 2.10.4, and 2.6.8, manipulated DATA Submessage can cause a heap overflow error in the Fast-DDS process, causing the process to be terminated remotely. Additionally, the payload_size in the DATA Submessage packet is declared as uint32_t. When a negative number, such as -1, is input into this variable, it results in an Integer Overflow (for example, -1 gets converted to 0xFFFFFFFF). This eventually leads to a heap-buffer-overflow, causing the program to terminate. Versions 2.14.0, 2.13.4, 2.12.3, 2.10.4, and 2.6.8 contain a fix for this issue." probability = 0.0  CVE = CVE-2024-28231 
+				   CVSS = CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H  BaseScore = 9.6 ImpactScore = 6.0 ExploitabilityScore = 2.8
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by description for keyword: libgcc_s Uncontrolled Search Path Element" {
+				 OR {
+				 AttackStep  CVE202248422  description = "ONLYOFFICE Docs through 7.3 on certain Linux distributions allows local users to gain privileges via a Trojan horse libgcc_s.so.1 in the current working directory, which may be any directory in which an ONLYOFFICE document is located." probability = 0.0  CVE = CVE-2022-48422 
+				   CVSS = CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by description for keyword: tzdata Release of Invalid Pointer or Reference" {
+				 OR {
+				 AttackStep  CVE20199290  description = "In tzdata there is possible memory corruption due to a mismatch between allocation and deallocation functions. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Product: AndroidVersions: Android-10Android ID: A-113039724" probability = 0.0  CVE = CVE-2019-9290 
+				   CVSS = CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H  BaseScore = 7.8 ImpactScore = 5.9 ExploitabilityScore = 1.8
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:gnu:glibc:2.31 Use After Free" {
+				 OR {
+				 AttackStep  CVE20201752  description = "A use-after-free vulnerability introduced in glibc upstream version 2.14 was found in the way the tilde expansion was carried out. Directory paths containing an initial tilde followed by a valid username were affected by this issue. A local attacker could exploit this flaw by creating a specially crafted path that, when processed by the glob function, would potentially lead to arbitrary code execution. This was fixed in version 2.32." probability = 0.0  CVE = CVE-2020-1752 
+				   CVSS = CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.0 ImpactScore = 5.9 ExploitabilityScore = 1.0
+				, 
+				 AttackStep  CVE20201752  description = "A use-after-free vulnerability introduced in glibc upstream version 2.14 was found in the way the tilde expansion was carried out. Directory paths containing an initial tilde followed by a valid username were affected by this issue. A local attacker could exploit this flaw by creating a specially crafted path that, when processed by the glob function, would potentially lead to arbitrary code execution. This was fixed in version 2.32." probability = 0.0  CVE = CVE-2020-1752 
+				   CVSS = CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 7.0 ImpactScore = 5.9 ExploitabilityScore = 1.0
+				, 
+				 AttackStep  CVE20234813  description = "A flaw was found in glibc. In an uncommon situation, the gaih_inet function may use memory that has been freed, resulting in an application crash. This issue is only exploitable when the getaddrinfo function is called and the hosts database in /etc/nsswitch.conf is configured with SUCCESS=continue or SUCCESS=merge." probability = 0.0  CVE = CVE-2023-4813 
+				   CVSS = CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H  BaseScore = 5.9 ImpactScore = 3.6 ExploitabilityScore = 2.2
+				, 
+				 AttackStep  CVE20234813  description = "A flaw was found in glibc. In an uncommon situation, the gaih_inet function may use memory that has been freed, resulting in an application crash. This issue is only exploitable when the getaddrinfo function is called and the hosts database in /etc/nsswitch.conf is configured with SUCCESS=continue or SUCCESS=merge." probability = 0.0  CVE = CVE-2023-4813 
+				   CVSS = CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H  BaseScore = 5.9 ImpactScore = 3.6 ExploitabilityScore = 2.2
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:gnu:glibc:2.31 Signed to Unsigned Conversion Error" {
+				 OR {
+				 AttackStep  CVE20206096  description = "An exploitable signed comparison vulnerability exists in the ARMv7 memcpy() implementation of GNU glibc 2.30.9000. Calling memcpy() (on ARMv7 targets that utilize the GNU glibc implementation) with a negative value for the 'num' parameter results in a signed comparison vulnerability. If an attacker underflows the 'num' parameter to memcpy(), this vulnerability could lead to undefined behavior such as writing to out-of-bounds memory and potentially remote code execution. Furthermore, this memcpy() implementation allows for program execution to continue in scenarios where a segmentation fault or crash should have occurred. The dangers occur in that subsequent execution and iterations of this code will be executed with this corrupted data." probability = 0.0  CVE = CVE-2020-6096 
+				   CVSS = CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H  BaseScore = 8.1 ImpactScore = 5.9 ExploitabilityScore = 2.2
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:gnu:glibc:2.31 Integer Underflow (Wrap or Wraparound)" {
+				 OR {
+				 AttackStep  CVE20206096  description = "An exploitable signed comparison vulnerability exists in the ARMv7 memcpy() implementation of GNU glibc 2.30.9000. Calling memcpy() (on ARMv7 targets that utilize the GNU glibc implementation) with a negative value for the 'num' parameter results in a signed comparison vulnerability. If an attacker underflows the 'num' parameter to memcpy(), this vulnerability could lead to undefined behavior such as writing to out-of-bounds memory and potentially remote code execution. Furthermore, this memcpy() implementation allows for program execution to continue in scenarios where a segmentation fault or crash should have occurred. The dangers occur in that subsequent execution and iterations of this code will be executed with this corrupted data." probability = 0.0  CVE = CVE-2020-6096 
+				   CVSS = CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H  BaseScore = 8.1 ImpactScore = 5.9 ExploitabilityScore = 2.2
+				}
+			}
+			, 
+			 IntermediateEvent description = "Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10 Use After Free" {
+				 OR {
+				 AttackStep  CVE20213518  description = "There's a flaw in libxml2 in versions before 2.9.11. An attacker who is able to submit a crafted file to be processed by an application linked with libxml2 could trigger a use-after-free. The greatest impact from this flaw is to confidentiality, integrity, and availability." probability = 0.0  CVE = CVE-2021-3518 
+				   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 8.8 ImpactScore = 5.9 ExploitabilityScore = 2.8
+				, 
+				 AttackStep  CVE20213518  description = "There's a flaw in libxml2 in versions before 2.9.11. An attacker who is able to submit a crafted file to be processed by an application linked with libxml2 could trigger a use-after-free. The greatest impact from this flaw is to confidentiality, integrity, and availability." probability = 0.0  CVE = CVE-2021-3518 
+				   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H  BaseScore = 8.8 ImpactScore = 5.9 ExploitabilityScore = 2.8
+				, 
+				 AttackStep  CVE202223308  description = "valid.c in libxml2 before 2.9.13 has a use-after-free of ID and IDREF attributes." probability = 0.0  CVE = CVE-2022-23308 
+				   CVSS = CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  BaseScore = 7.5 ImpactScore = 3.6 ExploitabilityScore = 3.9
+				, 
+				 AttackStep  CVE202345322  description = "libxml2 through 2.11.5 has a use-after-free that can only occur after a certain memory allocation fails. This occurs in xmlUnlinkNode in tree.c. NOTE: the vendor's position is " probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+				}
+			}
+			}
+		}
+		, 
+		 AttackEvent  description = "Attacker takes over the trajectory client node" cost = 6.0 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L dataflowElement = trajectory_client 
+		}
+	}
+	, 
+	 IntermediateEvent description = "Leak of camera information" {
+		 OR {
+		 IntermediateEvent description = "Attacker reads messages from the tracking camera data stream Dataflow: CameraData" {
+			 OR {
+			 IntermediateEvent description = "Attacker reads messages from the tracking camera data stream" {
+				 PAND {
+				 IntermediateEvent description = "Determine communication mechanism" {
+					 OR {
+					 AND {
+					 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					, 
+					 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: CameraData" {
+						 OR {
+						 IntermediateEvent description = "Observe communication to determine communication protocol" {
+							 PAND {
+							 IntermediateEvent description = "Determine communication mechanism" {
+								 OR {
+								 AND {
+								 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								, 
+								 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Observe communication to determine communication protocol" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+								, 
+								 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Position in between the target" {
+								 OR {
+								 AND {
+								 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+								, 
+								 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+							}
+							, 
+							 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Channel is corrupted" {
+							 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+						}
+						}
+					}
+					}
+					, 
+					 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+					}
+				}
+				, 
+				 IntermediateEvent description = "Position in between the target" {
+					 OR {
+					 AND {
+					 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+					, 
+					 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					}
+					, 
+					 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: CameraData" {
+						 OR {
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+							 PAND {
+							 IntermediateEvent description = "Determine communication mechanism" {
+								 OR {
+								 AND {
+								 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								, 
+								 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Observe communication to determine communication protocol" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+								, 
+								 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Position in between the target" {
+								 OR {
+								 AND {
+								 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+								, 
+								 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+							}
+							, 
+							 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+							 PAND {
+							 IntermediateEvent description = "Determine communication mechanism" {
+								 OR {
+								 AND {
+								 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								, 
+								 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Observe communication to determine communication protocol" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+								, 
+								 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Position in between the target" {
+								 OR {
+								 AND {
+								 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+								, 
+								 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+							}
+							, 
+							 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Channel is corrupted" {
+							 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = optitrack_prime_13W 
+						}
+						}
+					}
+					}
+				}
+				, 
+				 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+				}
+			}
+			, 
+			 IntermediateEvent description = "Attacker reads messages from the tracking camera data stream" {
+				 PAND {
+				 IntermediateEvent description = "Determine communication mechanism" {
+					 OR {
+					 AND {
+					 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					, 
+					 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: CameraData" {
+						 OR {
+						 IntermediateEvent description = "Observe communication to determine communication protocol" {
+							 PAND {
+							 IntermediateEvent description = "Determine communication mechanism" {
+								 OR {
+								 AND {
+								 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								, 
+								 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Observe communication to determine communication protocol" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+								, 
+								 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Position in between the target" {
+								 OR {
+								 AND {
+								 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+								, 
+								 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+							}
+							, 
+							 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Channel is corrupted" {
+							 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+						}
+						}
+					}
+					}
+					, 
+					 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+					}
+				}
+				, 
+				 IntermediateEvent description = "Position in between the target" {
+					 OR {
+					 AND {
+					 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+					, 
+					 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					}
+					, 
+					 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: CameraData" {
+						 OR {
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+							 PAND {
+							 IntermediateEvent description = "Determine communication mechanism" {
+								 OR {
+								 AND {
+								 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								, 
+								 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Observe communication to determine communication protocol" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+								, 
+								 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Position in between the target" {
+								 OR {
+								 AND {
+								 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+								, 
+								 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+							}
+							, 
+							 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+							 PAND {
+							 IntermediateEvent description = "Determine communication mechanism" {
+								 OR {
+								 AND {
+								 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								, 
+								 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Observe communication to determine communication protocol" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+								, 
+								 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Position in between the target" {
+								 OR {
+								 AND {
+								 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+								, 
+								 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+								, 
+								 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: CameraData" {
+									 OR {
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+										 PAND {
+										 IntermediateEvent description = "Determine communication mechanism" {
+											 OR {
+											 AND {
+											 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											, 
+											 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = CameraData 
+											}
+											, 
+											 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Position in between the target" {
+											 OR {
+											 AND {
+											 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = optitrack_prime_13W 
+											, 
+											 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+											, 
+											 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = CameraData 
+											}
+										}
+										, 
+										 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+										}
+									}
+									, 
+									 IntermediateEvent description = "Channel is corrupted" {
+										 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = optitrack_prime_13W 
+									}
+									}
+								}
+								}
+							}
+							, 
+							 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+							}
+						}
+						, 
+						 IntermediateEvent description = "Channel is corrupted" {
+							 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = optitrack_prime_13W 
+						}
+						}
+					}
+					}
+				}
+				, 
+				 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+				}
+			}
+			, 
+			 IntermediateEvent description = "Channel is corrupted" {
+				 AttackEvent  description = "Sender is corrupted" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:=H/A:~L dataflowElement = optitrack_prime_13W 
+			}
+			}
+		}
+		, 
+		 IntermediateEvent GetDroneCameraData  description = "Attacker captures video/image data from the drone" {
+			 OR {
+			 IntermediateEvent description = "Attacker reads messages from the drone's video stream Dataflow: DroneTelemetry" {
+				 OR {
+				 IntermediateEvent description = "Attacker reads messages from the drone's video stream" {
+					 PAND {
+					 IntermediateEvent description = "Determine communication mechanism" {
+						 OR {
+						 AND {
+						 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						, 
+						 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DroneTelemetry" {
+							 OR {
+							 IntermediateEvent description = "Observe communication to determine communication protocol" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+							}
+							}
+						}
+						}
+						, 
+						 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+						}
+					}
+					, 
+					 IntermediateEvent description = "Position in between the target" {
+						 OR {
+						 AND {
+						 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+						, 
+						 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+						, 
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DroneTelemetry" {
+							 OR {
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+							}
+							}
+						}
+						}
+					}
+					, 
+					 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					}
+				}
+				, 
+				 IntermediateEvent description = "Attacker reads messages from the drone's video stream" {
+					 PAND {
+					 IntermediateEvent description = "Determine communication mechanism" {
+						 OR {
+						 AND {
+						 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						, 
+						 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DroneTelemetry" {
+							 OR {
+							 IntermediateEvent description = "Observe communication to determine communication protocol" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+							}
+							}
+						}
+						}
+						, 
+						 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+						}
+					}
+					, 
+					 IntermediateEvent description = "Position in between the target" {
+						 OR {
+						 AND {
+						 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+						, 
+						 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+						, 
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DroneTelemetry" {
+							 OR {
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DroneTelemetry" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DroneTelemetry 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DroneTelemetry 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+							}
+							}
+						}
+						}
+					}
+					, 
+					 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					}
+				}
+				, 
+				 IntermediateEvent description = "Channel is corrupted" {
+					 AttackEvent  description = "Sender is corrupted" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L dataflowElement = bebop2 
+				}
+				}
+			}
+			, 
+			 IntermediateEvent description = "Attacker gets picture data from the drone Dataflow: DronePhotoData" {
+				 OR {
+				 IntermediateEvent description = "Attacker gets picture data from the drone" {
+					 PAND {
+					 IntermediateEvent description = "Determine communication mechanism" {
+						 OR {
+						 AND {
+						 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						, 
+						 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DronePhotoData" {
+							 OR {
+							 IntermediateEvent description = "Observe communication to determine communication protocol" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+							}
+							}
+						}
+						}
+						, 
+						 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+						}
+					}
+					, 
+					 IntermediateEvent description = "Position in between the target" {
+						 OR {
+						 AND {
+						 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+						, 
+						 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+						, 
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DronePhotoData" {
+							 OR {
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+							}
+							}
+						}
+						}
+					}
+					, 
+					 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					}
+				}
+				, 
+				 IntermediateEvent description = "Attacker gets picture data from the drone" {
+					 PAND {
+					 IntermediateEvent description = "Determine communication mechanism" {
+						 OR {
+						 AND {
+						 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						, 
+						 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DronePhotoData" {
+							 OR {
+							 IntermediateEvent description = "Observe communication to determine communication protocol" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+							}
+							}
+						}
+						}
+						, 
+						 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+						}
+					}
+					, 
+					 IntermediateEvent description = "Position in between the target" {
+						 OR {
+						 AND {
+						 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+						, 
+						 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+						}
+						, 
+						 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DronePhotoData" {
+							 OR {
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+								 PAND {
+								 IntermediateEvent description = "Determine communication mechanism" {
+									 OR {
+									 AND {
+									 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									, 
+									 IntermediateEvent description = "Observe communication to determine communication protocol Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Observe communication to determine communication protocol" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+									, 
+									 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+									}
+								}
+								, 
+								 IntermediateEvent description = "Position in between the target" {
+									 OR {
+									 AND {
+									 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+									, 
+									 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+									}
+									, 
+									 IntermediateEvent description = "Exploit a weakness in an encrypted communication Dataflow: DronePhotoData" {
+										 OR {
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attacker obtaines information" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Exploit a weakness in an encrypted communication" {
+											 PAND {
+											 IntermediateEvent description = "Determine communication mechanism" {
+												 OR {
+												 AND {
+												 AttackStep  description = "Perform sniffing attack" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												, 
+												 AttackEvent  description = "Observe communication to determine communication protocol" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = DronePhotoData 
+												}
+												, 
+												 BasicEvent description = "Application documentation describes communication mechanism" probability = 0.0
+												}
+											}
+											, 
+											 IntermediateEvent description = "Position in between the target" {
+												 OR {
+												 AND {
+												 AttackEvent  description = "Install spyware on client" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:*/A:* dataflowElement = bebop2 
+												, 
+												 AttackStep  description = "Route packages" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+												}
+												, 
+												 AttackEvent  description = "Exploit a weakness in an encrypted communication" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = DronePhotoData 
+												}
+											}
+											, 
+											 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+											}
+										}
+										, 
+										 IntermediateEvent description = "Channel is corrupted" {
+											 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+										}
+										}
+									}
+									}
+								}
+								, 
+								 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+								}
+							}
+							, 
+							 IntermediateEvent description = "Channel is corrupted" {
+								 AttackEvent  description = "Sender is corrupted" cost = 0.0 lambda = 0 CVSSreq = CVSS:3.1/AV:*/AC:*/PR:*/UI:*/S:*/C:H/I:H/A:* dataflowElement = bebop2 
+							}
+							}
+						}
+						}
+					}
+					, 
+					 AttackStep  description = "Attack manipulates message content" probability = 0.0   BaseScore = 0.0 ImpactScore = 0.0 ExploitabilityScore = 0.0
+					}
+				}
+				, 
+				 IntermediateEvent description = "Channel is corrupted" {
+					 AttackEvent  description = "Sender is corrupted" cost = 0.9 lambda = 0.00012 CVSSreq = CVSS:3.1/C:=H/I:=H/A:~L dataflowElement = bebop2 
+				}
+				}
+			}
+			}
+		}
+		}
+	}
+	}
+	}
+}	

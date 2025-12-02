@@ -1,0 +1,618 @@
+AttackTarget synonyms=("python3") CWE=CWE-77.0 cweNotes="Improper Neutralization of Special Elements used in a Command ('Command Injection')" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE20204636 description="IBM Resilient OnPrem 38.2 could allow a privileged user to inject malicious commands through Python3 scripting. IBM X-Force ID: 185503." CVE=CVE-2020-4636 CVSS=CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H BaseScore=7.2 ImpactScore=5.9 ExploitabilityScore=1.2
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-295.0 cweNotes="Improper Certificate Validation" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE20120955 description="software-properties was vulnerable to a person-in-the-middle attack due to incorrect TLS certificate validation in softwareproperties/ppa.py. software-properties didn't check TLS certificates under python2 and only checked certificates under python3 if a valid certificate bundle was provided. Fixed in software-properties version 0.92." CVE=CVE-2012-0955 CVSS=CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N BaseScore=6.8 ImpactScore=5.2 ExploitabilityScore=1.6,
+CVE20120955
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-400.0 cweNotes="Uncontrolled Resource Consumption" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202239209 description="cmark-gfm is GitHub's fork of cmark, a CommonMark parsing and rendering library and program in C. In versions prior to 0.29.0.gfm.6 a polynomial time complexity issue in cmark-gfm's autolink extension may lead to unbounded resource exhaustion and subsequent denial of service. Users may verify the patch by running `python3 -c 'print("![l"* 100000 + "\n")' | ./cmark-gfm -e autolink`, which will resource exhaust on unpatched cmark-gfm but render correctly on patched cmark-gfm. This vulnerability has been patched in 0.29.0.gfm.6. Users are advised to upgrade. Users unable to upgrade should disable the use of the autolink extension." CVE=CVE-2022-39209 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9,
+AttackStep CVE202326485 description="cmark-gfm is GitHub's fork of cmark, a CommonMark parsing and rendering library and program in C. A polynomial time complexity issue in cmark-gfm may lead to unbounded resource exhaustion and subsequent denial of service. This CVE covers quadratic complexity issues when parsing text which leads with either large numbers of `_` characters. This issue has been addressed in version 0.29.0.gfm.10. Users are advised to upgrade. Users unable to upgrade should validate that their input comes from trusted sources.
+
+
+
+
+### Impact
+
+A polynomial time complexity issue in cmark-gfm may lead to unbounded resource exhaustion and subsequent denial of service.
+
+### Proof of concept
+
+```
+$ ~/cmark-gfm$ python3 -c 'pad = "_" * 100000; print(pad + "." + pad, end="")' | time ./build/src/cmark-gfm --to plaintext
+```
+
+Increasing the number 10000 in the above commands causes the running time to increase quadratically.
+
+### Patches
+
+This vulnerability have been patched in 0.29.0.gfm.10.
+
+### Note on cmark and cmark-gfm
+
+XXX: TBD
+
+[cmark-gfm](https://github.com/github/cmark-gfm) is a fork of [cmark](https://github.com/commonmark/cmark) that adds the GitHub Flavored Markdown extensions. The two codebases have diverged over time, but share a common core. These bugs affect both `cmark` and `cmark-gfm`. 
+
+### Credit
+
+We would like to thank @gravypod for reporting this vulnerability.
+
+### References
+
+https://en.wikipedia.org/wiki/Time_complexity
+
+### For more information
+
+If you have any questions or comments about this advisory:
+
+* Open an issue in [github/cmark-gfm](https://github.com/github/cmark-gfm)
+" CVE=CVE-2023-26485 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L BaseScore=5.3 ImpactScore=1.4 ExploitabilityScore=3.9
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-401.0 cweNotes="Missing Release of Memory after Effective Lifetime" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202248975 description="In the Linux kernel, the following vulnerability has been resolved:
+
+gpiolib: fix memory leak in gpiochip_setup_dev()
+
+Here is a backtrace report about memory leak detected in
+gpiochip_setup_dev():
+
+unreferenced object 0xffff88810b406400 (size 512):
+  comm "python3", pid 1682, jiffies 4295346908 (age 24.090s)
+  backtrace:
+    kmalloc_trace
+    device_add		device_private_init at drivers/base/core.c:3361
+			(inlined by) device_add at drivers/base/core.c:3411
+    cdev_device_add
+    gpiolib_cdev_register
+    gpiochip_setup_dev
+    gpiochip_add_data_with_key
+
+gcdev_register() & gcdev_unregister() would call device_add() &
+device_del() (no matter CONFIG_GPIO_CDEV is enabled or not) to
+register/unregister device.
+
+However, if device_add() succeeds, some resource (like
+struct device_private allocated by device_private_init())
+is not released by device_del().
+
+Therefore, after device_add() succeeds by gcdev_register(), it
+needs to call put_device() to release resource in the error handle
+path.
+
+Here we move forward the register of release function, and let it
+release every piece of resource by put_device() instead of kfree().
+
+While at it, fix another subtle issue, i.e. when gc->ngpio is equal
+to 0, we still call kcalloc() and, in case of further error, kfree()
+on the ZERO_PTR pointer, which is not NULL. It's not a bug per se,
+but rather waste of the resources and potentially wrong expectation
+about contents of the gdev->descs variable." CVE=CVE-2022-48975 CVSS=CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H BaseScore=5.5 ImpactScore=3.6 ExploitabilityScore=1.8,
+AttackStep CVE202248995 description="In the Linux kernel, the following vulnerability has been resolved:
+
+Input: raydium_ts_i2c - fix memory leak in raydium_i2c_send()
+
+There is a kmemleak when test the raydium_i2c_ts with bpf mock device:
+
+  unreferenced object 0xffff88812d3675a0 (size 8):
+    comm "python3", pid 349, jiffies 4294741067 (age 95.695s)
+    hex dump (first 8 bytes):
+      11 0e 10 c0 01 00 04 00                          ........
+    backtrace:
+      [<0000000068427125>] __kmalloc+0x46/0x1b0
+      [<0000000090180f91>] raydium_i2c_send+0xd4/0x2bf [raydium_i2c_ts]
+      [<000000006e631aee>] raydium_i2c_initialize.cold+0xbc/0x3e4 [raydium_i2c_ts]
+      [<00000000dc6fcf38>] raydium_i2c_probe+0x3cd/0x6bc [raydium_i2c_ts]
+      [<00000000a310de16>] i2c_device_probe+0x651/0x680
+      [<00000000f5a96bf3>] really_probe+0x17c/0x3f0
+      [<00000000096ba499>] __driver_probe_device+0xe3/0x170
+      [<00000000c5acb4d9>] driver_probe_device+0x49/0x120
+      [<00000000264fe082>] __device_attach_driver+0xf7/0x150
+      [<00000000f919423c>] bus_for_each_drv+0x114/0x180
+      [<00000000e067feca>] __device_attach+0x1e5/0x2d0
+      [<0000000054301fc2>] bus_probe_device+0x126/0x140
+      [<00000000aad93b22>] device_add+0x810/0x1130
+      [<00000000c086a53f>] i2c_new_client_device+0x352/0x4e0
+      [<000000003c2c248c>] of_i2c_register_device+0xf1/0x110
+      [<00000000ffec4177>] of_i2c_notify+0x100/0x160
+  unreferenced object 0xffff88812d3675c8 (size 8):
+    comm "python3", pid 349, jiffies 4294741070 (age 95.692s)
+    hex dump (first 8 bytes):
+      22 00 36 2d 81 88 ff ff                          ".6-....
+    backtrace:
+      [<0000000068427125>] __kmalloc+0x46/0x1b0
+      [<0000000090180f91>] raydium_i2c_send+0xd4/0x2bf [raydium_i2c_ts]
+      [<000000001d5c9620>] raydium_i2c_initialize.cold+0x223/0x3e4 [raydium_i2c_ts]
+      [<00000000dc6fcf38>] raydium_i2c_probe+0x3cd/0x6bc [raydium_i2c_ts]
+      [<00000000a310de16>] i2c_device_probe+0x651/0x680
+      [<00000000f5a96bf3>] really_probe+0x17c/0x3f0
+      [<00000000096ba499>] __driver_probe_device+0xe3/0x170
+      [<00000000c5acb4d9>] driver_probe_device+0x49/0x120
+      [<00000000264fe082>] __device_attach_driver+0xf7/0x150
+      [<00000000f919423c>] bus_for_each_drv+0x114/0x180
+      [<00000000e067feca>] __device_attach+0x1e5/0x2d0
+      [<0000000054301fc2>] bus_probe_device+0x126/0x140
+      [<00000000aad93b22>] device_add+0x810/0x1130
+      [<00000000c086a53f>] i2c_new_client_device+0x352/0x4e0
+      [<000000003c2c248c>] of_i2c_register_device+0xf1/0x110
+      [<00000000ffec4177>] of_i2c_notify+0x100/0x160
+
+After BANK_SWITCH command from i2c BUS, no matter success or error
+happened, the tx_buf should be freed." CVE=CVE-2022-48995 CVSS=CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H BaseScore=5.5 ImpactScore=3.6 ExploitabilityScore=1.8
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-407.0 cweNotes="Inefficient Algorithmic Complexity" note="Generated for search by description for keyword: python3" {
+OR {
+CVE202239209
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-426.0 cweNotes="Untrusted Search Path" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202015801 description="In Python 3.8.4, sys.path restrictions specified in a python38._pth file are ignored, allowing code to be loaded from arbitrary locations. The <executable-name>._pth file (e.g., the python._pth file) is not affected." CVE=CVE-2020-15801 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H BaseScore=9.8 ImpactScore=5.9 ExploitabilityScore=3.9
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-427.0 cweNotes="Uncontrolled Search Path Element" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE20195629 description="Rapid7 Insight Agent, version 2.6.3 and prior, suffers from a local privilege escalation due to an uncontrolled DLL search path. Specifically, when Insight Agent 2.6.3 and prior starts, the Python interpreter attempts to load python3.dll at "C:\DLLs\python3.dll," which normally is writable by locally authenticated users. Because of this, a malicious local user could use Insight Agent's startup conditions to elevate to SYSTEM privileges. This issue was fixed in Rapid7 Insight Agent 2.6.4." CVE=CVE-2019-5629 CVSS=CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H BaseScore=7.8 ImpactScore=5.9 ExploitabilityScore=1.8,
+CVE20195629,
+AttackStep CVE202015523 description="In Python 3.6 through 3.6.10, 3.7 through 3.7.8, 3.8 through 3.8.4rc1, and 3.9 through 3.9.0b4 on Windows, a Trojan horse python3.dll might be used in cases where CPython is embedded in a native application. This occurs because python3X.dll may use an invalid search path for python3.dll loading (after Py_SetPath has been used). NOTE: this issue CANNOT occur when using python.exe from a standard (non-embedded) Python installation on Windows." CVE=CVE-2020-15523 CVSS=CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H BaseScore=7.8 ImpactScore=5.9 ExploitabilityScore=1.8,
+AttackStep CVE20214007 description="Rapid7 Insight Agent, versions 3.0.1 to 3.1.2.34, suffer from a local privilege escalation due to an uncontrolled DLL search path. Specifically, when Insight Agent versions 3.0.1 to 3.1.2.34 start, the Python interpreter attempts to load python3.dll at "C:\DLLs\python3.dll," which normally is writable by locally authenticated users. Because of this, a malicious local user could use Insight Agent's startup conditions to elevate to SYSTEM privileges. This issue was fixed in Rapid7 Insight Agent 3.1.2.35. This vulnerability is a regression of CVE-2019-5629." CVE=CVE-2021-4007 CVSS=CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H BaseScore=7.8 ImpactScore=5.9 ExploitabilityScore=1.8,
+CVE20214007
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-476.0 cweNotes="NULL Pointer Dereference" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202452296 description="libosdp is an implementation of IEC 60839-11-5 OSDP (Open Supervised Device Protocol) and provides a C library with support for C++, Rust and Python3. At ospd_common.c, on the osdp_reply_name function, any reply id between REPLY_ACK and REPLY_XRD is valid, but names array do not declare all of the range. On a case of an undefined reply id within the range, name will be null (name = names[reply_id - REPLY_ACK];). Null name will casue a crash on next line: if (name[0] == '\0') as null[0] is invalid. As this logic is not limited to a secure connection, attacker may trigger this vulnerability without any prior knowledge. This issue is fixed in 2.4.0." CVE=CVE-2024-52296 CVSS=CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=6.5 ImpactScore=3.6 ExploitabilityScore=2.8
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-732.0 cweNotes="Incorrect Permission Assignment for Critical Resource" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202245305 description="Insecure permissions in Chocolatey Python3 package v3.11.0 and below grants all users in the Authenticated Users group write privileges for the subfolder C:\Python311 and all files located in that folder." CVE=CVE-2022-45305 CVSS=CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N BaseScore=4.3 ImpactScore=1.4 ExploitabilityScore=2.8
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-770.0 cweNotes="Allocation of Resources Without Limits or Throttling" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202435969 description="In the Linux kernel, the following vulnerability has been resolved:
+
+ipv6: fix race condition between ipv6_get_ifaddr and ipv6_del_addr
+
+Although ipv6_get_ifaddr walks inet6_addr_lst under the RCU lock, it
+still means hlist_for_each_entry_rcu can return an item that got removed
+from the list. The memory itself of such item is not freed thanks to RCU
+but nothing guarantees the actual content of the memory is sane.
+
+In particular, the reference count can be zero. This can happen if
+ipv6_del_addr is called in parallel. ipv6_del_addr removes the entry
+from inet6_addr_lst (hlist_del_init_rcu(&ifp->addr_lst)) and drops all
+references (__in6_ifa_put(ifp) + in6_ifa_put(ifp)). With bad enough
+timing, this can happen:
+
+1. In ipv6_get_ifaddr, hlist_for_each_entry_rcu returns an entry.
+
+2. Then, the whole ipv6_del_addr is executed for the given entry. The
+   reference count drops to zero and kfree_rcu is scheduled.
+
+3. ipv6_get_ifaddr continues and tries to increments the reference count
+   (in6_ifa_hold).
+
+4. The rcu is unlocked and the entry is freed.
+
+5. The freed entry is returned.
+
+Prevent increasing of the reference count in such case. The name
+in6_ifa_hold_safe is chosen to mimic the existing fib6_info_hold_safe.
+
+[   41.506330] refcount_t: addition on 0; use-after-free.
+[   41.506760] WARNING: CPU: 0 PID: 595 at lib/refcount.c:25 refcount_warn_saturate+0xa5/0x130
+[   41.507413] Modules linked in: veth bridge stp llc
+[   41.507821] CPU: 0 PID: 595 Comm: python3 Not tainted 6.9.0-rc2.main-00208-g49563be82afa #14
+[   41.508479] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996)
+[   41.509163] RIP: 0010:refcount_warn_saturate+0xa5/0x130
+[   41.509586] Code: ad ff 90 0f 0b 90 90 c3 cc cc cc cc 80 3d c0 30 ad 01 00 75 a0 c6 05 b7 30 ad 01 01 90 48 c7 c7 38 cc 7a 8c e8 cc 18 ad ff 90 <0f> 0b 90 90 c3 cc cc cc cc 80 3d 98 30 ad 01 00 0f 85 75 ff ff ff
+[   41.510956] RSP: 0018:ffffbda3c026baf0 EFLAGS: 00010282
+[   41.511368] RAX: 0000000000000000 RBX: ffff9e9c46914800 RCX: 0000000000000000
+[   41.511910] RDX: ffff9e9c7ec29c00 RSI: ffff9e9c7ec1c900 RDI: ffff9e9c7ec1c900
+[   41.512445] RBP: ffff9e9c43660c9c R08: 0000000000009ffb R09: 00000000ffffdfff
+[   41.512998] R10: 00000000ffffdfff R11: ffffffff8ca58a40 R12: ffff9e9c4339a000
+[   41.513534] R13: 0000000000000001 R14: ffff9e9c438a0000 R15: ffffbda3c026bb48
+[   41.514086] FS:  00007fbc4cda1740(0000) GS:ffff9e9c7ec00000(0000) knlGS:0000000000000000
+[   41.514726] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[   41.515176] CR2: 000056233b337d88 CR3: 000000000376e006 CR4: 0000000000370ef0
+[   41.515713] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+[   41.516252] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+[   41.516799] Call Trace:
+[   41.517037]  <TASK>
+[   41.517249]  ? __warn+0x7b/0x120
+[   41.517535]  ? refcount_warn_saturate+0xa5/0x130
+[   41.517923]  ? report_bug+0x164/0x190
+[   41.518240]  ? handle_bug+0x3d/0x70
+[   41.518541]  ? exc_invalid_op+0x17/0x70
+[   41.520972]  ? asm_exc_invalid_op+0x1a/0x20
+[   41.521325]  ? refcount_warn_saturate+0xa5/0x130
+[   41.521708]  ipv6_get_ifaddr+0xda/0xe0
+[   41.522035]  inet6_rtm_getaddr+0x342/0x3f0
+[   41.522376]  ? __pfx_inet6_rtm_getaddr+0x10/0x10
+[   41.522758]  rtnetlink_rcv_msg+0x334/0x3d0
+[   41.523102]  ? netlink_unicast+0x30f/0x390
+[   41.523445]  ? __pfx_rtnetlink_rcv_msg+0x10/0x10
+[   41.523832]  netlink_rcv_skb+0x53/0x100
+[   41.524157]  netlink_unicast+0x23b/0x390
+[   41.524484]  netlink_sendmsg+0x1f2/0x440
+[   41.524826]  __sys_sendto+0x1d8/0x1f0
+[   41.525145]  __x64_sys_sendto+0x1f/0x30
+[   41.525467]  do_syscall_64+0xa5/0x1b0
+[   41.525794]  entry_SYSCALL_64_after_hwframe+0x72/0x7a
+[   41.526213] RIP: 0033:0x7fbc4cfcea9a
+[   41.526528] Code: d8 64 89 02 48 c7 c0 ff ff ff ff eb b8 0f 1f 00 f3 0f 1e fa 41 89 ca 64 8b 04 25 18 00 00 00 85 c0 75 15 b8 2c 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 7e c3 0f 1f 44 00 00 41 54 48 83 ec 30 44 89
+[   41.527942] RSP: 002b:00007f
+---truncated---" CVE=CVE-2024-35969 CVSS=CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H BaseScore=5.5 ImpactScore=3.6 ExploitabilityScore=1.8
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-918.0 cweNotes="Server-Side Request Forgery (SSRF)" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202028463 description="All versions of package reportlab are vulnerable to Server-side Request Forgery (SSRF) via img tags. In order to reduce risk, use trustedSchemes & trustedHosts (see in Reportlab's documentation) Steps to reproduce by Karan Bamal: 1. Download and install the latest package of reportlab 2. Go to demos -> odyssey -> dodyssey 3. In the text file odyssey.txt that needs to be converted to pdf inject <img src="http://127.0.0.1:5000" valign="top"/> 4. Create a nc listener nc -lp 5000 5. Run python3 dodyssey.py 6. You will get a hit on your nc showing we have successfully proceded to send a server side request 7. dodyssey.py will show error since there is no img file on the url, but we are able to do SSRF" CVE=CVE-2020-28463 CVSS=CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N BaseScore=6.5 ImpactScore=3.6 ExploitabilityScore=2.8
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-924.0 cweNotes="Improper Enforcement of Message Integrity During Transmission in a Communication Channel" note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202452288 description="libosdp is an implementation of IEC 60839-11-5 OSDP (Open Supervised Device Protocol) and provides a C library with support for C++, Rust and Python3. In affected versions an unexpected `REPLY_CCRYPT` or `REPLY_RMAC_I` may be introduced into an active stream when they should not be. Once RMAC_I message can be sent during a session, attacker with MITM access to the communication may intercept the original RMAC_I reply and save it. While the session continues, the attacker will record all of the replies and save them, till capturing the message to be replied (can be detected by ID, length or time based on inspection of visual activity next to the reader) Once attacker captures a session with the message to be replayed, he stops resetting the connection and waits for signal to perform the replay to of the PD to CP message (ex: by signaling remotely to the MIMT device or setting a specific timing). In order to replay, the attacker will craft a specific RMAC_I message in the proper seq of the execution, which will result in reverting the RMAC to the beginning of the session. At that phase - attacker can replay all the messages from the beginning of the session. This issue has been addressed in commit `298576d9` which is included in release version 3.0.0. Users are advised to upgrade. There are no known workarounds for this vulnerability." CVE=CVE-2024-52288 CVSS=CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N BaseScore=5.1 ImpactScore=3.6 ExploitabilityScore=1.4
+} 
+}
+AttackTarget synonyms=("python3") CWE=CWE-Other note="Generated for search by description for keyword: python3" {
+OR {
+AttackStep CVE202147076 description="In the Linux kernel, the following vulnerability has been resolved:
+
+RDMA/rxe: Return CQE error if invalid lkey was supplied
+
+RXE is missing update of WQE status in LOCAL_WRITE failures.  This caused
+the following kernel panic if someone sent an atomic operation with an
+explicitly wrong lkey.
+
+[leonro@vm ~]$ mkt test
+test_atomic_invalid_lkey (tests.test_atomic.AtomicTest) ...
+ WARNING: CPU: 5 PID: 263 at drivers/infiniband/sw/rxe/rxe_comp.c:740 rxe_completer+0x1a6d/0x2e30 [rdma_rxe]
+ Modules linked in: crc32_generic rdma_rxe ip6_udp_tunnel udp_tunnel rdma_ucm rdma_cm ib_umad ib_ipoib iw_cm ib_cm mlx5_ib ib_uverbs ib_core mlx5_core ptp pps_core
+ CPU: 5 PID: 263 Comm: python3 Not tainted 5.13.0-rc1+ #2936
+ Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS rel-1.13.0-0-gf21b5a4aeb02-prebuilt.qemu.org 04/01/2014
+ RIP: 0010:rxe_completer+0x1a6d/0x2e30 [rdma_rxe]
+ Code: 03 0f 8e 65 0e 00 00 3b 93 10 06 00 00 0f 84 82 0a 00 00 4c 89 ff 4c 89 44 24 38 e8 2d 74 a9 e1 4c 8b 44 24 38 e9 1c f5 ff ff <0f> 0b e9 0c e8 ff ff b8 05 00 00 00 41 bf 05 00 00 00 e9 ab e7 ff
+ RSP: 0018:ffff8880158af090 EFLAGS: 00010246
+ RAX: 0000000000000000 RBX: ffff888016a78000 RCX: ffffffffa0cf1652
+ RDX: 1ffff9200004b442 RSI: 0000000000000004 RDI: ffffc9000025a210
+ RBP: dffffc0000000000 R08: 00000000ffffffea R09: ffff88801617740b
+ R10: ffffed1002c2ee81 R11: 0000000000000007 R12: ffff88800f3b63e8
+ R13: ffff888016a78008 R14: ffffc9000025a180 R15: 000000000000000c
+ FS:  00007f88b622a740(0000) GS:ffff88806d540000(0000) knlGS:0000000000000000
+ CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+ CR2: 00007f88b5a1fa10 CR3: 000000000d848004 CR4: 0000000000370ea0
+ DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+ DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+ Call Trace:
+  rxe_do_task+0x130/0x230 [rdma_rxe]
+  rxe_rcv+0xb11/0x1df0 [rdma_rxe]
+  rxe_loopback+0x157/0x1e0 [rdma_rxe]
+  rxe_responder+0x5532/0x7620 [rdma_rxe]
+  rxe_do_task+0x130/0x230 [rdma_rxe]
+  rxe_rcv+0x9c8/0x1df0 [rdma_rxe]
+  rxe_loopback+0x157/0x1e0 [rdma_rxe]
+  rxe_requester+0x1efd/0x58c0 [rdma_rxe]
+  rxe_do_task+0x130/0x230 [rdma_rxe]
+  rxe_post_send+0x998/0x1860 [rdma_rxe]
+  ib_uverbs_post_send+0xd5f/0x1220 [ib_uverbs]
+  ib_uverbs_write+0x847/0xc80 [ib_uverbs]
+  vfs_write+0x1c5/0x840
+  ksys_write+0x176/0x1d0
+  do_syscall_64+0x3f/0x80
+  entry_SYSCALL_64_after_hwframe+0x44/0xae" CVE=CVE-2021-47076,
+AttackStep CVE202246609 description="Python3-RESTfulAPI commit d9907f14e9e25dcdb54f5b22252b0e9452e3970e and e772e0beee284c50946e94c54a1d43071ca78b74 was discovered to contain a code execution backdoor via the request package. This vulnerability allows attackers to access sensitive user information and digital currency keys, as well as escalate privileges." CVE=CVE-2022-46609 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H BaseScore=9.8 ImpactScore=5.9 ExploitabilityScore=3.9,
+AttackStep CVE202352745 description="In the Linux kernel, the following vulnerability has been resolved:
+
+IB/IPoIB: Fix legacy IPoIB due to wrong number of queues
+
+The cited commit creates child PKEY interfaces over netlink will
+multiple tx and rx queues, but some devices doesn't support more than 1
+tx and 1 rx queues. This causes to a crash when traffic is sent over the
+PKEY interface due to the parent having a single queue but the child
+having multiple queues.
+
+This patch fixes the number of queues to 1 for legacy IPoIB at the
+earliest possible point in time.
+
+BUG: kernel NULL pointer dereference, address: 000000000000036b
+PGD 0 P4D 0
+Oops: 0000 [#1] SMP
+CPU: 4 PID: 209665 Comm: python3 Not tainted 6.1.0_for_upstream_min_debug_2022_12_12_17_02 #1
+Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS rel-1.13.0-0-gf21b5a4aeb02-prebuilt.qemu.org 04/01/2014
+RIP: 0010:kmem_cache_alloc+0xcb/0x450
+Code: ce 7e 49 8b 50 08 49 83 78 10 00 4d 8b 28 0f 84 cb 02 00 00 4d 85 ed 0f 84 c2 02 00 00 41 8b 44 24 28 48 8d 4a
+01 49 8b 3c 24 <49> 8b 5c 05 00 4c 89 e8 65 48 0f c7 0f 0f 94 c0 84 c0 74 b8 41 8b
+RSP: 0018:ffff88822acbbab8 EFLAGS: 00010202
+RAX: 0000000000000070 RBX: ffff8881c28e3e00 RCX: 00000000064f8dae
+RDX: 00000000064f8dad RSI: 0000000000000a20 RDI: 0000000000030d00
+RBP: 0000000000000a20 R08: ffff8882f5d30d00 R09: ffff888104032f40
+R10: ffff88810fade828 R11: 736f6d6570736575 R12: ffff88810081c000
+R13: 00000000000002fb R14: ffffffff817fc865 R15: 0000000000000000
+FS:  00007f9324ff9700(0000) GS:ffff8882f5d00000(0000) knlGS:0000000000000000
+CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+CR2: 000000000000036b CR3: 00000001125af004 CR4: 0000000000370ea0
+DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+Call Trace:
+ <TASK>
+ skb_clone+0x55/0xd0
+ ip6_finish_output2+0x3fe/0x690
+ ip6_finish_output+0xfa/0x310
+ ip6_send_skb+0x1e/0x60
+ udp_v6_send_skb+0x1e5/0x420
+ udpv6_sendmsg+0xb3c/0xe60
+ ? ip_mc_finish_output+0x180/0x180
+ ? __switch_to_asm+0x3a/0x60
+ ? __switch_to_asm+0x34/0x60
+ sock_sendmsg+0x33/0x40
+ __sys_sendto+0x103/0x160
+ ? _copy_to_user+0x21/0x30
+ ? kvm_clock_get_cycles+0xd/0x10
+ ? ktime_get_ts64+0x49/0xe0
+ __x64_sys_sendto+0x25/0x30
+ do_syscall_64+0x3d/0x90
+ entry_SYSCALL_64_after_hwframe+0x46/0xb0
+RIP: 0033:0x7f9374f1ed14
+Code: 42 41 f8 ff 44 8b 4c 24 2c 4c 8b 44 24 20 89 c5 44 8b 54 24 28 48 8b 54 24 18 b8 2c 00 00 00 48 8b 74 24 10 8b
+7c 24 08 0f 05 <48> 3d 00 f0 ff ff 77 34 89 ef 48 89 44 24 08 e8 68 41 f8 ff 48 8b
+RSP: 002b:00007f9324ff7bd0 EFLAGS: 00000293 ORIG_RAX: 000000000000002c
+RAX: ffffffffffffffda RBX: 00007f9324ff7cc8 RCX: 00007f9374f1ed14
+RDX: 00000000000002fb RSI: 00007f93000052f0 RDI: 0000000000000030
+RBP: 0000000000000000 R08: 00007f9324ff7d40 R09: 000000000000001c
+R10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000
+R13: 000000012a05f200 R14: 0000000000000001 R15: 00007f9374d57bdc
+ </TASK>" CVE=CVE-2023-52745,
+AttackStep CVE202426703 description="In the Linux kernel, the following vulnerability has been resolved:
+
+tracing/timerlat: Move hrtimer_init to timerlat_fd open()
+
+Currently, the timerlat's hrtimer is initialized at the first read of
+timerlat_fd, and destroyed at close(). It works, but it causes an error
+if the user program open() and close() the file without reading.
+
+Here's an example:
+
+ # echo NO_OSNOISE_WORKLOAD > /sys/kernel/debug/tracing/osnoise/options
+ # echo timerlat > /sys/kernel/debug/tracing/current_tracer
+
+ # cat <<EOF > ./timerlat_load.py
+ # !/usr/bin/env python3
+
+ timerlat_fd = open("/sys/kernel/tracing/osnoise/per_cpu/cpu0/timerlat_fd", 'r')
+ timerlat_fd.close();
+ EOF
+
+ # ./taskset -c 0 ./timerlat_load.py
+<BOOM>
+
+ BUG: kernel NULL pointer dereference, address: 0000000000000010
+ #PF: supervisor read access in kernel mode
+ #PF: error_code(0x0000) - not-present page
+ PGD 0 P4D 0
+ Oops: 0000 [#1] PREEMPT SMP NOPTI
+ CPU: 1 PID: 2673 Comm: python3 Not tainted 6.6.13-200.fc39.x86_64 #1
+ Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-1.fc39 04/01/2014
+ RIP: 0010:hrtimer_active+0xd/0x50
+ Code: 2e 0f 1f 84 00 00 00 00 00 0f 1f 40 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 f3 0f 1e fa 0f 1f 44 00 00 48 8b 57 30 <8b> 42 10 a8 01 74 09 f3 90 8b 42 10 a8 01 75 f7 80 7f 38 00 75 1d
+ RSP: 0018:ffffb031009b7e10 EFLAGS: 00010286
+ RAX: 000000000002db00 RBX: ffff9118f786db08 RCX: 0000000000000000
+ RDX: 0000000000000000 RSI: ffff9117a0e64400 RDI: ffff9118f786db08
+ RBP: ffff9118f786db80 R08: ffff9117a0ddd420 R09: ffff9117804d4f70
+ R10: 0000000000000000 R11: 0000000000000000 R12: ffff9118f786db08
+ R13: ffff91178fdd5e20 R14: ffff9117840978c0 R15: 0000000000000000
+ FS:  00007f2ffbab1740(0000) GS:ffff9118f7840000(0000) knlGS:0000000000000000
+ CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+ CR2: 0000000000000010 CR3: 00000001b402e000 CR4: 0000000000750ee0
+ PKRU: 55555554
+ Call Trace:
+  <TASK>
+  ? __die+0x23/0x70
+  ? page_fault_oops+0x171/0x4e0
+  ? srso_alias_return_thunk+0x5/0x7f
+  ? avc_has_extended_perms+0x237/0x520
+  ? exc_page_fault+0x7f/0x180
+  ? asm_exc_page_fault+0x26/0x30
+  ? hrtimer_active+0xd/0x50
+  hrtimer_cancel+0x15/0x40
+  timerlat_fd_release+0x48/0xe0
+  __fput+0xf5/0x290
+  __x64_sys_close+0x3d/0x80
+  do_syscall_64+0x60/0x90
+  ? srso_alias_return_thunk+0x5/0x7f
+  ? __x64_sys_ioctl+0x72/0xd0
+  ? srso_alias_return_thunk+0x5/0x7f
+  ? syscall_exit_to_user_mode+0x2b/0x40
+  ? srso_alias_return_thunk+0x5/0x7f
+  ? do_syscall_64+0x6c/0x90
+  ? srso_alias_return_thunk+0x5/0x7f
+  ? exit_to_user_mode_prepare+0x142/0x1f0
+  ? srso_alias_return_thunk+0x5/0x7f
+  ? syscall_exit_to_user_mode+0x2b/0x40
+  ? srso_alias_return_thunk+0x5/0x7f
+  ? do_syscall_64+0x6c/0x90
+  entry_SYSCALL_64_after_hwframe+0x6e/0xd8
+ RIP: 0033:0x7f2ffb321594
+ Code: 00 f7 d8 64 89 01 48 83 c8 ff c3 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa 80 3d d5 cd 0d 00 00 74 13 b8 03 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 3c c3 0f 1f 00 55 48 89 e5 48 83 ec 10 89 7d
+ RSP: 002b:00007ffe8d8eef18 EFLAGS: 00000202 ORIG_RAX: 0000000000000003
+ RAX: ffffffffffffffda RBX: 00007f2ffba4e668 RCX: 00007f2ffb321594
+ RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000003
+ RBP: 00007ffe8d8eef40 R08: 0000000000000000 R09: 0000000000000000
+ R10: 55c926e3167eae79 R11: 0000000000000202 R12: 0000000000000003
+ R13: 00007ffe8d8ef030 R14: 0000000000000000 R15: 00007f2ffba4e668
+  </TASK>
+ CR2: 0000000000000010
+ ---[ end trace 0000000000000000 ]---
+
+Move hrtimer_init to timerlat_fd open() to avoid this problem." CVE=CVE-2024-26703,
+AttackStep CVE202426725 description="In the Linux kernel, the following vulnerability has been resolved:
+
+dpll: fix possible deadlock during netlink dump operation
+
+Recently, I've been hitting following deadlock warning during dpll pin
+dump:
+
+[52804.637962] ======================================================
+[52804.638536] WARNING: possible circular locking dependency detected
+[52804.639111] 6.8.0-rc2jiri+ #1 Not tainted
+[52804.639529] ------------------------------------------------------
+[52804.640104] python3/2984 is trying to acquire lock:
+[52804.640581] ffff88810e642678 (nlk_cb_mutex-GENERIC){+.+.}-{3:3}, at: netlink_dump+0xb3/0x780
+[52804.641417]
+               but task is already holding lock:
+[52804.642010] ffffffff83bde4c8 (dpll_lock){+.+.}-{3:3}, at: dpll_lock_dumpit+0x13/0x20
+[52804.642747]
+               which lock already depends on the new lock.
+
+[52804.643551]
+               the existing dependency chain (in reverse order) is:
+[52804.644259]
+               -> #1 (dpll_lock){+.+.}-{3:3}:
+[52804.644836]        lock_acquire+0x174/0x3e0
+[52804.645271]        __mutex_lock+0x119/0x1150
+[52804.645723]        dpll_lock_dumpit+0x13/0x20
+[52804.646169]        genl_start+0x266/0x320
+[52804.646578]        __netlink_dump_start+0x321/0x450
+[52804.647056]        genl_family_rcv_msg_dumpit+0x155/0x1e0
+[52804.647575]        genl_rcv_msg+0x1ed/0x3b0
+[52804.648001]        netlink_rcv_skb+0xdc/0x210
+[52804.648440]        genl_rcv+0x24/0x40
+[52804.648831]        netlink_unicast+0x2f1/0x490
+[52804.649290]        netlink_sendmsg+0x36d/0x660
+[52804.649742]        __sock_sendmsg+0x73/0xc0
+[52804.650165]        __sys_sendto+0x184/0x210
+[52804.650597]        __x64_sys_sendto+0x72/0x80
+[52804.651045]        do_syscall_64+0x6f/0x140
+[52804.651474]        entry_SYSCALL_64_after_hwframe+0x46/0x4e
+[52804.652001]
+               -> #0 (nlk_cb_mutex-GENERIC){+.+.}-{3:3}:
+[52804.652650]        check_prev_add+0x1ae/0x1280
+[52804.653107]        __lock_acquire+0x1ed3/0x29a0
+[52804.653559]        lock_acquire+0x174/0x3e0
+[52804.653984]        __mutex_lock+0x119/0x1150
+[52804.654423]        netlink_dump+0xb3/0x780
+[52804.654845]        __netlink_dump_start+0x389/0x450
+[52804.655321]        genl_family_rcv_msg_dumpit+0x155/0x1e0
+[52804.655842]        genl_rcv_msg+0x1ed/0x3b0
+[52804.656272]        netlink_rcv_skb+0xdc/0x210
+[52804.656721]        genl_rcv+0x24/0x40
+[52804.657119]        netlink_unicast+0x2f1/0x490
+[52804.657570]        netlink_sendmsg+0x36d/0x660
+[52804.658022]        __sock_sendmsg+0x73/0xc0
+[52804.658450]        __sys_sendto+0x184/0x210
+[52804.658877]        __x64_sys_sendto+0x72/0x80
+[52804.659322]        do_syscall_64+0x6f/0x140
+[52804.659752]        entry_SYSCALL_64_after_hwframe+0x46/0x4e
+[52804.660281]
+               other info that might help us debug this:
+
+[52804.661077]  Possible unsafe locking scenario:
+
+[52804.661671]        CPU0                    CPU1
+[52804.662129]        ----                    ----
+[52804.662577]   lock(dpll_lock);
+[52804.662924]                                lock(nlk_cb_mutex-GENERIC);
+[52804.663538]                                lock(dpll_lock);
+[52804.664073]   lock(nlk_cb_mutex-GENERIC);
+[52804.664490]
+
+The issue as follows: __netlink_dump_start() calls control->start(cb)
+with nlk->cb_mutex held. In control->start(cb) the dpll_lock is taken.
+Then nlk->cb_mutex is released and taken again in netlink_dump(), while
+dpll_lock still being held. That leads to ABBA deadlock when another
+CPU races with the same operation.
+
+Fix this by moving dpll_lock taking into dumpit() callback which ensures
+correct lock taking order." CVE=CVE-2024-26725,
+AttackStep CVE202426870 description="In the Linux kernel, the following vulnerability has been resolved:
+
+NFSv4.2: fix nfs4_listxattr kernel BUG at mm/usercopy.c:102
+
+A call to listxattr() with a buffer size = 0 returns the actual
+size of the buffer needed for a subsequent call. When size > 0,
+nfs4_listxattr() does not return an error because either
+generic_listxattr() or nfs4_listxattr_nfs4_label() consumes
+exactly all the bytes then size is 0 when calling
+nfs4_listxattr_nfs4_user() which then triggers the following
+kernel BUG:
+
+  [   99.403778] kernel BUG at mm/usercopy.c:102!
+  [   99.404063] Internal error: Oops - BUG: 00000000f2000800 [#1] SMP
+  [   99.408463] CPU: 0 PID: 3310 Comm: python3 Not tainted 6.6.0-61.fc40.aarch64 #1
+  [   99.415827] Call trace:
+  [   99.415985]  usercopy_abort+0x70/0xa0
+  [   99.416227]  __check_heap_object+0x134/0x158
+  [   99.416505]  check_heap_object+0x150/0x188
+  [   99.416696]  __check_object_size.part.0+0x78/0x168
+  [   99.416886]  __check_object_size+0x28/0x40
+  [   99.417078]  listxattr+0x8c/0x120
+  [   99.417252]  path_listxattr+0x78/0xe0
+  [   99.417476]  __arm64_sys_listxattr+0x28/0x40
+  [   99.417723]  invoke_syscall+0x78/0x100
+  [   99.417929]  el0_svc_common.constprop.0+0x48/0xf0
+  [   99.418186]  do_el0_svc+0x24/0x38
+  [   99.418376]  el0_svc+0x3c/0x110
+  [   99.418554]  el0t_64_sync_handler+0x120/0x130
+  [   99.418788]  el0t_64_sync+0x194/0x198
+  [   99.418994] Code: aa0003e3 d000a3e0 91310000 97f49bdb (d4210000)
+
+Issue is reproduced when generic_listxattr() returns 'system.nfs4_acl',
+thus calling lisxattr() with size = 16 will trigger the bug.
+
+Add check on nfs4_listxattr() to return ERANGE error when it is
+called with size > 0 and the return value is greater than size." CVE=CVE-2024-26870,
+AttackStep CVE202439205 description="An issue in pyload-ng v0.5.0b3.dev85 running under python3.11 or below allows attackers to execute arbitrary code via a crafted HTTP request." CVE=CVE-2024-39205 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H BaseScore=9.8 ImpactScore=5.9 ExploitabilityScore=3.9,
+AttackStep CVE202441065 description="In the Linux kernel, the following vulnerability has been resolved:
+
+powerpc/pseries: Whitelist dtl slub object for copying to userspace
+
+Reading the dispatch trace log from /sys/kernel/debug/powerpc/dtl/cpu-*
+results in a BUG() when the config CONFIG_HARDENED_USERCOPY is enabled as
+shown below.
+
+    kernel BUG at mm/usercopy.c:102!
+    Oops: Exception in kernel mode, sig: 5 [#1]
+    LE PAGE_SIZE=64K MMU=Radix SMP NR_CPUS=2048 NUMA pSeries
+    Modules linked in: xfs libcrc32c dm_service_time sd_mod t10_pi sg ibmvfc
+    scsi_transport_fc ibmveth pseries_wdt dm_multipath dm_mirror dm_region_hash dm_log dm_mod fuse
+    CPU: 27 PID: 1815 Comm: python3 Not tainted 6.10.0-rc3 #85
+    Hardware name: IBM,9040-MRX POWER10 (raw) 0x800200 0xf000006 of:IBM,FW1060.00 (NM1060_042) hv:phyp pSeries
+    NIP:  c0000000005d23d4 LR: c0000000005d23d0 CTR: 00000000006ee6f8
+    REGS: c000000120c078c0 TRAP: 0700   Not tainted  (6.10.0-rc3)
+    MSR:  8000000000029033 <SF,EE,ME,IR,DR,RI,LE>  CR: 2828220f  XER: 0000000e
+    CFAR: c0000000001fdc80 IRQMASK: 0
+    [ ... GPRs omitted ... ]
+    NIP [c0000000005d23d4] usercopy_abort+0x78/0xb0
+    LR [c0000000005d23d0] usercopy_abort+0x74/0xb0
+    Call Trace:
+     usercopy_abort+0x74/0xb0 (unreliable)
+     __check_heap_object+0xf8/0x120
+     check_heap_object+0x218/0x240
+     __check_object_size+0x84/0x1a4
+     dtl_file_read+0x17c/0x2c4
+     full_proxy_read+0x8c/0x110
+     vfs_read+0xdc/0x3a0
+     ksys_read+0x84/0x144
+     system_call_exception+0x124/0x330
+     system_call_vectored_common+0x15c/0x2ec
+    --- interrupt: 3000 at 0x7fff81f3ab34
+
+Commit 6d07d1cd300f ("usercopy: Restrict non-usercopy caches to size 0")
+requires that only whitelisted areas in slab/slub objects can be copied to
+userspace when usercopy hardening is enabled using CONFIG_HARDENED_USERCOPY.
+Dtl contains hypervisor dispatch events which are expected to be read by
+privileged users. Hence mark this safe for user access.
+Specify useroffset=0 and usersize=DISPATCH_LOG_BYTES to whitelist the
+entire object." CVE=CVE-2024-41065
+} 
+}

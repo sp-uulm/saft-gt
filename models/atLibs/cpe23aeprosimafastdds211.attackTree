@@ -1,5 +1,43 @@
-AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-406 cweNotes="Insufficient Control of Network Message Volume (Network Amplification)" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-20.0 cweNotes="Improper Input Validation" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
 OR {
-AttackStep CVE202138425 description="eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." CVE=CVE-2021-38425 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H BaseScore=9.1 ImpactScore=5.2 ExploitabilityScore=3.9
+AttackStep CVE202430258 description="FastDDS is a C++ implementation of the DDS (Data Distribution Service) standard of the OMG (Object Management Group). Prior to versions 2.14.1, 2.13.5, 2.10.4, and 2.6.8, when a publisher serves a malformed `RTPS` packet, the subscriber crashes when creating `pthread`. This can remotely crash any Fast-DDS process, potentially leading to a DOS attack. Versions 2.14.1, 2.13.5, 2.10.4, and 2.6.8 contain a patch for the issue.
+" CVE=CVE-2024-30258 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H BaseScore=8.2 ImpactScore=4.2 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-120.0 cweNotes="Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+OR {
+AttackStep CVE202430259 description="FastDDS is a C++ implementation of the DDS (Data Distribution Service) standard of the OMG (Object Management Group). Prior to versions 2.14.1, 2.13.5, 2.10.4, and 2.6.8, when a publisher serves malformed `RTPS` packet, heap buffer overflow occurs on the subscriber. This can remotely crash any Fast-DDS process, potentially leading to a DOS attack. Versions 2.14.1, 2.13.5, 2.10.4, and 2.6.8 contain a patch for the issue.
+" CVE=CVE-2024-30259 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H BaseScore=8.2 ImpactScore=4.2 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-122.0 cweNotes="Heap-based Buffer Overflow" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+OR {
+AttackStep CVE202428231 description="eprosima Fast DDS is a C++ implementation of the Data Distribution Service standard of the Object Management Group. Prior to versions 2.14.0, 2.13.4, 2.12.3, 2.10.4, and 2.6.8, manipulated DATA Submessage can cause a heap overflow error in the Fast-DDS process, causing the process to be terminated remotely. Additionally, the payload_size in the DATA Submessage packet is declared as uint32_t. When a negative number, such as -1, is input into this variable, it results in an Integer Overflow (for example, -1 gets converted to 0xFFFFFFFF). This eventually leads to a heap-buffer-overflow, causing the program to terminate. Versions 2.14.0, 2.13.4, 2.12.3, 2.10.4, and 2.6.8 contain a fix for this issue." CVE=CVE-2024-28231 CVSS=CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H BaseScore=9.6 ImpactScore=6.0 ExploitabilityScore=2.8
+} 
+}
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-229.0 cweNotes="Improper Handling of Values" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+OR {
+AttackStep CVE202430917 description="An issue was discovered in eProsima FastDDS v.2.14.0 and before, allows a local attacker to cause a denial of service (DoS) and obtain sensitive information via a crafted history_depth parameter in DurabilityService QoS component." CVE=CVE-2024-30917 CVSS=CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H BaseScore=5.5 ImpactScore=3.6 ExploitabilityScore=1.8
+} 
+}
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-406.0 cweNotes="Insufficient Control of Network Message Volume (Network Amplification)" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+OR {
+AttackStep CVE202138425 description="eProsima Fast DDS versions prior to 2.4.0 (#2269) are susceptible to exploitation when an attacker sends a specially crafted packet to flood a target device with unwanted traffic, which may result in a denial-of-service condition and information exposure." CVE=CVE-2021-38425 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-415.0 cweNotes="Double Free" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+OR {
+AttackStep CVE202342459 description="Fast DDS is a C++ implementation of the DDS (Data Distribution Service) standard of the OMG (Object Management Group). In affected versions specific DATA submessages can be sent to a discovery locator which may trigger a free error. This can remotely crash any Fast-DDS process. The call to free() could potentially leave the pointer in the attackers control which could lead to a double free. This issue has been addressed in versions 2.12.0, 2.11.3, 2.10.3, and 2.6.7. Users are advised to upgrade. There are no known workarounds for this vulnerability.
+" CVE=CVE-2023-42459 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H BaseScore=8.6 ImpactScore=4.7 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-416.0 cweNotes="Use After Free" note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+OR {
+AttackStep CVE202350716 description="eProsima Fast DDS (formerly Fast RTPS) is a C++ implementation of the Data Distribution Service standard of the Object Management Group. Prior to versions 2.13.0, 2.12.2, 2.11.3, 2.10.3, and 2.6.7, an invalid DATA_FRAG Submessage causes a bad-free error, and the Fast-DDS process can be remotely terminated. If an invalid Data_Frag packet is sent, the `Inline_qos, SerializedPayload` member of object `ch` will attempt to release memory without initialization, resulting in a 'bad-free' error. Versions 2.13.0, 2.12.2, 2.11.3, 2.10.2, and 2.6.7 fix this issue." CVE=CVE-2023-50716 CVSS=CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H BaseScore=9.6 ImpactScore=6.0 ExploitabilityScore=2.8
+} 
+}
+AttackTarget CPE=cpe:2.3:a:eprosima:fast_dds:2.1.1 synonyms=("ros-foxy-fastrtps") CWE=CWE-Other note="Generated for search by cpe for keyword: cpe:2.3:a:eprosima:fast_dds:2.1.1" {
+OR {
+AttackStep CVE202430916 description="An issue was discovered in eProsima FastDDS v.2.14.0 and before, allows a local attacker to cause a denial of service (DoS) and obtain sensitive information via a crafted max_samples parameter in DurabilityService QoS component." CVE=CVE-2024-30916
 } 
 }

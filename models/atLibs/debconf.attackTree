@@ -1,0 +1,12 @@
+AttackTarget synonyms=("debconf") CWE=CWE-209.0 cweNotes="Generation of Error Message Containing Sensitive Information" note="Generated for search by description for keyword: debconf" {
+OR {
+AttackStep CVE202016128 description="The aptdaemon DBus interface disclosed file existence disclosure by setting Terminal/DebconfSocket properties, aka GHSL-2020-192 and GHSL-2020-196. This affected versions prior to 1.1.1+bzr982-0ubuntu34.1, 1.1.1+bzr982-0ubuntu32.3, 1.1.1+bzr982-0ubuntu19.5, 1.1.1+bzr982-0ubuntu14.5." CVE=CVE-2020-16128 CVSS=CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N BaseScore=3.8 ImpactScore=1.4 ExploitabilityScore=2.0,
+CVE202016128
+} 
+}
+AttackTarget synonyms=("debconf") CWE=CWE-Other note="Generated for search by description for keyword: debconf" {
+OR {
+AttackStep CVE20061376 description="The installation of Debian GNU/Linux 3.1r1 from the network install CD creates /var/log/debian-installer/cdebconf with world writable permissions, which allows local users to cause a denial of service (disk consumption)." CVE=CVE-2006-1376,
+AttackStep CVE20061772 description="debconf in Debian GNU/Linux, when configuring mnogosearch in the mnogosearch-common 3.2.31-1 package, uses the world-readable config.dat file instead of the restricted passwords.dat for storing the cleartext database administrator password in the mnogosearch-common/database_admin_pass record, which allows local users to view the password." CVE=CVE-2006-1772
+} 
+}

@@ -3,3 +3,8 @@ OR {
 AttackStep CVE202126807 description="GalaxyClient version 2.0.28.9 loads unsigned DLLs such as zlib1.dll, libgcc_s_dw2-1.dll and libwinpthread-1.dll from PATH, which allows an attacker to potentially run code locally through unsigned DLL loading." CVE=CVE-2021-26807 CVSS=CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H BaseScore=7.8 ImpactScore=5.9 ExploitabilityScore=1.8
 } 
 }
+AttackTarget synonyms=("/usr/lib/x86_64-linux-gnu/libgcc_s.so.1") CWE=CWE-427 cweNotes="Uncontrolled Search Path Element" note="Generated for search by description for keyword: libgcc_s" {
+OR {
+AttackStep CVE202248422 description="ONLYOFFICE Docs through 7.3 on certain Linux distributions allows local users to gain privileges via a Trojan horse libgcc_s.so.1 in the current working directory, which may be any directory in which an ONLYOFFICE document is located." CVE=CVE-2022-48422 CVSS=CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H BaseScore=7.8 ImpactScore=5.9 ExploitabilityScore=1.8
+} 
+}

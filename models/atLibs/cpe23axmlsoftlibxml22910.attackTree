@@ -1,0 +1,66 @@
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-79 cweNotes="Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE20163709 description="Possible cross-site scripting vulnerability in libxml after commit 960f0e2." CVE=CVE-2016-3709 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N BaseScore=6.1 ImpactScore=2.7 ExploitabilityScore=2.8,
+CVE20163709
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-122 cweNotes="Heap-based Buffer Overflow" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE202434459 description="An issue was discovered in xmllint (from libxml2) before 2.11.8 and 2.12.x before 2.12.7. Formatting error messages with xmllint --htmlout can result in a buffer over-read in xmlHTMLPrintFileContext in xmllint.c." CVE=CVE-2024-34459 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-125 cweNotes="Out-of-bounds Read" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE202024977 description="GNOME project libxml2 v2.9.10 has a global buffer over-read vulnerability in xmlEncodeEntitiesInternal at libxml2/entities.c. The issue has been fixed in commit 50f06b3e." CVE=CVE-2020-24977 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L BaseScore=6.5 ImpactScore=2.5 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-190 cweNotes="Integer Overflow or Wraparound" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE202229824 description="In libxml2 before 2.9.14, several buffer handling functions in buf.c (xmlBuf*) and tree.c (xmlBuffer*) don't check for integer overflows. This can result in out-of-bounds memory writes. Exploitation requires a victim to open a crafted, multi-gigabyte XML file. Other software using libxml2's buffer functions, for example libxslt through 1.1.35, is affected as well." CVE=CVE-2022-29824 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H BaseScore=6.5 ImpactScore=3.6 ExploitabilityScore=2.8,
+AttackStep CVE202240303 description="An issue was discovered in libxml2 before 2.10.3. When parsing a multi-gigabyte XML document with the XML_PARSE_HUGE parser option enabled, several integer counters can overflow. This results in an attempt to access an array at a negative 2GB offset, typically leading to a segmentation fault." CVE=CVE-2022-40303 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-401 cweNotes="Missing Release of Memory after Effective Lifetime" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE201920388 description="xmlSchemaPreRun in xmlschemas.c in libxml2 2.9.10 allows an xmlSchemaValidateStream memory leak." CVE=CVE-2019-20388 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-415 cweNotes="Double Free" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE202240304 description="An issue was discovered in libxml2 before 2.10.3. Certain invalid XML entity definitions can corrupt a hash table key, potentially leading to subsequent logic errors. In one case, a double-free can be provoked." CVE=CVE-2022-40304 CVSS=CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H BaseScore=7.8 ImpactScore=5.9 ExploitabilityScore=1.8,
+AttackStep CVE202329469 description="An issue was discovered in libxml2 before 2.10.4. When hashing empty dict strings in a crafted XML document, xmlDictComputeFastKey in dict.c can produce non-deterministic values, leading to various logic and memory errors, such as a double free. This behavior occurs because there is an attempt to use the first byte of an empty string, and any value is possible (not solely the '\0' value)." CVE=CVE-2023-29469 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H BaseScore=6.5 ImpactScore=3.6 ExploitabilityScore=2.8
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-416 cweNotes="Use After Free" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE20213518 description="There's a flaw in libxml2 in versions before 2.9.11. An attacker who is able to submit a crafted file to be processed by an application linked with libxml2 could trigger a use-after-free. The greatest impact from this flaw is to confidentiality, integrity, and availability." CVE=CVE-2021-3518 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H BaseScore=8.8 ImpactScore=5.9 ExploitabilityScore=2.8,
+CVE20213518,
+AttackStep CVE202223308 description="valid.c in libxml2 before 2.9.13 has a use-after-free of ID and IDREF attributes." CVE=CVE-2022-23308 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9,
+AttackStep CVE202345322 description="libxml2 through 2.11.5 has a use-after-free that can only occur after a certain memory allocation fails. This occurs in xmlUnlinkNode in tree.c. NOTE: the vendor's position is "I don't think these issues are critical enough to warrant a CVE ID ... because an attacker typically can't control when memory allocations fail."" CVE=CVE-2023-45322 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H BaseScore=6.5 ImpactScore=3.6 ExploitabilityScore=2.8,
+AttackStep CVE202425062 description="An issue was discovered in libxml2 before 2.11.7 and 2.12.x before 2.12.5. When using the XML Reader interface with DTD validation and XInclude expansion enabled, processing crafted XML documents can lead to an xmlValidatePopElement use-after-free." CVE=CVE-2024-25062 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-476 cweNotes="NULL Pointer Dereference" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE20213537 description="A vulnerability found in libxml2 in versions before 2.9.11 shows that it did not propagate errors while parsing XML mixed content, causing a NULL dereference. If an untrusted XML document was parsed in recovery mode and post-validated, the flaw could be used to crash the application. The highest threat from this vulnerability is to system availability." CVE=CVE-2021-3537 CVSS=CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=5.9 ImpactScore=3.6 ExploitabilityScore=2.2,
+CVE20213537,
+AttackStep CVE20222309 description="NULL Pointer Dereference allows attackers to cause a denial of service (or application crash). This only applies when lxml is used together with libxml2 2.9.10 through 2.9.14. libxml2 2.9.9 and earlier are not affected. It allows triggering crashes through forged input data, given a vulnerable code sequence in the application. The vulnerability is caused by the iterwalk function (also used by the canonicalize function). Such code shouldn't be in wide-spread use, given that parsing + iterwalk would usually be replaced with the more efficient iterparse function. However, an XML converter that serialises to C14N would also be vulnerable, for example, and there are legitimate use cases for this code sequence. If untrusted input is received (also remotely) and processed via iterwalk function, a crash can be triggered." CVE=CVE-2022-2309 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9,
+AttackStep CVE202328484 description="In libxml2 before 2.10.4, parsing of certain invalid XSD schemas can lead to a NULL pointer dereference and subsequently a segfault. This occurs in xmlSchemaFixupComplexType in xmlschemas.c." CVE=CVE-2023-28484 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H BaseScore=6.5 ImpactScore=3.6 ExploitabilityScore=2.8
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-776 cweNotes="Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE20213541 description="A flaw was found in libxml2. Exponential entity expansion attack its possible bypassing all existing protection mechanisms and leading to denial of service." CVE=CVE-2021-3541 CVSS=CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H BaseScore=6.5 ImpactScore=3.6 ExploitabilityScore=2.8
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-787 cweNotes="Out-of-bounds Write" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE20213517 description="There is a flaw in the xml entity encoding functionality of libxml2 in versions before 2.9.11. An attacker who is able to supply a crafted file to be processed by an application linked with the affected functionality of libxml2 could trigger an out-of-bounds read. The most likely impact of this flaw is to application availability, with some potential impact to confidentiality and integrity if an attacker is able to use memory information to further exploit the application." CVE=CVE-2021-3517 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H BaseScore=8.6 ImpactScore=4.7 ExploitabilityScore=3.9,
+CVE20213517
+} 
+}
+AttackTarget CPE=cpe:2.3:a:xmlsoft:libxml2:2.9.10 synonyms=("libxml2") CWE=CWE-835 cweNotes="Loop with Unreachable Exit Condition ('Infinite Loop')" note="Generated for search by cpe for keyword: cpe:2.3:a:xmlsoft:libxml2:2.9.10" {
+OR {
+AttackStep CVE20207595 description="xmlStringLenDecodeEntities in parser.c in libxml2 2.9.10 has an infinite loop in a certain end-of-file situation." CVE=CVE-2020-7595 CVSS=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H BaseScore=7.5 ImpactScore=3.6 ExploitabilityScore=3.9
+} 
+}

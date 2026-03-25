@@ -9,7 +9,7 @@ If you use the SAFT-GT pipeline, models, or any part of this repository in your 
   title   = {Bridging Safety and Security in Complex Systems: A Model-Based Approach with SAFT-GT Toolchain},
   author  = {Pekaric, Irdin and Groner, Raffaela and Raschke, Alexander and Witte, Thomas and Adigun, Jubril Gbolahan and Felderer, Michael and Tichy, Matthias},
   journal = {Journal of Systems and Software},
-  year    = {2025}
+  year    = {2026}
 }
 ```
 

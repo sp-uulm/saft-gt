@@ -11,6 +11,7 @@ If you use the SAFT-GT pipeline, models, or any part of this repository in your 
   journal = {Journal of Systems and Software},
   year    = {2025}
 }
+```
 
 ## Contents
 The content of this supplement package is structured as follows:

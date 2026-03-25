@@ -2,6 +2,16 @@
 The SafeSec Attack-Fault Tree Generation Toolchain (SAFT-GT) was created in the [SafeSec Project](https://www.uni-ulm.de/in/sp/research/projects/safesec/).
 It generates and analyzes Attack-Fault Trees for cyber-physical systems based on their data flow and the hardware and software components used. Vulnerability databases are crawled to identify possible attacks.
 
+If you use the SAFT-GT pipeline, models, or any part of this repository in your research, please kindly cite our paper:
+
+```bibtex
+@article{pekaric2025saftgt,
+  title   = {Bridging Safety and Security in Complex Systems: A Model-Based Approach with SAFT-GT Toolchain},
+  author  = {Pekaric, Irdin and Groner, Raffaela and Raschke, Alexander and Witte, Thomas and Adigun, Jubril Gbolahan and Felderer, Michael and Tichy, Matthias},
+  journal = {Journal of Systems and Software},
+  year    = {2025}
+}
+
 ## Contents
 The content of this supplement package is structured as follows:
 - `/models`  
